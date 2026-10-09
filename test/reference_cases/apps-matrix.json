@@ -1,0 +1,1065 @@
+{
+  "schema": 1,
+  "phase": "P15",
+  "cases": [
+    {
+      "id": "P15-MAT-01",
+      "title": "Matrix launch",
+      "app": "Matrix",
+      "surface": "launch",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__matrix_calculations.html.txt",
+          "section": "launch instructions"
+        }
+      ],
+      "initial": {
+        "app": "Matrix",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-MAT-01-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Entry"
+            },
+            "app": {
+              "id": 9
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-MAT-02",
+      "title": "Matrix menu",
+      "app": "Matrix",
+      "surface": "menu",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__matrix_calculations.html.txt",
+          "section": "variable list, four named variables"
+        }
+      ],
+      "initial": {
+        "app": "Matrix",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-MAT-02-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "List"
+            },
+            "menu": {
+              "labels": [
+                "MatA: None",
+                "MatB: None",
+                "MatC: None",
+                "MatD: None"
+              ]
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-MAT-03",
+      "title": "Matrix dimension choice",
+      "app": "Matrix",
+      "surface": "dimension choice",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__matrix_calculations.html.txt",
+          "section": "example 2 dimension submenu"
+        }
+      ],
+      "initial": {
+        "app": "Matrix",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        "OK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-MAT-03-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Dimension"
+            },
+            "menu": {
+              "labels": [
+                "1 Row",
+                "2 Rows",
+                "3 Rows",
+                "4 Rows"
+              ]
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-MAT-04",
+      "title": "Matrix grid",
+      "app": "Matrix",
+      "surface": "grid",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__matrix_calculations.html.txt",
+          "section": "example 1 default size"
+        }
+      ],
+      "initial": {
+        "app": "Matrix",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        "DOWN",
+        "DOWN",
+        "OK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-MAT-04-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Editor"
+            },
+            "grid": {
+              "rows": 2,
+              "cols": 2
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-MAT-05",
+      "title": "Matrix input",
+      "app": "Matrix",
+      "surface": "input",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__matrix_calculations.html.txt",
+          "section": "example 1 data entry"
+        }
+      ],
+      "initial": {
+        "app": "Matrix",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "2",
+        "EXE",
+        "1",
+        "EXE",
+        "1",
+        "EXE",
+        "1",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-MAT-05-1",
+          "capture": "final",
+          "expect": {
+            "grid": {
+              "cells": [
+                "2",
+                "1",
+                "1",
+                "1"
+              ],
+              "editing": false
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-MAT-06",
+      "title": "Matrix grid boundaries",
+      "app": "Matrix",
+      "surface": "grid boundaries",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__matrix_calculations.html.txt",
+          "section": "grid boundaries"
+        }
+      ],
+      "initial": {
+        "app": "Matrix",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "LEFT",
+        "UP",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-MAT-06-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "Shared cursor clamp is regression-tested; target boundary wrap/clamp is not captured.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-MAT-07",
+      "title": "Matrix result",
+      "app": "Matrix",
+      "surface": "result",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__matrix_calculations.html.txt",
+          "section": "answer memory: recall named aggregate"
+        }
+      ],
+      "initial": {
+        "app": "Matrix",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "2",
+        "EXE",
+        "1",
+        "EXE",
+        "1",
+        "EXE",
+        "1",
+        "EXE",
+        "BACK",
+        "CATALOG",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "OK",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-MAT-07-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Answer"
+            },
+            "grid": {
+              "cells": [
+                "2",
+                "1",
+                "1",
+                "1"
+              ]
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-MAT-08",
+      "title": "Matrix answer TOOLS",
+      "app": "Matrix",
+      "surface": "answer TOOLS",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__matrix_calculations.html.txt",
+          "section": "display variable list from editor OR answer: TOOLS Define"
+        }
+      ],
+      "initial": {
+        "app": "Matrix",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "2",
+        "EXE",
+        "1",
+        "EXE",
+        "1",
+        "EXE",
+        "1",
+        "EXE",
+        "BACK",
+        "CATALOG",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "OK",
+        "EXE",
+        "TOOLS",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-MAT-08-1",
+          "capture": "final",
+          "expect": {
+            "menu": {
+              "labels": [
+                "Define Matrix",
+                "Store"
+              ]
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-MAT-09",
+      "title": "Matrix BACK",
+      "app": "Matrix",
+      "surface": "BACK",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__matrix_calculations.html.txt",
+          "section": "answer BACK returns completed expression"
+        }
+      ],
+      "initial": {
+        "app": "Matrix",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "2",
+        "EXE",
+        "1",
+        "EXE",
+        "1",
+        "EXE",
+        "1",
+        "EXE",
+        "BACK",
+        "CATALOG",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "OK",
+        "EXE",
+        "BACK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-MAT-09-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Entry"
+            },
+            "logical": {
+              "source": "MatA"
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-MAT-10",
+      "title": "Matrix AC",
+      "app": "Matrix",
+      "surface": "AC",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__matrix_calculations.html.txt",
+          "section": "answer AC clears expression"
+        }
+      ],
+      "initial": {
+        "app": "Matrix",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "2",
+        "EXE",
+        "1",
+        "EXE",
+        "1",
+        "EXE",
+        "1",
+        "EXE",
+        "BACK",
+        "CATALOG",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "OK",
+        "EXE",
+        "AC",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-MAT-10-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Entry"
+            },
+            "logical": {
+              "source": ""
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-MAT-11",
+      "title": "Matrix FORMAT",
+      "app": "Matrix",
+      "surface": "FORMAT",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__matrix_calculations.html.txt",
+          "section": "FORMAT"
+        }
+      ],
+      "initial": {
+        "app": "Matrix",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "2",
+        "EXE",
+        "1",
+        "EXE",
+        "1",
+        "EXE",
+        "1",
+        "EXE",
+        "BACK",
+        "CATALOG",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "OK",
+        "EXE",
+        "FORMAT",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-MAT-11-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "Answer-grid FORMAT/no-op not explicitly established by available target chapter.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-MAT-12",
+      "title": "Matrix error",
+      "app": "Matrix",
+      "surface": "error",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__matrix_calculations.html.txt",
+          "section": "error"
+        }
+      ],
+      "initial": {
+        "app": "Matrix",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "1",
+        "DIVIDE",
+        "0",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-MAT-12-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "Cell Math ERROR delivery and exact footer/modal need target capture; native error regression separately exercised.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-MAT-13",
+      "title": "Matrix retention",
+      "app": "Matrix",
+      "surface": "retention",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__matrix_calculations.html.txt",
+          "section": "named aggregates survive other-app launch"
+        }
+      ],
+      "initial": {
+        "app": "Matrix",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "2",
+        "EXE",
+        "1",
+        "EXE",
+        "1",
+        "EXE",
+        "1",
+        "EXE",
+        "BACK",
+        "HOME",
+        "RIGHT",
+        "OK",
+        "HOME",
+        "LEFT",
+        "OK",
+        "TOOLS",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-MAT-13-1",
+          "capture": "final",
+          "expect": {
+            "menu": {
+              "labels": [
+                "MatA: 2x2",
+                "MatB: None",
+                "MatC: None",
+                "MatD: None"
+              ]
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-MAT-14",
+      "title": "Matrix icons",
+      "app": "Matrix",
+      "surface": "icons",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__matrix_calculations.html.txt",
+          "section": "icons"
+        }
+      ],
+      "initial": {
+        "app": "Matrix",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        "DOWN",
+        "DOWN",
+        "OK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-MAT-14-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "Target chapter does not establish exact behavior/raster for this surface.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-MAT-15",
+      "title": "Matrix stale job",
+      "app": "Matrix",
+      "surface": "stale job",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "SOURCE-ONLY",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__matrix_calculations.html.txt",
+          "section": "stale job"
+        }
+      ],
+      "initial": {
+        "app": "Matrix",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-MAT-15-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "Async generation/revision behavior is a native architecture safety contract, not externally visible target internals. Executed by P15 controller checks.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-MAT-16",
+      "title": "Matrix render reference",
+      "app": "Matrix",
+      "surface": "render reference",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__matrix_calculations.html.txt",
+          "section": "render reference"
+        }
+      ],
+      "initial": {
+        "app": "Matrix",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-MAT-16-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "No approved physical app raster; existing render fixtures are regression evidence only.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    }
+  ]
+}

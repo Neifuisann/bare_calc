@@ -1,0 +1,1122 @@
+{
+  "schema": 1,
+  "phase": "P15",
+  "cases": [
+    {
+      "id": "P15-EQ-01",
+      "title": "Equation launch",
+      "app": "Equation",
+      "surface": "launch",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__equation_calculations.html.txt",
+          "section": "launch instructions"
+        }
+      ],
+      "initial": {
+        "app": "Equation",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-EQ-01-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Mode"
+            },
+            "app": {
+              "id": 5
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-EQ-02",
+      "title": "Equation menu",
+      "app": "Equation",
+      "surface": "menu",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__equation_calculations.html.txt",
+          "section": "menu"
+        }
+      ],
+      "initial": {
+        "app": "Equation",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-EQ-02-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "Semantic degree/type choices known; exact formula rows/raster not yet transcribed. Do not substitute CN labels.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-EQ-03",
+      "title": "Equation input",
+      "app": "Equation",
+      "surface": "input",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__equation_calculations.html.txt",
+          "section": "coefficient-entry procedure; x^2+2x-3"
+        }
+      ],
+      "initial": {
+        "app": "Equation",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "DOWN",
+        "OK",
+        "OK",
+        "1",
+        "EXE",
+        "2",
+        "EXE",
+        "SUBTRACT",
+        "3",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-EQ-03-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Coefficients"
+            },
+            "grid": {
+              "cells": [
+                "1",
+                "2",
+                "-3"
+              ]
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-EQ-04",
+      "title": "Equation grid navigation",
+      "app": "Equation",
+      "surface": "grid navigation",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__equation_calculations.html.txt",
+          "section": "coefficient selection"
+        }
+      ],
+      "initial": {
+        "app": "Equation",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "DOWN",
+        "OK",
+        "OK",
+        "RIGHT",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-EQ-04-1",
+          "capture": "final",
+          "expect": {
+            "grid": {
+              "col": 1
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-EQ-05",
+      "title": "Equation result",
+      "app": "Equation",
+      "surface": "result",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__equation_calculations.html.txt",
+          "section": "solve coefficients"
+        }
+      ],
+      "initial": {
+        "app": "Equation",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "DOWN",
+        "OK",
+        "OK",
+        "1",
+        "EXE",
+        "2",
+        "EXE",
+        "SUBTRACT",
+        "3",
+        "EXE",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-EQ-05-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Solutions"
+            },
+            "result": {
+              "hasResult": true
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-EQ-06",
+      "title": "Equation solution presentation",
+      "app": "Equation",
+      "surface": "solution presentation",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__equation_calculations.html.txt",
+          "section": "solution presentation"
+        }
+      ],
+      "initial": {
+        "app": "Equation",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "DOWN",
+        "OK",
+        "OK",
+        "1",
+        "EXE",
+        "2",
+        "EXE",
+        "SUBTRACT",
+        "3",
+        "EXE",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-EQ-06-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "Interval/solution mathematical raster and exact radical typography require target image review; do not bless native strings.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-EQ-07",
+      "title": "Equation next solution",
+      "app": "Equation",
+      "surface": "next solution",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__equation_calculations.html.txt",
+          "section": "polynomial solution pages"
+        }
+      ],
+      "initial": {
+        "app": "Equation",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "DOWN",
+        "OK",
+        "OK",
+        "1",
+        "EXE",
+        "2",
+        "EXE",
+        "SUBTRACT",
+        "3",
+        "EXE",
+        "EXE",
+        "DOWN",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-EQ-07-1",
+          "capture": "final",
+          "expect": {
+            "result": {
+              "page": 1
+            },
+            "icons": {
+              "UP": true
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-EQ-08",
+      "title": "Equation BACK previous",
+      "app": "Equation",
+      "surface": "BACK previous",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__equation_calculations.html.txt",
+          "section": "polynomial example 2: BACK while previous indicator is present"
+        }
+      ],
+      "initial": {
+        "app": "Equation",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "DOWN",
+        "OK",
+        "OK",
+        "1",
+        "EXE",
+        "2",
+        "EXE",
+        "SUBTRACT",
+        "3",
+        "EXE",
+        "EXE",
+        "DOWN",
+        "BACK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-EQ-08-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Solutions"
+            },
+            "result": {
+              "page": 0
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-EQ-09",
+      "title": "Equation AC",
+      "app": "Equation",
+      "surface": "AC",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__equation_calculations.html.txt",
+          "section": "AC returns coefficient editor"
+        }
+      ],
+      "initial": {
+        "app": "Equation",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "DOWN",
+        "OK",
+        "OK",
+        "1",
+        "EXE",
+        "2",
+        "EXE",
+        "SUBTRACT",
+        "3",
+        "EXE",
+        "EXE",
+        "AC",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-EQ-09-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Coefficients"
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-EQ-10",
+      "title": "Equation FORMAT",
+      "app": "Equation",
+      "surface": "FORMAT",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__equation_calculations.html.txt",
+          "section": "FORMAT"
+        }
+      ],
+      "initial": {
+        "app": "Equation",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "DOWN",
+        "OK",
+        "OK",
+        "1",
+        "EXE",
+        "2",
+        "EXE",
+        "SUBTRACT",
+        "3",
+        "EXE",
+        "EXE",
+        "FORMAT",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-EQ-10-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "Legacy solution FORMAT applicability needs target verification; retain no-op until evidenced.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-EQ-11",
+      "title": "Equation error",
+      "app": "Equation",
+      "surface": "error",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__equation_calculations.html.txt",
+          "section": "error"
+        }
+      ],
+      "initial": {
+        "app": "Equation",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "DOWN",
+        "OK",
+        "OK",
+        "1",
+        "DIVIDE",
+        "0",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-EQ-11-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "Coefficient error modal/notice ownership needs target capture; source regression retained.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-EQ-12",
+      "title": "Equation retention",
+      "app": "Equation",
+      "surface": "retention",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__equation_calculations.html.txt",
+          "section": "retention"
+        }
+      ],
+      "initial": {
+        "app": "Equation",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "DOWN",
+        "OK",
+        "OK",
+        "1",
+        "EXE",
+        "2",
+        "EXE",
+        "SUBTRACT",
+        "3",
+        "EXE",
+        "HOME",
+        "OK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-EQ-12-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "Coefficient draft retention on Home versus other app is provisional O-4.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-EQ-13",
+      "title": "Equation icons",
+      "app": "Equation",
+      "surface": "icons",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__equation_calculations.html.txt",
+          "section": "icons"
+        }
+      ],
+      "initial": {
+        "app": "Equation",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "DOWN",
+        "OK",
+        "OK",
+        "1",
+        "EXE",
+        "2",
+        "EXE",
+        "SUBTRACT",
+        "3",
+        "EXE",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-EQ-13-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "Target chapter does not establish exact behavior/raster for this surface.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-EQ-14",
+      "title": "Equation Complex Roots menu",
+      "app": "Equation",
+      "surface": "Complex Roots menu",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__equation_calculations.html.txt",
+          "section": "Displaying complex roots: TOOLS Complex Roots On/Off"
+        }
+      ],
+      "initial": {
+        "app": "Equation",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "DOWN",
+        "OK",
+        "OK",
+        "1",
+        "EXE",
+        "0",
+        "EXE",
+        "1",
+        "EXE",
+        "EXE",
+        "TOOLS",
+        "OK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-EQ-14-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "ComplexRoots"
+            },
+            "menu": {
+              "labels": [
+                "On",
+                "Off"
+              ]
+            },
+            "icons": {
+              "allOff": true
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-EQ-15",
+      "title": "Equation Complex Roots Off",
+      "app": "Equation",
+      "surface": "Complex Roots Off",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__equation_calculations.html.txt",
+          "section": "Complex Roots Off: no real roots message for complex roots"
+        }
+      ],
+      "initial": {
+        "app": "Equation",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "DOWN",
+        "OK",
+        "OK",
+        "1",
+        "EXE",
+        "0",
+        "EXE",
+        "1",
+        "EXE",
+        "EXE",
+        "TOOLS",
+        "OK",
+        "DOWN",
+        "OK",
+        "AC",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-EQ-15-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Solutions"
+            },
+            "result": {
+              "text": "No Real Roots"
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-EQ-16",
+      "title": "Equation Complex Roots On restore",
+      "app": "Equation",
+      "surface": "Complex Roots On restore",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__equation_calculations.html.txt",
+          "section": "Complex Roots On: return to existing solution; exact root order is not asserted"
+        }
+      ],
+      "initial": {
+        "app": "Equation",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "DOWN",
+        "OK",
+        "OK",
+        "1",
+        "EXE",
+        "0",
+        "EXE",
+        "1",
+        "EXE",
+        "EXE",
+        "TOOLS",
+        "OK",
+        "DOWN",
+        "OK",
+        "AC",
+        "TOOLS",
+        "OK",
+        "UP",
+        "OK",
+        "AC",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-EQ-16-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Solutions"
+            },
+            "result": {
+              "hasResult": true
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-EQ-17",
+      "title": "Equation stale job",
+      "app": "Equation",
+      "surface": "stale job",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "SOURCE-ONLY",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__equation_calculations.html.txt",
+          "section": "stale job"
+        }
+      ],
+      "initial": {
+        "app": "Equation",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-EQ-17-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "Async generation/revision behavior is a native architecture safety contract, not externally visible target internals. Executed by P15 controller checks.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-EQ-18",
+      "title": "Equation render reference",
+      "app": "Equation",
+      "surface": "render reference",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__equation_calculations.html.txt",
+          "section": "render reference"
+        }
+      ],
+      "initial": {
+        "app": "Equation",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-EQ-18-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "No approved physical app raster; existing render fixtures are regression evidence only.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    }
+  ]
+}

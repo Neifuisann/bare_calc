@@ -1,0 +1,911 @@
+{
+  "schema": 1,
+  "phase": "P15",
+  "cases": [
+    {
+      "id": "P15-BN-01",
+      "title": "Base-N launch",
+      "app": "Base-N",
+      "surface": "launch",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "https://support.casio.com/global/vi/calc/manual/fx-880BTGPLUS_vi/using_calculator_apps/base-n_calculations.html",
+          "section": "launch instructions"
+        }
+      ],
+      "initial": {
+        "app": "Base-N",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-BN-01-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Entry"
+            },
+            "app": {
+              "id": 8
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-BN-02",
+      "title": "Base-N initial base",
+      "app": "Base-N",
+      "surface": "initial base",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "https://support.casio.com/global/vi/calc/manual/fx-880BTGPLUS_vi/using_calculator_apps/base-n_calculations.html",
+          "section": "initial default Decimal"
+        }
+      ],
+      "initial": {
+        "app": "Base-N",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-BN-02-1",
+          "capture": "final",
+          "expect": {
+            "app": {
+              "base": 10
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-BN-03",
+      "title": "Base-N input",
+      "app": "Base-N",
+      "surface": "input",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "https://support.casio.com/global/vi/calc/manual/fx-880BTGPLUS_vi/using_calculator_apps/base-n_calculations.html",
+          "section": "example 4"
+        }
+      ],
+      "initial": {
+        "app": "Base-N",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "1",
+        "5",
+        "MULTIPLY",
+        "3",
+        "7",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-BN-03-1",
+          "capture": "final",
+          "expect": {
+            "logical": {
+              "source": "15*37"
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-BN-04",
+      "title": "Base-N result",
+      "app": "Base-N",
+      "surface": "result",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "https://support.casio.com/global/vi/calc/manual/fx-880BTGPLUS_vi/using_calculator_apps/base-n_calculations.html",
+          "section": "example 4"
+        }
+      ],
+      "initial": {
+        "app": "Base-N",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "1",
+        "5",
+        "MULTIPLY",
+        "3",
+        "7",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-BN-04-1",
+          "capture": "final",
+          "expect": {
+            "result": {
+              "text": "555"
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-BN-05",
+      "title": "Base-N FORMAT",
+      "app": "Base-N",
+      "surface": "FORMAT",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "https://support.casio.com/global/vi/calc/manual/fx-880BTGPLUS_vi/using_calculator_apps/base-n_calculations.html",
+          "section": "example 4 decimal to hexadecimal"
+        }
+      ],
+      "initial": {
+        "app": "Base-N",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "1",
+        "5",
+        "MULTIPLY",
+        "3",
+        "7",
+        "EXE",
+        "FORMAT",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-BN-05-1",
+          "capture": "final",
+          "expect": {
+            "app": {
+              "base": 16
+            },
+            "result": {
+              "text": "0000022B"
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-BN-06",
+      "title": "Base-N hex digits",
+      "app": "Base-N",
+      "surface": "hex digits",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "https://support.casio.com/global/vi/calc/manual/fx-880BTGPLUS_vi/using_calculator_apps/base-n_calculations.html",
+          "section": "example 2"
+        }
+      ],
+      "initial": {
+        "app": "Base-N",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "FORMAT",
+        "1",
+        "SHIFT",
+        "3",
+        "ADD",
+        "1",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-BN-06-1",
+          "capture": "final",
+          "expect": {
+            "result": {
+              "text": "00000020"
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-BN-07",
+      "title": "Base-N binary",
+      "app": "Base-N",
+      "surface": "binary",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "https://support.casio.com/global/vi/calc/manual/fx-880BTGPLUS_vi/using_calculator_apps/base-n_calculations.html",
+          "section": "example 1"
+        }
+      ],
+      "initial": {
+        "app": "Base-N",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "FORMAT",
+        "FORMAT",
+        "1",
+        "1",
+        "ADD",
+        "1",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-BN-07-1",
+          "capture": "final",
+          "expect": {
+            "app": {
+              "base": 2
+            },
+            "result": {
+              "text": "00000000000000000000000000000100"
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-BN-08",
+      "title": "Base-N base cycle",
+      "app": "Base-N",
+      "surface": "base cycle",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "https://support.casio.com/global/vi/calc/manual/fx-880BTGPLUS_vi/using_calculator_apps/base-n_calculations.html",
+          "section": "Decimal Hexadecimal Binary Octal cycle"
+        }
+      ],
+      "initial": {
+        "app": "Base-N",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "FORMAT",
+        "FORMAT",
+        "FORMAT",
+        "FORMAT",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-BN-08-1",
+          "capture": "final",
+          "expect": {
+            "app": {
+              "base": 10
+            },
+            "screen": {
+              "id": "Entry"
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-BN-09",
+      "title": "Base-N invalid digit",
+      "app": "Base-N",
+      "surface": "invalid digit",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "https://support.casio.com/global/vi/calc/manual/fx-880BTGPLUS_vi/using_calculator_apps/base-n_calculations.html",
+          "section": "invalid digit"
+        }
+      ],
+      "initial": {
+        "app": "Base-N",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "FORMAT",
+        "FORMAT",
+        "9",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-BN-09-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "Manual gives base ranges, not whether invalid digit key is ignored immediately or rejected on EXE.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-BN-10",
+      "title": "Base-N error",
+      "app": "Base-N",
+      "surface": "error",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "https://support.casio.com/global/vi/calc/manual/fx-880BTGPLUS_vi/using_calculator_apps/base-n_calculations.html",
+          "section": "32-bit overflow note"
+        }
+      ],
+      "initial": {
+        "app": "Base-N",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "2",
+        "1",
+        "4",
+        "7",
+        "4",
+        "8",
+        "3",
+        "6",
+        "4",
+        "7",
+        "ADD",
+        "1",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-BN-10-1",
+          "capture": "final",
+          "expect": {
+            "error": {
+              "title": "Math ERROR"
+            },
+            "screen": {
+              "id": "ErrorDialog"
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-BN-11",
+      "title": "Base-N menu",
+      "app": "Base-N",
+      "surface": "menu",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "https://support.casio.com/global/vi/calc/manual/fx-880BTGPLUS_vi/using_calculator_apps/base-n_calculations.html",
+          "section": "three named Base-N categories; order deliberately not asserted"
+        }
+      ],
+      "initial": {
+        "app": "Base-N",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "CATALOG",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-BN-11-1",
+          "capture": "final",
+          "expect": {
+            "menu": {
+              "labelSet": [
+                "Base Prefix",
+                "Hex Value",
+                "Logic Operation"
+              ]
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-BN-12",
+      "title": "Base-N retention",
+      "app": "Base-N",
+      "surface": "retention",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "https://support.casio.com/global/vi/calc/manual/fx-880BTGPLUS_vi/using_calculator_apps/base-n_calculations.html",
+          "section": "session transition manual-backed policy: other app resets base"
+        }
+      ],
+      "initial": {
+        "app": "Base-N",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "FORMAT",
+        "HOME",
+        "LEFT",
+        "OK",
+        "HOME",
+        "RIGHT",
+        "OK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-BN-12-1",
+          "capture": "final",
+          "expect": {
+            "app": {
+              "base": 10
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-BN-13",
+      "title": "Base-N icons",
+      "app": "Base-N",
+      "surface": "icons",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "https://support.casio.com/global/vi/calc/manual/fx-880BTGPLUS_vi/using_calculator_apps/base-n_calculations.html",
+          "section": "icons"
+        }
+      ],
+      "initial": {
+        "app": "Base-N",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-BN-13-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "Target chapter does not establish exact behavior/raster for this surface.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-BN-14",
+      "title": "Base-N BACK AC",
+      "app": "Base-N",
+      "surface": "BACK AC",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "https://support.casio.com/global/vi/calc/manual/fx-880BTGPLUS_vi/using_calculator_apps/base-n_calculations.html",
+          "section": "basic clear operation"
+        }
+      ],
+      "initial": {
+        "app": "Base-N",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "1",
+        "AC",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-BN-14-1",
+          "capture": "final",
+          "expect": {
+            "logical": {
+              "source": ""
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-BN-15",
+      "title": "Base-N stale job",
+      "app": "Base-N",
+      "surface": "stale job",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "SOURCE-ONLY",
+          "evidence": "https://support.casio.com/global/vi/calc/manual/fx-880BTGPLUS_vi/using_calculator_apps/base-n_calculations.html",
+          "section": "stale job"
+        }
+      ],
+      "initial": {
+        "app": "Base-N",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-BN-15-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "Async generation/revision behavior is a native architecture safety contract, not externally visible target internals. Executed by P15 controller checks.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-BN-16",
+      "title": "Base-N render reference",
+      "app": "Base-N",
+      "surface": "render reference",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "https://support.casio.com/global/vi/calc/manual/fx-880BTGPLUS_vi/using_calculator_apps/base-n_calculations.html",
+          "section": "render reference"
+        }
+      ],
+      "initial": {
+        "app": "Base-N",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-BN-16-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "No approved physical app raster; existing render fixtures are regression evidence only.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    }
+  ]
+}

@@ -1,0 +1,968 @@
+{
+  "schema": 1,
+  "phase": "P15",
+  "cases": [
+    {
+      "id": "P15-IN-01",
+      "title": "Inequality launch",
+      "app": "Inequality",
+      "surface": "launch",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__inequality_calculations.html.txt",
+          "section": "launch instructions"
+        }
+      ],
+      "initial": {
+        "app": "Inequality",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-IN-01-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Size"
+            },
+            "app": {
+              "id": 6
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-IN-02",
+      "title": "Inequality menu",
+      "app": "Inequality",
+      "surface": "menu",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__inequality_calculations.html.txt",
+          "section": "menu"
+        }
+      ],
+      "initial": {
+        "app": "Inequality",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-IN-02-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "Semantic degree/type choices known; exact formula rows/raster not yet transcribed. Do not substitute CN labels.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-IN-03",
+      "title": "Inequality input",
+      "app": "Inequality",
+      "surface": "input",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__inequality_calculations.html.txt",
+          "section": "coefficient-entry procedure; x^2+2x-3"
+        }
+      ],
+      "initial": {
+        "app": "Inequality",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "OK",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "1",
+        "EXE",
+        "2",
+        "EXE",
+        "SUBTRACT",
+        "3",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-IN-03-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Coefficients"
+            },
+            "grid": {
+              "cells": [
+                "1",
+                "2",
+                "-3"
+              ]
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-IN-04",
+      "title": "Inequality grid navigation",
+      "app": "Inequality",
+      "surface": "grid navigation",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__inequality_calculations.html.txt",
+          "section": "coefficient selection"
+        }
+      ],
+      "initial": {
+        "app": "Inequality",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "OK",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "RIGHT",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-IN-04-1",
+          "capture": "final",
+          "expect": {
+            "grid": {
+              "col": 1
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-IN-05",
+      "title": "Inequality result",
+      "app": "Inequality",
+      "surface": "result",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__inequality_calculations.html.txt",
+          "section": "solve coefficients"
+        }
+      ],
+      "initial": {
+        "app": "Inequality",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "OK",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "1",
+        "EXE",
+        "2",
+        "EXE",
+        "SUBTRACT",
+        "3",
+        "EXE",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-IN-05-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Solutions"
+            },
+            "result": {
+              "hasResult": true
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-IN-06",
+      "title": "Inequality solution presentation",
+      "app": "Inequality",
+      "surface": "solution presentation",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__inequality_calculations.html.txt",
+          "section": "solution presentation"
+        }
+      ],
+      "initial": {
+        "app": "Inequality",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "OK",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "1",
+        "EXE",
+        "2",
+        "EXE",
+        "SUBTRACT",
+        "3",
+        "EXE",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-IN-06-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "Interval/solution mathematical raster and exact radical typography require target image review; do not bless native strings.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-IN-07",
+      "title": "Inequality no solution",
+      "app": "Inequality",
+      "surface": "no solution",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__inequality_calculations.html.txt",
+          "section": "x^2 < 0 note"
+        }
+      ],
+      "initial": {
+        "app": "Inequality",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "OK",
+        "DOWN",
+        "OK",
+        "1",
+        "EXE",
+        "0",
+        "EXE",
+        "0",
+        "EXE",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-IN-07-1",
+          "capture": "final",
+          "expect": {
+            "result": {
+              "text": "No Solution"
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-IN-08",
+      "title": "Inequality all real",
+      "app": "Inequality",
+      "surface": "all real",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__inequality_calculations.html.txt",
+          "section": "x^2 >= 0 note"
+        }
+      ],
+      "initial": {
+        "app": "Inequality",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "OK",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "1",
+        "EXE",
+        "0",
+        "EXE",
+        "0",
+        "EXE",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-IN-08-1",
+          "capture": "final",
+          "expect": {
+            "result": {
+              "text": "All Real Numbers"
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-IN-09",
+      "title": "Inequality BACK",
+      "app": "Inequality",
+      "surface": "BACK",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__inequality_calculations.html.txt",
+          "section": "solution BACK returns coefficient editor"
+        }
+      ],
+      "initial": {
+        "app": "Inequality",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "OK",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "1",
+        "EXE",
+        "2",
+        "EXE",
+        "SUBTRACT",
+        "3",
+        "EXE",
+        "EXE",
+        "BACK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-IN-09-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Coefficients"
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-IN-10",
+      "title": "Inequality AC",
+      "app": "Inequality",
+      "surface": "AC",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__inequality_calculations.html.txt",
+          "section": "AC returns coefficient editor"
+        }
+      ],
+      "initial": {
+        "app": "Inequality",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "OK",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "1",
+        "EXE",
+        "2",
+        "EXE",
+        "SUBTRACT",
+        "3",
+        "EXE",
+        "EXE",
+        "AC",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-IN-10-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Coefficients"
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-IN-11",
+      "title": "Inequality FORMAT",
+      "app": "Inequality",
+      "surface": "FORMAT",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__inequality_calculations.html.txt",
+          "section": "FORMAT"
+        }
+      ],
+      "initial": {
+        "app": "Inequality",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "OK",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "1",
+        "EXE",
+        "2",
+        "EXE",
+        "SUBTRACT",
+        "3",
+        "EXE",
+        "EXE",
+        "FORMAT",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-IN-11-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "Legacy solution FORMAT applicability needs target verification; retain no-op until evidenced.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-IN-12",
+      "title": "Inequality error",
+      "app": "Inequality",
+      "surface": "error",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__inequality_calculations.html.txt",
+          "section": "error"
+        }
+      ],
+      "initial": {
+        "app": "Inequality",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "OK",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "1",
+        "DIVIDE",
+        "0",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-IN-12-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "Coefficient error modal/notice ownership needs target capture; source regression retained.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-IN-13",
+      "title": "Inequality retention",
+      "app": "Inequality",
+      "surface": "retention",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__inequality_calculations.html.txt",
+          "section": "retention"
+        }
+      ],
+      "initial": {
+        "app": "Inequality",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "OK",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "1",
+        "EXE",
+        "2",
+        "EXE",
+        "SUBTRACT",
+        "3",
+        "EXE",
+        "HOME",
+        "OK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-IN-13-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "Coefficient draft retention on Home versus other app is provisional O-4.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-IN-14",
+      "title": "Inequality icons",
+      "app": "Inequality",
+      "surface": "icons",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__inequality_calculations.html.txt",
+          "section": "icons"
+        }
+      ],
+      "initial": {
+        "app": "Inequality",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "OK",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "1",
+        "EXE",
+        "2",
+        "EXE",
+        "SUBTRACT",
+        "3",
+        "EXE",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-IN-14-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "Target chapter does not establish exact behavior/raster for this surface.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-IN-15",
+      "title": "Inequality stale job",
+      "app": "Inequality",
+      "surface": "stale job",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "SOURCE-ONLY",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__inequality_calculations.html.txt",
+          "section": "stale job"
+        }
+      ],
+      "initial": {
+        "app": "Inequality",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-IN-15-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "Async generation/revision behavior is a native architecture safety contract, not externally visible target internals. Executed by P15 controller checks.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-IN-16",
+      "title": "Inequality render reference",
+      "app": "Inequality",
+      "surface": "render reference",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__inequality_calculations.html.txt",
+          "section": "render reference"
+        }
+      ],
+      "initial": {
+        "app": "Inequality",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-IN-16-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "No approved physical app raster; existing render fixtures are regression evidence only.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    }
+  ]
+}

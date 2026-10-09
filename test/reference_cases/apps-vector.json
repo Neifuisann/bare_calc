@@ -1,0 +1,1020 @@
+{
+  "schema": 1,
+  "phase": "P15",
+  "cases": [
+    {
+      "id": "P15-VCT-01",
+      "title": "Vector launch",
+      "app": "Vector",
+      "surface": "launch",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__vector_calculations.html.txt",
+          "section": "launch instructions"
+        }
+      ],
+      "initial": {
+        "app": "Vector",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-VCT-01-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Entry"
+            },
+            "app": {
+              "id": 10
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-VCT-02",
+      "title": "Vector menu",
+      "app": "Vector",
+      "surface": "menu",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__vector_calculations.html.txt",
+          "section": "variable list, four named variables"
+        }
+      ],
+      "initial": {
+        "app": "Vector",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-VCT-02-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "List"
+            },
+            "menu": {
+              "labels": [
+                "VctA: None",
+                "VctB: None",
+                "VctC: None",
+                "VctD: None"
+              ]
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-VCT-03",
+      "title": "Vector dimension choice",
+      "app": "Vector",
+      "surface": "dimension choice",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__vector_calculations.html.txt",
+          "section": "example 2 dimension submenu"
+        }
+      ],
+      "initial": {
+        "app": "Vector",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        "OK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-VCT-03-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Dimension"
+            },
+            "menu": {
+              "labels": [
+                "2 Dimensions",
+                "3 Dimensions"
+              ]
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-VCT-04",
+      "title": "Vector grid",
+      "app": "Vector",
+      "surface": "grid",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__vector_calculations.html.txt",
+          "section": "example 1 default size"
+        }
+      ],
+      "initial": {
+        "app": "Vector",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        "DOWN",
+        "OK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-VCT-04-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Editor"
+            },
+            "grid": {
+              "rows": 2,
+              "cols": 1
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-VCT-05",
+      "title": "Vector input",
+      "app": "Vector",
+      "surface": "input",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__vector_calculations.html.txt",
+          "section": "example 1 data entry"
+        }
+      ],
+      "initial": {
+        "app": "Vector",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        "DOWN",
+        "OK",
+        "1",
+        "EXE",
+        "2",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-VCT-05-1",
+          "capture": "final",
+          "expect": {
+            "grid": {
+              "cells": [
+                "1",
+                "2"
+              ],
+              "editing": false
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-VCT-06",
+      "title": "Vector grid boundaries",
+      "app": "Vector",
+      "surface": "grid boundaries",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__vector_calculations.html.txt",
+          "section": "grid boundaries"
+        }
+      ],
+      "initial": {
+        "app": "Vector",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        "DOWN",
+        "OK",
+        "LEFT",
+        "UP",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-VCT-06-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "Shared cursor clamp is regression-tested; target boundary wrap/clamp is not captured.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-VCT-07",
+      "title": "Vector result",
+      "app": "Vector",
+      "surface": "result",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__vector_calculations.html.txt",
+          "section": "answer memory: recall named aggregate"
+        }
+      ],
+      "initial": {
+        "app": "Vector",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        "DOWN",
+        "OK",
+        "1",
+        "EXE",
+        "2",
+        "EXE",
+        "BACK",
+        "CATALOG",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "OK",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-VCT-07-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Answer"
+            },
+            "grid": {
+              "cells": [
+                "1",
+                "2"
+              ]
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-VCT-08",
+      "title": "Vector answer TOOLS",
+      "app": "Vector",
+      "surface": "answer TOOLS",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__vector_calculations.html.txt",
+          "section": "display variable list from editor OR answer: TOOLS Define"
+        }
+      ],
+      "initial": {
+        "app": "Vector",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        "DOWN",
+        "OK",
+        "1",
+        "EXE",
+        "2",
+        "EXE",
+        "BACK",
+        "CATALOG",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "OK",
+        "EXE",
+        "TOOLS",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-VCT-08-1",
+          "capture": "final",
+          "expect": {
+            "menu": {
+              "labels": [
+                "Define Vector",
+                "Store"
+              ]
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-VCT-09",
+      "title": "Vector BACK",
+      "app": "Vector",
+      "surface": "BACK",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__vector_calculations.html.txt",
+          "section": "answer BACK returns completed expression"
+        }
+      ],
+      "initial": {
+        "app": "Vector",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        "DOWN",
+        "OK",
+        "1",
+        "EXE",
+        "2",
+        "EXE",
+        "BACK",
+        "CATALOG",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "OK",
+        "EXE",
+        "BACK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-VCT-09-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Entry"
+            },
+            "logical": {
+              "source": "VctA"
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-VCT-10",
+      "title": "Vector AC",
+      "app": "Vector",
+      "surface": "AC",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__vector_calculations.html.txt",
+          "section": "answer AC clears expression"
+        }
+      ],
+      "initial": {
+        "app": "Vector",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        "DOWN",
+        "OK",
+        "1",
+        "EXE",
+        "2",
+        "EXE",
+        "BACK",
+        "CATALOG",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "OK",
+        "EXE",
+        "AC",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-VCT-10-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Entry"
+            },
+            "logical": {
+              "source": ""
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-VCT-11",
+      "title": "Vector FORMAT",
+      "app": "Vector",
+      "surface": "FORMAT",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__vector_calculations.html.txt",
+          "section": "FORMAT"
+        }
+      ],
+      "initial": {
+        "app": "Vector",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        "DOWN",
+        "OK",
+        "1",
+        "EXE",
+        "2",
+        "EXE",
+        "BACK",
+        "CATALOG",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "OK",
+        "EXE",
+        "FORMAT",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-VCT-11-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "Answer-grid FORMAT/no-op not explicitly established by available target chapter.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-VCT-12",
+      "title": "Vector error",
+      "app": "Vector",
+      "surface": "error",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__vector_calculations.html.txt",
+          "section": "error"
+        }
+      ],
+      "initial": {
+        "app": "Vector",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        "DOWN",
+        "OK",
+        "1",
+        "DIVIDE",
+        "0",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-VCT-12-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "Cell Math ERROR delivery and exact footer/modal need target capture; native error regression separately exercised.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-VCT-13",
+      "title": "Vector retention",
+      "app": "Vector",
+      "surface": "retention",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__vector_calculations.html.txt",
+          "section": "named aggregates survive other-app launch"
+        }
+      ],
+      "initial": {
+        "app": "Vector",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        "DOWN",
+        "OK",
+        "1",
+        "EXE",
+        "2",
+        "EXE",
+        "BACK",
+        "HOME",
+        "RIGHT",
+        "OK",
+        "HOME",
+        "LEFT",
+        "OK",
+        "TOOLS",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-VCT-13-1",
+          "capture": "final",
+          "expect": {
+            "menu": {
+              "labels": [
+                "VctA: 2",
+                "VctB: None",
+                "VctC: None",
+                "VctD: None"
+              ]
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-VCT-14",
+      "title": "Vector icons",
+      "app": "Vector",
+      "surface": "icons",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__vector_calculations.html.txt",
+          "section": "icons"
+        }
+      ],
+      "initial": {
+        "app": "Vector",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        "DOWN",
+        "OK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-VCT-14-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "Target chapter does not establish exact behavior/raster for this surface.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-VCT-15",
+      "title": "Vector stale job",
+      "app": "Vector",
+      "surface": "stale job",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "SOURCE-ONLY",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__vector_calculations.html.txt",
+          "section": "stale job"
+        }
+      ],
+      "initial": {
+        "app": "Vector",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-VCT-15-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "Async generation/revision behavior is a native architecture safety contract, not externally visible target internals. Executed by P15 controller checks.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-VCT-16",
+      "title": "Vector render reference",
+      "app": "Vector",
+      "surface": "render reference",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__vector_calculations.html.txt",
+          "section": "render reference"
+        }
+      ],
+      "initial": {
+        "app": "Vector",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-VCT-16-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "No approved physical app raster; existing render fixtures are regression evidence only.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    }
+  ]
+}

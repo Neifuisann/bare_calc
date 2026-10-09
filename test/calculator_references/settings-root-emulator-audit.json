@@ -1,0 +1,1155 @@
+{
+  "provenance": "User supplied; subsequently clarified: other emulator, pasted into Paint. NOT a physical target capture.",
+  "sha256": "a255d9eb8f2ca77bc06f85bf04faf18bf891f1260a0ab6898628894d538f54bb",
+  "dimensions": [
+    192,
+    68
+  ],
+  "shades": [
+    0,
+    128,
+    192,
+    255
+  ],
+  "palette_indices": [
+    0,
+    7,
+    8,
+    15
+  ],
+  "physical_level_mapping": null,
+  "transform_candidate": {
+    "dx": 1,
+    "dy": 4,
+    "status": "bar/arrow geometry consistent; not a physical pipeline calibration"
+  },
+  "font_source_sha256": "f0c3df5d0d4a5da83ae32bb25aec8f32a73caa2d1d43af813b5bccfc1575234d",
+  "font_version": "3.009",
+  "candidate_scope": "Settings labels only; test-only grid subset",
+  "rows": [
+    {
+      "label": "Calc Settings",
+      "mismatched_pixels": 0,
+      "capture_pen_x": 2,
+      "capture_baseline": 17,
+      "classification": "MATCH",
+      "classwiz15_current_mismatched_pixels": 541
+    },
+    {
+      "label": "System Settings",
+      "mismatched_pixels": 0,
+      "capture_pen_x": 2,
+      "capture_baseline": 33,
+      "classification": "MATCH",
+      "classwiz15_current_mismatched_pixels": 658
+    },
+    {
+      "label": "Reset",
+      "mismatched_pixels": 0,
+      "capture_pen_x": 2,
+      "capture_baseline": 49,
+      "classification": "MATCH",
+      "classwiz15_current_mismatched_pixels": 233
+    },
+    {
+      "label": "Get Started",
+      "mismatched_pixels": 0,
+      "capture_pen_x": 2,
+      "capture_baseline": 65,
+      "classification": "MATCH",
+      "classwiz15_current_mismatched_pixels": 445
+    }
+  ],
+  "glyph_occurrences": [
+    {
+      "character": "C",
+      "row": 0,
+      "capture_pen_x": 2,
+      "ink_box": [
+        3,
+        5,
+        8,
+        12
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -12,
+      "classwiz15_metrics": [
+        11,
+        14,
+        11,
+        0,
+        -13
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "a",
+      "row": 0,
+      "capture_pen_x": 13,
+      "ink_box": [
+        14,
+        8,
+        8,
+        9
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -9,
+      "classwiz15_metrics": [
+        11,
+        11,
+        11,
+        0,
+        -10
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "l",
+      "row": 0,
+      "capture_pen_x": 24,
+      "ink_box": [
+        26,
+        5,
+        6,
+        12
+      ],
+      "advance": 11,
+      "bearing": 2,
+      "baseline_offset": -12,
+      "classwiz15_metrics": [
+        11,
+        14,
+        11,
+        0,
+        -13
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "c",
+      "row": 0,
+      "capture_pen_x": 35,
+      "ink_box": [
+        36,
+        8,
+        8,
+        9
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -9,
+      "classwiz15_metrics": [
+        11,
+        11,
+        11,
+        0,
+        -10
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": " ",
+      "row": 0,
+      "capture_pen_x": 46,
+      "ink_box": [
+        46,
+        17,
+        0,
+        0
+      ],
+      "advance": 11,
+      "bearing": 0,
+      "baseline_offset": 0,
+      "classwiz15_metrics": [
+        0,
+        0,
+        11,
+        0,
+        0
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "S",
+      "row": 0,
+      "capture_pen_x": 57,
+      "ink_box": [
+        58,
+        5,
+        9,
+        12
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -12,
+      "classwiz15_metrics": [
+        11,
+        14,
+        11,
+        0,
+        -13
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "e",
+      "row": 0,
+      "capture_pen_x": 68,
+      "ink_box": [
+        69,
+        8,
+        8,
+        9
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -9,
+      "classwiz15_metrics": [
+        11,
+        11,
+        11,
+        0,
+        -10
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "t",
+      "row": 0,
+      "capture_pen_x": 79,
+      "ink_box": [
+        80,
+        6,
+        7,
+        11
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -11,
+      "classwiz15_metrics": [
+        9,
+        13,
+        11,
+        0,
+        -12
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "t",
+      "row": 0,
+      "capture_pen_x": 90,
+      "ink_box": [
+        91,
+        6,
+        7,
+        11
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -11,
+      "classwiz15_metrics": [
+        9,
+        13,
+        11,
+        0,
+        -12
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "i",
+      "row": 0,
+      "capture_pen_x": 101,
+      "ink_box": [
+        103,
+        5,
+        6,
+        12
+      ],
+      "advance": 11,
+      "bearing": 2,
+      "baseline_offset": -12,
+      "classwiz15_metrics": [
+        11,
+        14,
+        11,
+        0,
+        -13
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "n",
+      "row": 0,
+      "capture_pen_x": 112,
+      "ink_box": [
+        113,
+        8,
+        8,
+        9
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -9,
+      "classwiz15_metrics": [
+        11,
+        11,
+        11,
+        0,
+        -10
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "g",
+      "row": 0,
+      "capture_pen_x": 123,
+      "ink_box": [
+        124,
+        7,
+        8,
+        11
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -10,
+      "classwiz15_metrics": [
+        11,
+        11,
+        11,
+        0,
+        -9
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "s",
+      "row": 0,
+      "capture_pen_x": 134,
+      "ink_box": [
+        135,
+        8,
+        8,
+        9
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -9,
+      "classwiz15_metrics": [
+        11,
+        11,
+        11,
+        0,
+        -10
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "S",
+      "row": 1,
+      "capture_pen_x": 2,
+      "ink_box": [
+        3,
+        21,
+        9,
+        12
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -12,
+      "classwiz15_metrics": [
+        11,
+        14,
+        11,
+        0,
+        -13
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "y",
+      "row": 1,
+      "capture_pen_x": 13,
+      "ink_box": [
+        14,
+        24,
+        8,
+        10
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -9,
+      "classwiz15_metrics": [
+        11,
+        12,
+        11,
+        0,
+        -10
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "s",
+      "row": 1,
+      "capture_pen_x": 24,
+      "ink_box": [
+        25,
+        24,
+        8,
+        9
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -9,
+      "classwiz15_metrics": [
+        11,
+        11,
+        11,
+        0,
+        -10
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "t",
+      "row": 1,
+      "capture_pen_x": 35,
+      "ink_box": [
+        36,
+        22,
+        7,
+        11
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -11,
+      "classwiz15_metrics": [
+        9,
+        13,
+        11,
+        0,
+        -12
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "e",
+      "row": 1,
+      "capture_pen_x": 46,
+      "ink_box": [
+        47,
+        24,
+        8,
+        9
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -9,
+      "classwiz15_metrics": [
+        11,
+        11,
+        11,
+        0,
+        -10
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "m",
+      "row": 1,
+      "capture_pen_x": 57,
+      "ink_box": [
+        57,
+        24,
+        10,
+        9
+      ],
+      "advance": 11,
+      "bearing": 0,
+      "baseline_offset": -9,
+      "classwiz15_metrics": [
+        11,
+        11,
+        11,
+        0,
+        -10
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": " ",
+      "row": 1,
+      "capture_pen_x": 68,
+      "ink_box": [
+        68,
+        33,
+        0,
+        0
+      ],
+      "advance": 11,
+      "bearing": 0,
+      "baseline_offset": 0,
+      "classwiz15_metrics": [
+        0,
+        0,
+        11,
+        0,
+        0
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "S",
+      "row": 1,
+      "capture_pen_x": 79,
+      "ink_box": [
+        80,
+        21,
+        9,
+        12
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -12,
+      "classwiz15_metrics": [
+        11,
+        14,
+        11,
+        0,
+        -13
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "e",
+      "row": 1,
+      "capture_pen_x": 90,
+      "ink_box": [
+        91,
+        24,
+        8,
+        9
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -9,
+      "classwiz15_metrics": [
+        11,
+        11,
+        11,
+        0,
+        -10
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "t",
+      "row": 1,
+      "capture_pen_x": 101,
+      "ink_box": [
+        102,
+        22,
+        7,
+        11
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -11,
+      "classwiz15_metrics": [
+        9,
+        13,
+        11,
+        0,
+        -12
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "t",
+      "row": 1,
+      "capture_pen_x": 112,
+      "ink_box": [
+        113,
+        22,
+        7,
+        11
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -11,
+      "classwiz15_metrics": [
+        9,
+        13,
+        11,
+        0,
+        -12
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "i",
+      "row": 1,
+      "capture_pen_x": 123,
+      "ink_box": [
+        125,
+        21,
+        6,
+        12
+      ],
+      "advance": 11,
+      "bearing": 2,
+      "baseline_offset": -12,
+      "classwiz15_metrics": [
+        11,
+        14,
+        11,
+        0,
+        -13
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "n",
+      "row": 1,
+      "capture_pen_x": 134,
+      "ink_box": [
+        135,
+        24,
+        8,
+        9
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -9,
+      "classwiz15_metrics": [
+        11,
+        11,
+        11,
+        0,
+        -10
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "g",
+      "row": 1,
+      "capture_pen_x": 145,
+      "ink_box": [
+        146,
+        23,
+        8,
+        11
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -10,
+      "classwiz15_metrics": [
+        11,
+        11,
+        11,
+        0,
+        -9
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "s",
+      "row": 1,
+      "capture_pen_x": 156,
+      "ink_box": [
+        157,
+        24,
+        8,
+        9
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -9,
+      "classwiz15_metrics": [
+        11,
+        11,
+        11,
+        0,
+        -10
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "R",
+      "row": 2,
+      "capture_pen_x": 2,
+      "ink_box": [
+        3,
+        37,
+        8,
+        12
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -12,
+      "classwiz15_metrics": [
+        11,
+        14,
+        11,
+        0,
+        -13
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "e",
+      "row": 2,
+      "capture_pen_x": 13,
+      "ink_box": [
+        14,
+        40,
+        8,
+        9
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -9,
+      "classwiz15_metrics": [
+        11,
+        11,
+        11,
+        0,
+        -10
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "s",
+      "row": 2,
+      "capture_pen_x": 24,
+      "ink_box": [
+        25,
+        40,
+        8,
+        9
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -9,
+      "classwiz15_metrics": [
+        11,
+        11,
+        11,
+        0,
+        -10
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "e",
+      "row": 2,
+      "capture_pen_x": 35,
+      "ink_box": [
+        36,
+        40,
+        8,
+        9
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -9,
+      "classwiz15_metrics": [
+        11,
+        11,
+        11,
+        0,
+        -10
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "t",
+      "row": 2,
+      "capture_pen_x": 46,
+      "ink_box": [
+        47,
+        38,
+        7,
+        11
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -11,
+      "classwiz15_metrics": [
+        9,
+        13,
+        11,
+        0,
+        -12
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "G",
+      "row": 3,
+      "capture_pen_x": 2,
+      "ink_box": [
+        3,
+        53,
+        8,
+        12
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -12,
+      "classwiz15_metrics": [
+        11,
+        14,
+        11,
+        0,
+        -13
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "e",
+      "row": 3,
+      "capture_pen_x": 13,
+      "ink_box": [
+        14,
+        56,
+        8,
+        9
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -9,
+      "classwiz15_metrics": [
+        11,
+        11,
+        11,
+        0,
+        -10
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "t",
+      "row": 3,
+      "capture_pen_x": 24,
+      "ink_box": [
+        25,
+        54,
+        7,
+        11
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -11,
+      "classwiz15_metrics": [
+        9,
+        13,
+        11,
+        0,
+        -12
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": " ",
+      "row": 3,
+      "capture_pen_x": 35,
+      "ink_box": [
+        35,
+        65,
+        0,
+        0
+      ],
+      "advance": 11,
+      "bearing": 0,
+      "baseline_offset": 0,
+      "classwiz15_metrics": [
+        0,
+        0,
+        11,
+        0,
+        0
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "S",
+      "row": 3,
+      "capture_pen_x": 46,
+      "ink_box": [
+        47,
+        53,
+        9,
+        12
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -12,
+      "classwiz15_metrics": [
+        11,
+        14,
+        11,
+        0,
+        -13
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "t",
+      "row": 3,
+      "capture_pen_x": 57,
+      "ink_box": [
+        58,
+        54,
+        7,
+        11
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -11,
+      "classwiz15_metrics": [
+        9,
+        13,
+        11,
+        0,
+        -12
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "a",
+      "row": 3,
+      "capture_pen_x": 68,
+      "ink_box": [
+        69,
+        56,
+        8,
+        9
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -9,
+      "classwiz15_metrics": [
+        11,
+        11,
+        11,
+        0,
+        -10
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "r",
+      "row": 3,
+      "capture_pen_x": 79,
+      "ink_box": [
+        81,
+        56,
+        7,
+        9
+      ],
+      "advance": 11,
+      "bearing": 2,
+      "baseline_offset": -9,
+      "classwiz15_metrics": [
+        11,
+        11,
+        11,
+        0,
+        -10
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "t",
+      "row": 3,
+      "capture_pen_x": 90,
+      "ink_box": [
+        91,
+        54,
+        7,
+        11
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -11,
+      "classwiz15_metrics": [
+        9,
+        13,
+        11,
+        0,
+        -12
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "e",
+      "row": 3,
+      "capture_pen_x": 101,
+      "ink_box": [
+        102,
+        56,
+        8,
+        9
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -9,
+      "classwiz15_metrics": [
+        11,
+        11,
+        11,
+        0,
+        -10
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    },
+    {
+      "character": "d",
+      "row": 3,
+      "capture_pen_x": 112,
+      "ink_box": [
+        113,
+        53,
+        8,
+        12
+      ],
+      "advance": 11,
+      "bearing": 1,
+      "baseline_offset": -12,
+      "classwiz15_metrics": [
+        11,
+        14,
+        11,
+        0,
+        -13
+      ],
+      "mismatched_pixels": 0,
+      "classification": "MATCH"
+    }
+  ],
+  "arrows": [
+    {
+      "row": 0,
+      "raw_shade": 192,
+      "bounds": [
+        179,
+        8,
+        186,
+        14
+      ],
+      "bitmap": [
+        "##......",
+        "####....",
+        "######..",
+        "########",
+        "######..",
+        "####....",
+        "##......"
+      ]
+    },
+    {
+      "row": 1,
+      "raw_shade": 128,
+      "bounds": [
+        179,
+        24,
+        186,
+        30
+      ],
+      "bitmap": [
+        "##......",
+        "####....",
+        "######..",
+        "########",
+        "######..",
+        "####....",
+        "##......"
+      ]
+    },
+    {
+      "row": 2,
+      "raw_shade": 128,
+      "bounds": [
+        179,
+        40,
+        186,
+        46
+      ],
+      "bitmap": [
+        "##......",
+        "####....",
+        "######..",
+        "########",
+        "######..",
+        "####....",
+        "##......"
+      ]
+    },
+    {
+      "row": 3,
+      "raw_shade": 128,
+      "bounds": [
+        179,
+        56,
+        186,
+        62
+      ],
+      "bitmap": [
+        "##......",
+        "####....",
+        "######..",
+        "########",
+        "######..",
+        "####....",
+        "##......"
+      ]
+    }
+  ]
+}

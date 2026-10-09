@@ -1,0 +1,5328 @@
+{
+ "schema": 1,
+ "phase": "P17",
+ "cases": [
+  {
+   "id": "STAT-01",
+   "title": "Statistics launch type selector",
+   "app": "Statistics",
+   "surface": "launch",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Statistical calculations: general procedure steps 1-2"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-01-1",
+     "capture": "final",
+     "expect": {
+      "screen": {
+       "id": "StatisticsType"
+      },
+      "menu": {
+       "labels": [
+        "1-Variable",
+        "2-Variable"
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-02",
+   "title": "1-variable editor",
+   "app": "Statistics",
+   "surface": "input",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Entering data with the Statistics editor"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "1",
+    "EXE",
+    "2",
+    "EXE",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-02-1",
+     "capture": "final",
+     "expect": {
+      "screen": {
+       "id": "Statistics"
+      },
+      "grid": {
+       "rows": 2,
+       "cols": 1,
+       "cells": [
+        "1",
+        "2"
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-03",
+   "title": "2-variable editor",
+   "app": "Statistics",
+   "surface": "input",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Entering data with the Statistics editor; Example 1"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "OK",
+    "1",
+    "7",
+    "0",
+    "EXE",
+    "1",
+    "7",
+    "9",
+    "EXE",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-03-1",
+     "capture": "final",
+     "expect": {
+      "screen": {
+       "id": "Statistics"
+      },
+      "grid": {
+       "rows": 2,
+       "cols": 2,
+       "cells": [
+        "170",
+        "",
+        "179",
+        ""
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-04",
+   "title": "Frequency On adds Freq",
+   "app": "Statistics",
+   "surface": "menu",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Freq column: showing the Freq column"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "7",
+    "EXE",
+    "TOOLS",
+    "OK",
+    "UP",
+    "OK",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-04-1",
+     "capture": "final",
+     "expect": {
+      "screen": {
+       "id": "Statistics"
+      },
+      "grid": {
+       "rows": 0,
+       "cols": 2
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-05",
+   "title": "Frequency Off removes Freq",
+   "app": "Statistics",
+   "surface": "menu",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Freq column: hiding the Freq column"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "7",
+    "EXE",
+    "TOOLS",
+    "OK",
+    "UP",
+    "OK",
+    "OK",
+    "TOOLS",
+    "OK",
+    "DOWN",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-05-1",
+     "capture": "final",
+     "expect": {
+      "screen": {
+       "id": "Statistics"
+      },
+      "grid": {
+       "rows": 0,
+       "cols": 1
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-06",
+   "title": "capacity 160 rows one column",
+   "app": "Statistics",
+   "surface": "input",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Data row capacity: 160 rows for one column"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-06-1",
+     "capture": "final",
+     "expect": {
+      "grid": {
+       "rows": 160,
+       "cols": 1
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-07",
+   "title": "capacity 80 rows two columns",
+   "app": "Statistics",
+   "surface": "input",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Data row capacity: 80 rows for two columns"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "OK",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-07-1",
+     "capture": "final",
+     "expect": {
+      "grid": {
+       "rows": 80,
+       "cols": 2
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-08",
+   "title": "capacity 53 rows three columns",
+   "app": "Statistics",
+   "surface": "input",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Data row capacity: 53 rows for three columns"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "OK",
+    "TOOLS",
+    "OK",
+    "UP",
+    "OK",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-08-1",
+     "capture": "final",
+     "expect": {
+      "grid": {
+       "rows": 53,
+       "cols": 3
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-09",
+   "title": "mode switch clears data",
+   "app": "Statistics",
+   "surface": "retention",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Important: switching 1-variable/2-variable clears entered data"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "4",
+    "EXE",
+    "HOME",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "RIGHT",
+    "OK",
+    "DOWN",
+    "OK",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-09-1",
+     "capture": "final",
+     "expect": {
+      "screen": {
+       "id": "Statistics"
+      },
+      "grid": {
+       "rows": 0,
+       "cols": 2
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-10",
+   "title": "Frequency change clears data",
+   "app": "Statistics",
+   "surface": "retention",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Important: changing Frequency clears entered data"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "4",
+    "EXE",
+    "TOOLS",
+    "OK",
+    "UP",
+    "OK",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-10-1",
+     "capture": "final",
+     "expect": {
+      "screen": {
+       "id": "Statistics"
+      },
+      "grid": {
+       "rows": 0,
+       "cols": 2
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-11",
+   "title": "replace a cell",
+   "app": "Statistics",
+   "surface": "input",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Editing sample data: replacing a cell"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "1",
+    "EXE",
+    "2",
+    "EXE",
+    "UP",
+    "UP",
+    "5",
+    "EXE",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-11-1",
+     "capture": "final",
+     "expect": {
+      "grid": {
+       "cells": [
+        "5",
+        "2"
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-12",
+   "title": "delete a row",
+   "app": "Statistics",
+   "surface": "input",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Editing sample data: deleting a row"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "1",
+    "EXE",
+    "2",
+    "EXE",
+    "UP",
+    "DEL",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-12-1",
+     "capture": "final",
+     "expect": {
+      "grid": {
+       "rows": 1,
+       "cells": [
+        "1"
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-13",
+   "title": "insert a row",
+   "app": "Statistics",
+   "surface": "input",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Editing sample data: inserting a row"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "1",
+    "EXE",
+    "TOOLS",
+    "DOWN",
+    "OK",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-13-1",
+     "capture": "final",
+     "expect": {
+      "grid": {
+       "rows": 2
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-14",
+   "title": "Delete All",
+   "app": "Statistics",
+   "surface": "input",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Editing sample data: deleting all editor contents"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "1",
+    "EXE",
+    "TOOLS",
+    "DOWN",
+    "OK",
+    "DOWN",
+    "OK",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-14-1",
+     "capture": "final",
+     "expect": {
+      "grid": {
+       "rows": 0
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-15",
+   "title": "sort x ascending keeps tuples",
+   "app": "Statistics",
+   "surface": "menu",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Sorting data; Example 2"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "OK",
+    "1",
+    "7",
+    "0",
+    "EXE",
+    "1",
+    "7",
+    "9",
+    "EXE",
+    "1",
+    "7",
+    "3",
+    "EXE",
+    "UP",
+    "UP",
+    "UP",
+    "RIGHT",
+    "6",
+    "6",
+    "EXE",
+    "7",
+    "5",
+    "EXE",
+    "6",
+    "8",
+    "EXE",
+    "TOOLS",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-15-1",
+     "capture": "final",
+     "expect": {
+      "grid": {
+       "cells": [
+        "170",
+        "66",
+        "173",
+        "68",
+        "179",
+        "75"
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-16",
+   "title": "sort x descending",
+   "app": "Statistics",
+   "surface": "menu",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Sorting data ascending/descending"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "OK",
+    "1",
+    "7",
+    "0",
+    "EXE",
+    "1",
+    "7",
+    "9",
+    "EXE",
+    "1",
+    "7",
+    "3",
+    "EXE",
+    "UP",
+    "UP",
+    "UP",
+    "RIGHT",
+    "6",
+    "6",
+    "EXE",
+    "7",
+    "5",
+    "EXE",
+    "6",
+    "8",
+    "EXE",
+    "TOOLS",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "DOWN",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-16-1",
+     "capture": "final",
+     "expect": {
+      "grid": {
+       "cells": [
+        "179",
+        "75",
+        "173",
+        "68",
+        "170",
+        "66"
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-17",
+   "title": "sort y descending",
+   "app": "Statistics",
+   "surface": "menu",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Sorting data on y/Freq"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "OK",
+    "1",
+    "7",
+    "0",
+    "EXE",
+    "1",
+    "7",
+    "9",
+    "EXE",
+    "1",
+    "7",
+    "3",
+    "EXE",
+    "UP",
+    "UP",
+    "UP",
+    "RIGHT",
+    "6",
+    "6",
+    "EXE",
+    "7",
+    "5",
+    "EXE",
+    "6",
+    "8",
+    "EXE",
+    "TOOLS",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-17-1",
+     "capture": "final",
+     "expect": {
+      "grid": {
+       "cells": [
+        "179",
+        "75",
+        "173",
+        "68",
+        "170",
+        "66"
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-18",
+   "title": "sort Freq ascending",
+   "app": "Statistics",
+   "surface": "menu",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Sorting data on y/Freq"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "TOOLS",
+    "OK",
+    "UP",
+    "OK",
+    "2",
+    "EXE",
+    "1",
+    "EXE",
+    "UP",
+    "UP",
+    "RIGHT",
+    "1",
+    "EXE",
+    "2",
+    "EXE",
+    "TOOLS",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "DOWN",
+    "DOWN",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-18-1",
+     "capture": "final",
+     "expect": {
+      "grid": {
+       "cells": [
+        "2",
+        "1",
+        "1",
+        "2"
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-19",
+   "title": "store a statistics cell",
+   "app": "Statistics",
+   "surface": "menu",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Statistics editor: storing a cell value in a variable"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "5",
+    "EXE",
+    "UP",
+    "VARIABLE",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "LEFT",
+    "OK",
+    "DOWN",
+    "OK",
+    "BACK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-19-1",
+     "capture": "final",
+     "expect": {
+      "screen": {
+       "id": "Statistics"
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-20",
+   "title": "manual 1-Var Results dataset",
+   "app": "Statistics",
+   "surface": "result",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Displaying 1-variable results; Example 3"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "1",
+    "EXE",
+    "2",
+    "EXE",
+    "3",
+    "EXE",
+    "4",
+    "EXE",
+    "5",
+    "EXE",
+    "6",
+    "EXE",
+    "7",
+    "EXE",
+    "8",
+    "EXE",
+    "9",
+    "EXE",
+    "1",
+    "0",
+    "EXE",
+    "TOOLS",
+    "OK",
+    "UP",
+    "OK",
+    "OK",
+    "1",
+    "EXE",
+    "2",
+    "EXE",
+    "3",
+    "EXE",
+    "4",
+    "EXE",
+    "5",
+    "EXE",
+    "6",
+    "EXE",
+    "7",
+    "EXE",
+    "8",
+    "EXE",
+    "9",
+    "EXE",
+    "1",
+    "0",
+    "EXE",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "RIGHT",
+    "1",
+    "EXE",
+    "2",
+    "EXE",
+    "1",
+    "EXE",
+    "2",
+    "EXE",
+    "2",
+    "EXE",
+    "2",
+    "EXE",
+    "3",
+    "EXE",
+    "4",
+    "EXE",
+    "2",
+    "EXE",
+    "1",
+    "EXE",
+    "OK",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-20-1",
+     "capture": "final",
+     "expect": {
+      "screen": {
+       "id": "StatisticsResults"
+      },
+      "menu": {
+       "labels": [
+        "xbar=5.95",
+        "sumX=119",
+        "sumX2=837",
+        "popVarX=6.4475",
+        "popSdX=2.539192785",
+        "smpVarX=6.786842105",
+        "smpSdX=2.605156829",
+        "n=20",
+        "minX=1",
+        "Q1=4",
+        "Med=6.5",
+        "Q3=8",
+        "maxX=10"
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-21",
+   "title": "manual 2-Var Results dataset",
+   "app": "Statistics",
+   "surface": "result",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Displaying 2-variable results; Example 4"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "OK",
+    "1",
+    "DOT",
+    "0",
+    "EXE",
+    "1",
+    "DOT",
+    "2",
+    "EXE",
+    "1",
+    "DOT",
+    "5",
+    "EXE",
+    "1",
+    "DOT",
+    "6",
+    "EXE",
+    "1",
+    "DOT",
+    "9",
+    "EXE",
+    "2",
+    "DOT",
+    "1",
+    "EXE",
+    "2",
+    "DOT",
+    "4",
+    "EXE",
+    "2",
+    "DOT",
+    "5",
+    "EXE",
+    "2",
+    "DOT",
+    "7",
+    "EXE",
+    "3",
+    "DOT",
+    "0",
+    "EXE",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "RIGHT",
+    "1",
+    "DOT",
+    "0",
+    "EXE",
+    "1",
+    "DOT",
+    "1",
+    "EXE",
+    "1",
+    "DOT",
+    "2",
+    "EXE",
+    "1",
+    "DOT",
+    "3",
+    "EXE",
+    "1",
+    "DOT",
+    "4",
+    "EXE",
+    "1",
+    "DOT",
+    "5",
+    "EXE",
+    "1",
+    "DOT",
+    "6",
+    "EXE",
+    "1",
+    "DOT",
+    "7",
+    "EXE",
+    "1",
+    "DOT",
+    "8",
+    "EXE",
+    "2",
+    "DOT",
+    "0",
+    "EXE",
+    "OK",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-21-1",
+     "capture": "final",
+     "expect": {
+      "screen": {
+       "id": "StatisticsResults"
+      },
+      "menu": {
+       "labels": [
+        "xbar=1.99",
+        "sumX=19.9",
+        "sumX2=43.57",
+        "popVarX=0.3969",
+        "popSdX=0.63",
+        "smpVarX=0.441",
+        "smpSdX=0.6640783086",
+        "n=10",
+        "ybar=1.46",
+        "sumY=14.6",
+        "sumY2=22.24",
+        "popVarY=0.0924",
+        "popSdY=0.3039736831",
+        "smpVarY=0.1026666667",
+        "smpSdY=0.3204163958",
+        "sumXY=30.96",
+        "sumX3=102.451",
+        "sumX2Y=71.244",
+        "sumX4=253.5541",
+        "minX=1",
+        "maxX=3",
+        "minY=1",
+        "maxY=2"
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-22",
+   "title": "linear regression a/b/r",
+   "app": "Statistics",
+   "surface": "result",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Displaying regression results; Example 5 (linear)"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "OK",
+    "1",
+    "DOT",
+    "0",
+    "EXE",
+    "1",
+    "DOT",
+    "2",
+    "EXE",
+    "1",
+    "DOT",
+    "5",
+    "EXE",
+    "1",
+    "DOT",
+    "6",
+    "EXE",
+    "1",
+    "DOT",
+    "9",
+    "EXE",
+    "2",
+    "DOT",
+    "1",
+    "EXE",
+    "2",
+    "DOT",
+    "4",
+    "EXE",
+    "2",
+    "DOT",
+    "5",
+    "EXE",
+    "2",
+    "DOT",
+    "7",
+    "EXE",
+    "3",
+    "DOT",
+    "0",
+    "EXE",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "RIGHT",
+    "1",
+    "DOT",
+    "0",
+    "EXE",
+    "1",
+    "DOT",
+    "1",
+    "EXE",
+    "1",
+    "DOT",
+    "2",
+    "EXE",
+    "1",
+    "DOT",
+    "3",
+    "EXE",
+    "1",
+    "DOT",
+    "4",
+    "EXE",
+    "1",
+    "DOT",
+    "5",
+    "EXE",
+    "1",
+    "DOT",
+    "6",
+    "EXE",
+    "1",
+    "DOT",
+    "7",
+    "EXE",
+    "1",
+    "DOT",
+    "8",
+    "EXE",
+    "2",
+    "DOT",
+    "0",
+    "EXE",
+    "OK",
+    "DOWN",
+    "OK",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-22-1",
+     "capture": "final",
+     "expect": {
+      "screen": {
+       "id": "StatisticsResults"
+      },
+      "menu": {
+       "labels": [
+        "a=0.5043587805",
+        "b=0.4802217183",
+        "r=0.9952824846"
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-23",
+   "title": "quadratic regression a/b/c",
+   "app": "Statistics",
+   "surface": "result",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Displaying regression results; Example 5 (quadratic)"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "OK",
+    "1",
+    "DOT",
+    "0",
+    "EXE",
+    "1",
+    "DOT",
+    "2",
+    "EXE",
+    "1",
+    "DOT",
+    "5",
+    "EXE",
+    "1",
+    "DOT",
+    "6",
+    "EXE",
+    "1",
+    "DOT",
+    "9",
+    "EXE",
+    "2",
+    "DOT",
+    "1",
+    "EXE",
+    "2",
+    "DOT",
+    "4",
+    "EXE",
+    "2",
+    "DOT",
+    "5",
+    "EXE",
+    "2",
+    "DOT",
+    "7",
+    "EXE",
+    "3",
+    "DOT",
+    "0",
+    "EXE",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "RIGHT",
+    "1",
+    "DOT",
+    "0",
+    "EXE",
+    "1",
+    "DOT",
+    "1",
+    "EXE",
+    "1",
+    "DOT",
+    "2",
+    "EXE",
+    "1",
+    "DOT",
+    "3",
+    "EXE",
+    "1",
+    "DOT",
+    "4",
+    "EXE",
+    "1",
+    "DOT",
+    "5",
+    "EXE",
+    "1",
+    "DOT",
+    "6",
+    "EXE",
+    "1",
+    "DOT",
+    "7",
+    "EXE",
+    "1",
+    "DOT",
+    "8",
+    "EXE",
+    "2",
+    "DOT",
+    "0",
+    "EXE",
+    "OK",
+    "DOWN",
+    "OK",
+    "DOWN",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-23-1",
+     "capture": "final",
+     "expect": {
+      "screen": {
+       "id": "StatisticsResults"
+      },
+      "menu": {
+       "labels": [
+        "a=0.7028598638",
+        "b=0.2576384379",
+        "c=0.05610274153"
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-24",
+   "title": "logarithmic regression domain",
+   "app": "Statistics",
+   "surface": "error",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Supported regression types: logarithmic y=a+b*ln(x)"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "OK",
+    "SUBTRACT",
+    "1",
+    "EXE",
+    "2",
+    "EXE",
+    "3",
+    "EXE",
+    "UP",
+    "UP",
+    "UP",
+    "RIGHT",
+    "1",
+    "EXE",
+    "2",
+    "EXE",
+    "3",
+    "EXE",
+    "OK",
+    "DOWN",
+    "OK",
+    "DOWN",
+    "DOWN",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-24-1",
+     "capture": "final",
+     "expect": {
+      "screen": {
+       "id": "ErrorDialog"
+      },
+      "error": {
+       "title": "Math ERROR"
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "LIKELY",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-25",
+   "title": "e exponential regression domain",
+   "app": "Statistics",
+   "surface": "error",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Supported regression types: exponential y=a*e^(bx)"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "OK",
+    "1",
+    "EXE",
+    "2",
+    "EXE",
+    "UP",
+    "UP",
+    "RIGHT",
+    "SUBTRACT",
+    "1",
+    "EXE",
+    "2",
+    "EXE",
+    "OK",
+    "DOWN",
+    "OK",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-25-1",
+     "capture": "final",
+     "expect": {
+      "screen": {
+       "id": "ErrorDialog"
+      },
+      "error": {
+       "title": "Math ERROR"
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "LIKELY",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-26",
+   "title": "ab exponential exact fit",
+   "app": "Statistics",
+   "surface": "result",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Supported regression types: y=a*b^x"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "OK",
+    "0",
+    "EXE",
+    "1",
+    "EXE",
+    "2",
+    "EXE",
+    "UP",
+    "UP",
+    "UP",
+    "RIGHT",
+    "2",
+    "EXE",
+    "3",
+    "EXE",
+    "4",
+    "DOT",
+    "5",
+    "EXE",
+    "OK",
+    "DOWN",
+    "OK",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-26-1",
+     "capture": "final",
+     "expect": {
+      "menu": {
+       "labels": [
+        "a=2",
+        "b=1.5",
+        "r=1"
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "LIKELY",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-27",
+   "title": "power exact fit",
+   "app": "Statistics",
+   "surface": "result",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Supported regression types: y=a*x^b"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "OK",
+    "1",
+    "EXE",
+    "4",
+    "EXE",
+    "9",
+    "EXE",
+    "UP",
+    "UP",
+    "UP",
+    "RIGHT",
+    "2",
+    "EXE",
+    "1",
+    "6",
+    "EXE",
+    "5",
+    "4",
+    "EXE",
+    "OK",
+    "DOWN",
+    "OK",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-27-1",
+     "capture": "final",
+     "expect": {
+      "menu": {
+       "labels": [
+        "a=2",
+        "b=1.5",
+        "r=1"
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "LIKELY",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-28",
+   "title": "inverse exact fit",
+   "app": "Statistics",
+   "surface": "result",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Supported regression types: y=a+b/x"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "OK",
+    "1",
+    "EXE",
+    "2",
+    "EXE",
+    "3",
+    "EXE",
+    "UP",
+    "UP",
+    "UP",
+    "RIGHT",
+    "5",
+    "EXE",
+    "3",
+    "DOT",
+    "5",
+    "EXE",
+    "3",
+    "EXE",
+    "OK",
+    "DOWN",
+    "OK",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-28-1",
+     "capture": "final",
+     "expect": {
+      "menu": {
+       "labels": [
+        "a=2",
+        "b=3",
+        "r=1"
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "LIKELY",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-29",
+   "title": "correlation through Statistics Calc",
+   "app": "Statistics",
+   "surface": "result",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Statistics Calc; Example 7 (a, b, r)"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "OK",
+    "1",
+    "DOT",
+    "0",
+    "EXE",
+    "1",
+    "DOT",
+    "2",
+    "EXE",
+    "1",
+    "DOT",
+    "5",
+    "EXE",
+    "1",
+    "DOT",
+    "6",
+    "EXE",
+    "1",
+    "DOT",
+    "9",
+    "EXE",
+    "2",
+    "DOT",
+    "1",
+    "EXE",
+    "2",
+    "DOT",
+    "4",
+    "EXE",
+    "2",
+    "DOT",
+    "5",
+    "EXE",
+    "2",
+    "DOT",
+    "7",
+    "EXE",
+    "3",
+    "DOT",
+    "0",
+    "EXE",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "RIGHT",
+    "1",
+    "DOT",
+    "0",
+    "EXE",
+    "1",
+    "DOT",
+    "1",
+    "EXE",
+    "1",
+    "DOT",
+    "2",
+    "EXE",
+    "1",
+    "DOT",
+    "3",
+    "EXE",
+    "1",
+    "DOT",
+    "4",
+    "EXE",
+    "1",
+    "DOT",
+    "5",
+    "EXE",
+    "1",
+    "DOT",
+    "6",
+    "EXE",
+    "1",
+    "DOT",
+    "7",
+    "EXE",
+    "1",
+    "DOT",
+    "8",
+    "EXE",
+    "2",
+    "DOT",
+    "0",
+    "EXE",
+    "OK",
+    "DOWN",
+    "OK",
+    "OK",
+    "BACK",
+    "OK",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "CATALOG",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "EXE",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-29-1",
+     "capture": "final",
+     "expect": {
+      "screen": {
+       "id": "StatisticsCalcResult"
+      },
+      "result": {
+       "text": "0.9952824846"
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-30",
+   "title": "Statistics Calc summation and mean",
+   "app": "Statistics",
+   "surface": "result",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Statistics Calc; Example 6 (sum x, mean x)"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "1",
+    "EXE",
+    "2",
+    "EXE",
+    "3",
+    "EXE",
+    "4",
+    "EXE",
+    "5",
+    "EXE",
+    "6",
+    "EXE",
+    "7",
+    "EXE",
+    "8",
+    "EXE",
+    "9",
+    "EXE",
+    "1",
+    "0",
+    "EXE",
+    "TOOLS",
+    "OK",
+    "UP",
+    "OK",
+    "OK",
+    "1",
+    "EXE",
+    "2",
+    "EXE",
+    "3",
+    "EXE",
+    "4",
+    "EXE",
+    "5",
+    "EXE",
+    "6",
+    "EXE",
+    "7",
+    "EXE",
+    "8",
+    "EXE",
+    "9",
+    "EXE",
+    "1",
+    "0",
+    "EXE",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "RIGHT",
+    "1",
+    "EXE",
+    "2",
+    "EXE",
+    "1",
+    "EXE",
+    "2",
+    "EXE",
+    "2",
+    "EXE",
+    "2",
+    "EXE",
+    "3",
+    "EXE",
+    "4",
+    "EXE",
+    "2",
+    "EXE",
+    "1",
+    "EXE",
+    "OK",
+    "DOWN",
+    "OK",
+    "CATALOG",
+    "OK",
+    "OK",
+    "EXE",
+    {
+     "capture": "mid"
+    },
+    "BACK",
+    "AC",
+    "CATALOG",
+    "DOWN",
+    "OK",
+    "OK",
+    "EXE",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-30-1",
+     "capture": "mid",
+     "expect": {
+      "result": {
+       "text": "119"
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    },
+    {
+     "id": "STAT-30-2",
+     "capture": "final",
+     "expect": {
+      "screen": {
+       "id": "StatisticsCalcResult"
+      },
+      "result": {
+       "text": "5.95"
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-31",
+   "title": "Statistics CATALOG groups",
+   "app": "Statistics",
+   "surface": "menu",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Statistical variables and functions via CATALOG"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "OK",
+    "DOWN",
+    "OK",
+    "CATALOG",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-31-1",
+     "capture": "final",
+     "expect": {
+      "screen": {
+       "id": "StatisticsCatalog"
+      },
+      "menu": {
+       "labels": [
+        "Summation",
+        "Mean/Var/Dev...",
+        "Min/Max/Quartile",
+        "Norm Dist"
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-32",
+   "title": "estimated y value",
+   "app": "Statistics",
+   "surface": "result",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Estimated values; Example 9 (yHat 5.5)"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "OK",
+    "1",
+    "DOT",
+    "0",
+    "EXE",
+    "1",
+    "DOT",
+    "2",
+    "EXE",
+    "1",
+    "DOT",
+    "5",
+    "EXE",
+    "1",
+    "DOT",
+    "6",
+    "EXE",
+    "1",
+    "DOT",
+    "9",
+    "EXE",
+    "2",
+    "DOT",
+    "1",
+    "EXE",
+    "2",
+    "DOT",
+    "4",
+    "EXE",
+    "2",
+    "DOT",
+    "5",
+    "EXE",
+    "2",
+    "DOT",
+    "7",
+    "EXE",
+    "3",
+    "DOT",
+    "0",
+    "EXE",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "RIGHT",
+    "1",
+    "DOT",
+    "0",
+    "EXE",
+    "1",
+    "DOT",
+    "1",
+    "EXE",
+    "1",
+    "DOT",
+    "2",
+    "EXE",
+    "1",
+    "DOT",
+    "3",
+    "EXE",
+    "1",
+    "DOT",
+    "4",
+    "EXE",
+    "1",
+    "DOT",
+    "5",
+    "EXE",
+    "1",
+    "DOT",
+    "6",
+    "EXE",
+    "1",
+    "DOT",
+    "7",
+    "EXE",
+    "1",
+    "DOT",
+    "8",
+    "EXE",
+    "2",
+    "DOT",
+    "0",
+    "EXE",
+    "OK",
+    "DOWN",
+    "OK",
+    "OK",
+    "BACK",
+    "OK",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "5",
+    "DOT",
+    "5",
+    "CATALOG",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "EXE",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-32-1",
+     "capture": "final",
+     "expect": {
+      "screen": {
+       "id": "StatisticsCalcResult"
+      },
+      "result": {
+       "text": "3.145578231"
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-33",
+   "title": "estimated x value",
+   "app": "Statistics",
+   "surface": "result",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Estimated values: xHat for an entered y"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "OK",
+    "1",
+    "DOT",
+    "0",
+    "EXE",
+    "1",
+    "DOT",
+    "2",
+    "EXE",
+    "1",
+    "DOT",
+    "5",
+    "EXE",
+    "1",
+    "DOT",
+    "6",
+    "EXE",
+    "1",
+    "DOT",
+    "9",
+    "EXE",
+    "2",
+    "DOT",
+    "1",
+    "EXE",
+    "2",
+    "DOT",
+    "4",
+    "EXE",
+    "2",
+    "DOT",
+    "5",
+    "EXE",
+    "2",
+    "DOT",
+    "7",
+    "EXE",
+    "3",
+    "DOT",
+    "0",
+    "EXE",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "RIGHT",
+    "1",
+    "DOT",
+    "0",
+    "EXE",
+    "1",
+    "DOT",
+    "1",
+    "EXE",
+    "1",
+    "DOT",
+    "2",
+    "EXE",
+    "1",
+    "DOT",
+    "3",
+    "EXE",
+    "1",
+    "DOT",
+    "4",
+    "EXE",
+    "1",
+    "DOT",
+    "5",
+    "EXE",
+    "1",
+    "DOT",
+    "6",
+    "EXE",
+    "1",
+    "DOT",
+    "7",
+    "EXE",
+    "1",
+    "DOT",
+    "8",
+    "EXE",
+    "2",
+    "DOT",
+    "0",
+    "EXE",
+    "OK",
+    "DOWN",
+    "OK",
+    "OK",
+    "BACK",
+    "OK",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "2",
+    "CATALOG",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "EXE",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-33-1",
+     "capture": "final",
+     "expect": {
+      "screen": {
+       "id": "StatisticsCalcResult"
+      },
+      "result": {
+       "text": "3.114480588"
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-34",
+   "title": "standardized t and P(t)",
+   "app": "Statistics",
+   "surface": "result",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Normal distribution with 1-variable data; Example 8"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "1",
+    "EXE",
+    "2",
+    "EXE",
+    "3",
+    "EXE",
+    "4",
+    "EXE",
+    "5",
+    "EXE",
+    "6",
+    "EXE",
+    "7",
+    "EXE",
+    "8",
+    "EXE",
+    "9",
+    "EXE",
+    "1",
+    "0",
+    "EXE",
+    "TOOLS",
+    "OK",
+    "UP",
+    "OK",
+    "OK",
+    "1",
+    "EXE",
+    "2",
+    "EXE",
+    "3",
+    "EXE",
+    "4",
+    "EXE",
+    "5",
+    "EXE",
+    "6",
+    "EXE",
+    "7",
+    "EXE",
+    "8",
+    "EXE",
+    "9",
+    "EXE",
+    "1",
+    "0",
+    "EXE",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "RIGHT",
+    "1",
+    "EXE",
+    "2",
+    "EXE",
+    "1",
+    "EXE",
+    "2",
+    "EXE",
+    "2",
+    "EXE",
+    "2",
+    "EXE",
+    "3",
+    "EXE",
+    "4",
+    "EXE",
+    "2",
+    "EXE",
+    "1",
+    "EXE",
+    "OK",
+    "DOWN",
+    "OK",
+    "AC",
+    "2",
+    "CATALOG",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "EXE",
+    {
+     "capture": "mid"
+    },
+    "BACK",
+    "AC",
+    "CATALOG",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "OK",
+    "ANS",
+    "CLOSE",
+    "EXE",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-34-1",
+     "capture": "mid",
+     "expect": {
+      "result": {
+       "text": "-1.555612486"
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    },
+    {
+     "id": "STAT-34-2",
+     "capture": "final",
+     "expect": {
+      "result": {
+       "text": "0.05990013396"
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-35",
+   "title": "stale statistics result",
+   "app": "Statistics",
+   "surface": "stale job",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Statistics ownership snapshot"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "OK",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-35-1",
+     "capture": "final",
+     "expect": null,
+     "native": "pending",
+     "evidence": "PENDING",
+     "confidence": "UNKNOWN",
+     "owner": "P17",
+     "reason": "reference runner drains after every key; no no-drain interleaving possible",
+     "resolution": "native coverage in calculator_apps_p17_test.h"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pending",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-36",
+   "title": "HOME reopen preserves dataset",
+   "app": "Statistics",
+   "surface": "retention",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Retention beyond type/Frequency clears is target-unresolved"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "4",
+    "EXE",
+    "HOME",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "RIGHT",
+    "OK",
+    "OK",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-36-1",
+     "capture": "final",
+     "expect": null,
+     "native": "pending",
+     "evidence": "PENDING",
+     "confidence": "UNKNOWN",
+     "owner": "P17",
+     "reason": "Statistics retention beyond the documented clears is provisional (O-1)",
+     "resolution": "physical retention observation"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pending",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-37",
+   "title": "result and menu raster",
+   "app": "Statistics",
+   "surface": "render reference",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Manual screenshots"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-37-1",
+     "capture": "final",
+     "expect": null,
+     "native": "pending",
+     "evidence": "PENDING",
+     "confidence": "UNKNOWN",
+     "owner": "P17",
+     "reason": "exact raster needs hardware captures",
+     "resolution": "P20 panel captures"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pending",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-38",
+   "title": "Insert Row at capacity 1 column",
+   "app": "Statistics",
+   "surface": "error",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Data row capacity: 160 rows for one column"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "TOOLS",
+    "DOWN",
+    "OK",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-38-1",
+     "capture": "final",
+     "expect": null,
+     "native": "pending",
+     "evidence": "PENDING",
+     "confidence": "UNKNOWN",
+     "owner": "P17",
+     "reason": "manual names no over-capacity error; provisional Range ERROR",
+     "resolution": "target error evidence"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pending",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-39",
+   "title": "Insert Row at capacity 2 columns",
+   "app": "Statistics",
+   "surface": "error",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Data row capacity: 80 rows for two columns"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "OK",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "TOOLS",
+    "DOWN",
+    "OK",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-39-1",
+     "capture": "final",
+     "expect": null,
+     "native": "pending",
+     "evidence": "PENDING",
+     "confidence": "UNKNOWN",
+     "owner": "P17",
+     "reason": "manual names no over-capacity error",
+     "resolution": "target error evidence"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pending",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-40",
+   "title": "Insert Row at capacity 3 columns",
+   "app": "Statistics",
+   "surface": "error",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Data row capacity: 53 rows for three columns"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "OK",
+    "TOOLS",
+    "OK",
+    "UP",
+    "OK",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "TOOLS",
+    "DOWN",
+    "OK",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-40-1",
+     "capture": "final",
+     "expect": null,
+     "native": "pending",
+     "evidence": "PENDING",
+     "confidence": "UNKNOWN",
+     "owner": "P17",
+     "reason": "manual names no over-capacity error",
+     "resolution": "target error evidence"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pending",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-41",
+   "title": "Frequency default state",
+   "app": "Statistics",
+   "surface": "menu",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Freq column default"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-41-1",
+     "capture": "final",
+     "expect": null,
+     "native": "pending",
+     "evidence": "PENDING",
+     "confidence": "UNKNOWN",
+     "owner": "P17",
+     "reason": "manual states no default Frequency; provisional Off",
+     "resolution": "target default evidence"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pending",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-42",
+   "title": "single observation sample variance",
+   "app": "Statistics",
+   "surface": "result",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "1-variable results with n = 1"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "4",
+    "EXE",
+    "OK",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-42-1",
+     "capture": "final",
+     "expect": null,
+     "native": "pending",
+     "evidence": "PENDING",
+     "confidence": "UNKNOWN",
+     "owner": "P17",
+     "reason": "undefined-quantity presentation is provisional",
+     "resolution": "target single-row observation"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pending",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-43",
+   "title": "quadratic estimated x pair",
+   "app": "Statistics",
+   "surface": "result",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__statistical_calculations.html.txt",
+     "section": "Estimated values: xHat1/xHat2 for quadratic"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "OK",
+    "1",
+    "EXE",
+    "2",
+    "EXE",
+    "3",
+    "EXE",
+    "UP",
+    "UP",
+    "UP",
+    "RIGHT",
+    "3",
+    "DOT",
+    "5",
+    "EXE",
+    "7",
+    "EXE",
+    "1",
+    "1",
+    "DOT",
+    "5",
+    "EXE",
+    "OK",
+    "DOWN",
+    "OK",
+    "DOWN",
+    "OK",
+    "BACK",
+    "OK",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "8",
+    "CATALOG",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "EXE",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-43-1",
+     "capture": "final",
+     "expect": {
+      "screen": {
+       "id": "StatisticsCalcResult"
+      },
+      "result": {
+       "text": "2.242640687"
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "LIKELY",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-44",
+   "title": "Frequency seeds Freq=1 on x entry",
+   "app": "Statistics",
+   "surface": "input",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-HW",
+     "evidence": "CW panel capture: user-provided fx-991 CN CW Statistics photos (16 frames: editor, TOOLS/Frequency, results pages, Clear Data?)",
+     "section": "Editor with the Freq column: entered rows carry Freq 1"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "TOOLS",
+    "OK",
+    "UP",
+    "OK",
+    "5",
+    "EXE",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-44-1",
+     "capture": "final",
+     "expect": {
+      "screen": {
+       "id": "Statistics"
+      },
+      "grid": {
+       "rows": 1,
+       "cols": 2,
+       "cells": [
+        "5",
+        "1"
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-45",
+   "title": "Clear Data confirm on Delete All",
+   "app": "Statistics",
+   "surface": "input",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-HW",
+     "evidence": "CW panel capture: user-provided fx-991 CN CW Statistics photos (16 frames: editor, TOOLS/Frequency, results pages, Clear Data?)",
+     "section": "Delete All asks Clear Data? Yes/Cancel; Cancel preserves data"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "1",
+    "EXE",
+    "TOOLS",
+    "DOWN",
+    "OK",
+    "DOWN",
+    "OK",
+    {
+     "capture": "mid"
+    },
+    "DOWN",
+    "OK",
+    {
+     "capture": "cancelled"
+    },
+    "TOOLS",
+    "DOWN",
+    "OK",
+    "DOWN",
+    "OK",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-45-1",
+     "capture": "mid",
+     "expect": {
+      "screen": {
+       "id": "StatisticsConfirm"
+      },
+      "menu": {
+       "labels": [
+        "Yes",
+        "Cancel"
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    },
+    {
+     "id": "STAT-45-2",
+     "capture": "cancelled",
+     "expect": {
+      "screen": {
+       "id": "Statistics"
+      },
+      "grid": {
+       "rows": 1
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    },
+    {
+     "id": "STAT-45-3",
+     "capture": "final",
+     "expect": {
+      "grid": {
+       "rows": 0
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-46",
+   "title": "typing echoes on the grid",
+   "app": "Statistics",
+   "surface": "input",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-HW",
+     "evidence": "CW panel capture: user-provided fx-991 CN CW Statistics photos (16 frames: editor, TOOLS/Frequency, results pages, Clear Data?)",
+     "section": "Editor typing echo with the grid visible"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "1",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-46-1",
+     "capture": "final",
+     "expect": {
+      "screen": {
+       "id": "Statistics"
+      },
+      "grid": {
+       "rows": 0,
+       "editing": true
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "STAT-47",
+   "title": "Clear Data confirm on mode switch",
+   "app": "Statistics",
+   "surface": "retention",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-HW",
+     "evidence": "CW panel capture: user-provided fx-991 CN CW Statistics photos (16 frames: editor, TOOLS/Frequency, results pages, Clear Data?)",
+     "section": "Switching 1-variable/2-variable asks Clear Data? first"
+    }
+   ],
+   "initial": {
+    "app": "Statistics",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "4",
+    "EXE",
+    "HOME",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "RIGHT",
+    "OK",
+    "DOWN",
+    "OK",
+    {
+     "capture": "mid"
+    },
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "STAT-47-1",
+     "capture": "mid",
+     "expect": {
+      "screen": {
+       "id": "StatisticsConfirm"
+      },
+      "menu": {
+       "labels": [
+        "Yes",
+        "Cancel"
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    },
+    {
+     "id": "STAT-47-2",
+     "capture": "final",
+     "expect": {
+      "screen": {
+       "id": "Statistics"
+      },
+      "grid": {
+       "rows": 0,
+       "cols": 2
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  }
+ ]
+}

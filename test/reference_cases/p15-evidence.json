@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "target": "fx-880BTG PLUS",
+  "physical_app_capture": null,
+  "physical_owner": "P15/P20 physical",
+  "cw": {
+    "model": "fx-991CN CW Ver A",
+    "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+    "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+    "cold_probe": "P15-CW-CX",
+    "local_artifacts": "../../../991CN-X-CW-Decompilation/calc-reference-kit/store/P15-CW-CX-kpvnsfv_/",
+    "sequence": "cold AC OK; HOME RIGHT RIGHT RIGHT RIGHT RIGHT OK; entry; 2 ADD 3 SHIFT 9 EXE; result; FORMAT; menu",
+    "reviewed_facts": {
+      "entry_icons": ["MATH", "D", "i"],
+      "rectangular_result": "2+3i",
+      "rectangular_icons": ["MATH", "D", "i", "UP"],
+      "format_concepts_in_order": ["Standard", "Decimal", "Rectangular", "Polar"],
+      "format_icons": []
+    },
+    "ignore": ["SUN"],
+    "scope_limit": "Only shared Complex concepts. CN Home index 5 and Chinese labels are not target expectations. No ROM pixels are redistributed.",
+    "polar_followup": {
+      "status": "PENDING",
+      "reason": "Both OK/EXE fixed-tick follow-ups still captured the selected FORMAT row, not a completed polar result. Do not treat an uncompleted replay as an icon rule.",
+      "owner": "P15/P20 reference",
+      "resolution": "Add an explicitly timed completion probe, or capture the physical target. Target icon semantics already have independent manual evidence."
+    }
+  }
+}

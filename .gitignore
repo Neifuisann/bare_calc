@@ -1,0 +1,5 @@
+# Host check outputs (tools/check.ps1) and bake audits
+.build/
+tools/out/
+__pycache__/
+.vscode/

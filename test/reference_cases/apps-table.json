@@ -1,0 +1,2142 @@
+{
+  "schema": 1,
+  "phase": "P16",
+  "cases": [
+    {
+      "id": "P16-TABLE-01",
+      "title": "undefined Table launch",
+      "app": "Table",
+      "surface": "undefined Table launch",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__creating_a_number_table.html.txt",
+          "section": "undefined Table launch"
+        }
+      ],
+      "initial": {
+        "app": "Table",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-TABLE-01-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Table"
+            },
+            "grid": {
+              "rows": 0,
+              "cols": 3
+            },
+            "notice": "Not Defined"
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-TABLE-02",
+      "title": "exact three Table Types",
+      "app": "Table",
+      "surface": "exact three Table Types",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__creating_a_number_table.html.txt",
+          "section": "exact three Table Types"
+        }
+      ],
+      "initial": {
+        "app": "Table",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "DOWN",
+        "DOWN",
+        "OK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-TABLE-02-1",
+          "capture": "final",
+          "expect": {
+            "menu": {
+              "labels": [
+                "f(x)/g(x)",
+                "f(x)",
+                "g(x)"
+              ]
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-TABLE-03",
+      "title": "single f mode",
+      "app": "Table",
+      "surface": "single f mode",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__creating_a_number_table.html.txt",
+          "section": "single f mode"
+        }
+      ],
+      "initial": {
+        "app": "Table",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "DOWN",
+        "OK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-TABLE-03-1",
+          "capture": "final",
+          "expect": {
+            "grid": {
+              "cols": 2,
+              "rows": 0
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-TABLE-04",
+      "title": "single g mode",
+      "app": "Table",
+      "surface": "single g mode",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__creating_a_number_table.html.txt",
+          "section": "single g mode"
+        }
+      ],
+      "initial": {
+        "app": "Table",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "DOWN",
+        "DOWN",
+        "OK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-TABLE-04-1",
+          "capture": "final",
+          "expect": {
+            "grid": {
+              "cols": 2
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-TABLE-05",
+      "title": "shared Define f editor",
+      "app": "Table",
+      "surface": "shared Define f editor",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__creating_a_number_table.html.txt",
+          "section": "shared Define f editor"
+        }
+      ],
+      "initial": {
+        "app": "Table",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "DOWN",
+        "OK",
+        "OK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-TABLE-05-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Define"
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-TABLE-06",
+      "title": "shared Define g editor",
+      "app": "Table",
+      "surface": "shared Define g editor",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__creating_a_number_table.html.txt",
+          "section": "shared Define g editor"
+        }
+      ],
+      "initial": {
+        "app": "Table",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "DOWN",
+        "OK",
+        "DOWN",
+        "OK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-TABLE-06-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Define"
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-TABLE-07",
+      "title": "range Start End Step Execute",
+      "app": "Table",
+      "surface": "range Start End Step Execute",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__creating_a_number_table.html.txt",
+          "section": "range Start End Step Execute"
+        }
+      ],
+      "initial": {
+        "app": "Table",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-TABLE-07-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "TableRange"
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-TABLE-08",
+      "title": "manual example real evaluation",
+      "app": "Table",
+      "surface": "manual example real evaluation",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__creating_a_number_table.html.txt",
+          "section": "manual example real evaluation"
+        }
+      ],
+      "initial": {
+        "app": "Table",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "DOWN",
+        "OK",
+        "OK",
+        "X",
+        "SQUARE",
+        "ADD",
+        "1",
+        "DIVIDE",
+        "2",
+        "EXE",
+        "BACK",
+        "TOOLS",
+        "DOWN",
+        "OK",
+        "DOWN",
+        "OK",
+        "X",
+        "SQUARE",
+        "SUBTRACT",
+        "1",
+        "DIVIDE",
+        "2",
+        "EXE",
+        "BACK",
+        "TOOLS",
+        "OK",
+        "SUBTRACT",
+        "1",
+        "EXE",
+        "1",
+        "EXE",
+        "0",
+        "DOT",
+        "5",
+        "EXE",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-TABLE-08-1",
+          "capture": "final",
+          "expect": {
+            "grid": {
+              "rows": 5,
+              "cols": 3
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-TABLE-09",
+      "title": "30 dual rows",
+      "app": "Table",
+      "surface": "30 dual rows",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__creating_a_number_table.html.txt",
+          "section": "30 dual rows"
+        }
+      ],
+      "initial": {
+        "app": "Table",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        "1",
+        "EXE",
+        "3",
+        "0",
+        "EXE",
+        "1",
+        "EXE",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-TABLE-09-1",
+          "capture": "final",
+          "expect": {
+            "grid": {
+              "rows": 30
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-TABLE-10",
+      "title": "31 dual Range ERROR",
+      "app": "Table",
+      "surface": "31 dual Range ERROR",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__creating_a_number_table.html.txt",
+          "section": "31 dual Range ERROR"
+        },
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/technical_information__errors.html.txt",
+          "section": "Range ERROR"
+        }
+      ],
+      "initial": {
+        "app": "Table",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        "1",
+        "EXE",
+        "3",
+        "1",
+        "EXE",
+        "1",
+        "EXE",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-TABLE-10-1",
+          "capture": "final",
+          "expect": {
+            "error": {
+              "title": "Range ERROR"
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-TABLE-11",
+      "title": "45 single rows",
+      "app": "Table",
+      "surface": "45 single rows",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__creating_a_number_table.html.txt",
+          "section": "45 single rows"
+        }
+      ],
+      "initial": {
+        "app": "Table",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "DOWN",
+        "OK",
+        "TOOLS",
+        "OK",
+        "1",
+        "EXE",
+        "4",
+        "5",
+        "EXE",
+        "1",
+        "EXE",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-TABLE-11-1",
+          "capture": "final",
+          "expect": {
+            "grid": {
+              "rows": 45
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-TABLE-12",
+      "title": "46 single Range ERROR",
+      "app": "Table",
+      "surface": "46 single Range ERROR",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__creating_a_number_table.html.txt",
+          "section": "46 single Range ERROR"
+        },
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/technical_information__errors.html.txt",
+          "section": "Range ERROR"
+        }
+      ],
+      "initial": {
+        "app": "Table",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "DOWN",
+        "OK",
+        "TOOLS",
+        "OK",
+        "1",
+        "EXE",
+        "4",
+        "6",
+        "EXE",
+        "1",
+        "EXE",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-TABLE-12-1",
+          "capture": "final",
+          "expect": {
+            "error": {
+              "title": "Range ERROR"
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-TABLE-13",
+      "title": "x edit preserves row count",
+      "app": "Table",
+      "surface": "x edit preserves row count",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__creating_a_number_table.html.txt",
+          "section": "x edit preserves row count"
+        }
+      ],
+      "initial": {
+        "app": "Table",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "DOWN",
+        "OK",
+        "OK",
+        "X",
+        "SQUARE",
+        "ADD",
+        "1",
+        "DIVIDE",
+        "2",
+        "EXE",
+        "BACK",
+        "TOOLS",
+        "DOWN",
+        "OK",
+        "DOWN",
+        "OK",
+        "X",
+        "SQUARE",
+        "SUBTRACT",
+        "1",
+        "DIVIDE",
+        "2",
+        "EXE",
+        "BACK",
+        "TOOLS",
+        "OK",
+        "SUBTRACT",
+        "1",
+        "EXE",
+        "1",
+        "EXE",
+        "0",
+        "DOT",
+        "5",
+        "EXE",
+        "EXE",
+        "2",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-TABLE-13-1",
+          "capture": "final",
+          "expect": {
+            "grid": {
+              "rows": 5
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-TABLE-14",
+      "title": "Delete Row",
+      "app": "Table",
+      "surface": "Delete Row",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__creating_a_number_table.html.txt",
+          "section": "Delete Row"
+        }
+      ],
+      "initial": {
+        "app": "Table",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "DOWN",
+        "OK",
+        "OK",
+        "X",
+        "SQUARE",
+        "ADD",
+        "1",
+        "DIVIDE",
+        "2",
+        "EXE",
+        "BACK",
+        "TOOLS",
+        "DOWN",
+        "OK",
+        "DOWN",
+        "OK",
+        "X",
+        "SQUARE",
+        "SUBTRACT",
+        "1",
+        "DIVIDE",
+        "2",
+        "EXE",
+        "BACK",
+        "TOOLS",
+        "OK",
+        "SUBTRACT",
+        "1",
+        "EXE",
+        "1",
+        "EXE",
+        "0",
+        "DOT",
+        "5",
+        "EXE",
+        "EXE",
+        "DEL",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-TABLE-14-1",
+          "capture": "final",
+          "expect": {
+            "grid": {
+              "rows": 4
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-TABLE-15",
+      "title": "Insert Row",
+      "app": "Table",
+      "surface": "Insert Row",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__creating_a_number_table.html.txt",
+          "section": "Insert Row"
+        }
+      ],
+      "initial": {
+        "app": "Table",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "DOWN",
+        "OK",
+        "OK",
+        "X",
+        "SQUARE",
+        "ADD",
+        "1",
+        "DIVIDE",
+        "2",
+        "EXE",
+        "BACK",
+        "TOOLS",
+        "DOWN",
+        "OK",
+        "DOWN",
+        "OK",
+        "X",
+        "SQUARE",
+        "SUBTRACT",
+        "1",
+        "DIVIDE",
+        "2",
+        "EXE",
+        "BACK",
+        "TOOLS",
+        "OK",
+        "SUBTRACT",
+        "1",
+        "EXE",
+        "1",
+        "EXE",
+        "0",
+        "DOT",
+        "5",
+        "EXE",
+        "EXE",
+        "TOOLS",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "OK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-TABLE-15-1",
+          "capture": "final",
+          "expect": {
+            "grid": {
+              "rows": 6
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-TABLE-16",
+      "title": "Delete All",
+      "app": "Table",
+      "surface": "Delete All",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__creating_a_number_table.html.txt",
+          "section": "Delete All"
+        }
+      ],
+      "initial": {
+        "app": "Table",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "DOWN",
+        "OK",
+        "OK",
+        "X",
+        "SQUARE",
+        "ADD",
+        "1",
+        "DIVIDE",
+        "2",
+        "EXE",
+        "BACK",
+        "TOOLS",
+        "DOWN",
+        "OK",
+        "DOWN",
+        "OK",
+        "X",
+        "SQUARE",
+        "SUBTRACT",
+        "1",
+        "DIVIDE",
+        "2",
+        "EXE",
+        "BACK",
+        "TOOLS",
+        "OK",
+        "SUBTRACT",
+        "1",
+        "EXE",
+        "1",
+        "EXE",
+        "0",
+        "DOT",
+        "5",
+        "EXE",
+        "EXE",
+        "TOOLS",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "DOWN",
+        "OK",
+        "DOWN",
+        "OK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-TABLE-16-1",
+          "capture": "final",
+          "expect": {
+            "grid": {
+              "rows": 0
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-TABLE-17",
+      "title": "type change clears generated data",
+      "app": "Table",
+      "surface": "type change clears generated data",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__creating_a_number_table.html.txt",
+          "section": "type change clears generated data"
+        }
+      ],
+      "initial": {
+        "app": "Table",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "DOWN",
+        "OK",
+        "OK",
+        "X",
+        "SQUARE",
+        "ADD",
+        "1",
+        "DIVIDE",
+        "2",
+        "EXE",
+        "BACK",
+        "TOOLS",
+        "DOWN",
+        "OK",
+        "DOWN",
+        "OK",
+        "X",
+        "SQUARE",
+        "SUBTRACT",
+        "1",
+        "DIVIDE",
+        "2",
+        "EXE",
+        "BACK",
+        "TOOLS",
+        "OK",
+        "SUBTRACT",
+        "1",
+        "EXE",
+        "1",
+        "EXE",
+        "0",
+        "DOT",
+        "5",
+        "EXE",
+        "EXE",
+        "TOOLS",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "DOWN",
+        "OK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-TABLE-17-1",
+          "capture": "final",
+          "expect": {
+            "grid": {
+              "rows": 0,
+              "cols": 2
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-TABLE-18",
+      "title": "Recalculate preserves x rows",
+      "app": "Table",
+      "surface": "Recalculate preserves x rows",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__creating_a_number_table.html.txt",
+          "section": "Recalculate preserves x rows"
+        }
+      ],
+      "initial": {
+        "app": "Table",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "DOWN",
+        "OK",
+        "OK",
+        "X",
+        "SQUARE",
+        "ADD",
+        "1",
+        "DIVIDE",
+        "2",
+        "EXE",
+        "BACK",
+        "TOOLS",
+        "DOWN",
+        "OK",
+        "DOWN",
+        "OK",
+        "X",
+        "SQUARE",
+        "SUBTRACT",
+        "1",
+        "DIVIDE",
+        "2",
+        "EXE",
+        "BACK",
+        "TOOLS",
+        "OK",
+        "SUBTRACT",
+        "1",
+        "EXE",
+        "1",
+        "EXE",
+        "0",
+        "DOT",
+        "5",
+        "EXE",
+        "EXE",
+        "TOOLS",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "OK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-TABLE-18-1",
+          "capture": "final",
+          "expect": {
+            "grid": {
+              "rows": 5
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-TABLE-19",
+      "title": "Verify ON",
+      "app": "Table",
+      "surface": "Verify ON",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__creating_a_number_table.html.txt",
+          "section": "Verify ON"
+        }
+      ],
+      "initial": {
+        "app": "Table",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "DOWN",
+        "OK",
+        "OK",
+        "X",
+        "SQUARE",
+        "ADD",
+        "1",
+        "DIVIDE",
+        "2",
+        "EXE",
+        "BACK",
+        "TOOLS",
+        "DOWN",
+        "OK",
+        "DOWN",
+        "OK",
+        "X",
+        "SQUARE",
+        "SUBTRACT",
+        "1",
+        "DIVIDE",
+        "2",
+        "EXE",
+        "BACK",
+        "TOOLS",
+        "OK",
+        "SUBTRACT",
+        "1",
+        "EXE",
+        "1",
+        "EXE",
+        "0",
+        "DOT",
+        "5",
+        "EXE",
+        "EXE",
+        "TOOLS",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "OK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-TABLE-19-1",
+          "capture": "final",
+          "expect": {
+            "icons": {
+              "VERIFY": true
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-TABLE-20",
+      "title": "Verify expected first f",
+      "app": "Table",
+      "surface": "Verify expected first f",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__creating_a_number_table.html.txt",
+          "section": "Verify expected first f"
+        }
+      ],
+      "initial": {
+        "app": "Table",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "DOWN",
+        "OK",
+        "OK",
+        "X",
+        "SQUARE",
+        "ADD",
+        "1",
+        "DIVIDE",
+        "2",
+        "EXE",
+        "BACK",
+        "TOOLS",
+        "DOWN",
+        "OK",
+        "DOWN",
+        "OK",
+        "X",
+        "SQUARE",
+        "SUBTRACT",
+        "1",
+        "DIVIDE",
+        "2",
+        "EXE",
+        "BACK",
+        "TOOLS",
+        "OK",
+        "SUBTRACT",
+        "1",
+        "EXE",
+        "1",
+        "EXE",
+        "0",
+        "DOT",
+        "5",
+        "EXE",
+        "EXE",
+        "TOOLS",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "RIGHT",
+        "1",
+        "DOT",
+        "5",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-TABLE-20-1",
+          "capture": "final",
+          "expect": {
+            "result": {
+              "text": "True"
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-TABLE-21",
+      "title": "Verify OFF",
+      "app": "Table",
+      "surface": "Verify OFF",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__creating_a_number_table.html.txt",
+          "section": "Verify OFF"
+        }
+      ],
+      "initial": {
+        "app": "Table",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "DOWN",
+        "OK",
+        "OK",
+        "X",
+        "SQUARE",
+        "ADD",
+        "1",
+        "DIVIDE",
+        "2",
+        "EXE",
+        "BACK",
+        "TOOLS",
+        "DOWN",
+        "OK",
+        "DOWN",
+        "OK",
+        "X",
+        "SQUARE",
+        "SUBTRACT",
+        "1",
+        "DIVIDE",
+        "2",
+        "EXE",
+        "BACK",
+        "TOOLS",
+        "OK",
+        "SUBTRACT",
+        "1",
+        "EXE",
+        "1",
+        "EXE",
+        "0",
+        "DOT",
+        "5",
+        "EXE",
+        "EXE",
+        "TOOLS",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "TOOLS",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "OK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-TABLE-21-1",
+          "capture": "final",
+          "expect": {
+            "icons": {
+              "VERIFY": false
+            },
+            "grid": {
+              "rows": 5
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-TABLE-22",
+      "title": "shared Store returns selected cell",
+      "app": "Table",
+      "surface": "shared Store returns selected cell",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__creating_a_number_table.html.txt",
+          "section": "shared Store returns selected cell"
+        }
+      ],
+      "initial": {
+        "app": "Table",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "DOWN",
+        "OK",
+        "OK",
+        "X",
+        "SQUARE",
+        "ADD",
+        "1",
+        "DIVIDE",
+        "2",
+        "EXE",
+        "BACK",
+        "TOOLS",
+        "DOWN",
+        "OK",
+        "DOWN",
+        "OK",
+        "X",
+        "SQUARE",
+        "SUBTRACT",
+        "1",
+        "DIVIDE",
+        "2",
+        "EXE",
+        "BACK",
+        "TOOLS",
+        "OK",
+        "SUBTRACT",
+        "1",
+        "EXE",
+        "1",
+        "EXE",
+        "0",
+        "DOT",
+        "5",
+        "EXE",
+        "EXE",
+        "VARIABLE",
+        "OK",
+        "DOWN",
+        "OK",
+        "BACK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-TABLE-22-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Table"
+            },
+            "grid": {
+              "rows": 5
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-TABLE-23",
+      "title": "physical grid and domain error raster",
+      "app": "Table",
+      "surface": "physical grid and domain error raster",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__creating_a_number_table.html.txt",
+          "section": "physical grid and domain error raster"
+        }
+      ],
+      "initial": {
+        "app": "Table",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-TABLE-23-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P16",
+          "reason": "Owner P20: physical Table grid/menu/icon/domain-error captures absent. Shared grid error labels are provisional; no target raster pass.",
+          "pending_reason": "Owner P20: physical Table grid/menu/icon/domain-error captures absent. Shared grid error labels are provisional; no target raster pass.",
+          "resolution": "Acquire the physical target observation described in reason; retain pending until reviewed."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "Owner P20: physical Table grid/menu/icon/domain-error captures absent. Shared grid error labels are provisional; no target raster pass."
+    },
+    {
+      "id": "P16-TABLE-24",
+      "title": "ON input delivery",
+      "app": "Table",
+      "surface": "ON input delivery",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__creating_a_number_table.html.txt",
+          "section": "ON input delivery"
+        }
+      ],
+      "initial": {
+        "app": "Table",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-TABLE-24-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P16",
+          "reason": "006F is visually confirmed ON. NativeOn transition is tested; current scanner exposes no ON event. Hardware owner must deliver the real ON event, never map AC to ON.",
+          "pending_reason": "006F is visually confirmed ON. NativeOn transition is tested; current scanner exposes no ON event. Hardware owner must deliver the real ON event, never map AC to ON.",
+          "resolution": "Acquire the physical target observation described in reason; retain pending until reviewed."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "006F is visually confirmed ON. NativeOn transition is tested; current scanner exposes no ON event. Hardware owner must deliver the real ON event, never map AC to ON."
+    },
+    {
+      "id": "P16-TABLE-25",
+      "title": "initial range defaults",
+      "app": "Table",
+      "surface": "initial range defaults",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__creating_a_number_table.html.txt",
+          "section": "initial range defaults"
+        }
+      ],
+      "initial": {
+        "app": "Table",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-TABLE-25-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P16",
+          "reason": "Owner P20: 1,5,1 are safe initial range defaults; initial target values require physical capture. User-entered ranges are manual-tested.",
+          "pending_reason": "Owner P20: 1,5,1 are safe initial range defaults; initial target values require physical capture. User-entered ranges are manual-tested.",
+          "resolution": "Acquire the physical target observation described in reason; retain pending until reviewed."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "Owner P20: 1,5,1 are safe initial range defaults; initial target values require physical capture. User-entered ranges are manual-tested."
+    },
+    {
+      "id": "P16-TABLE-26",
+      "title": "Step 0 exact target error",
+      "app": "Table",
+      "surface": "Step 0 exact target error",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__creating_a_number_table.html.txt",
+          "section": "Step 0 exact target error"
+        }
+      ],
+      "initial": {
+        "app": "Table",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        "1",
+        "EXE",
+        "5",
+        "EXE",
+        "0",
+        "EXE",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-TABLE-26-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P16",
+          "reason": "Native rejects Step=0 with Range ERROR as a safe bound (no rows published, x untouched). The manual names no error for a zero step; exact target behavior is PENDING. Owner P20: physical target capture.",
+          "pending_reason": "Native rejects Step=0 with Range ERROR as a safe bound (no rows published, x untouched). The manual names no error for a zero step; exact target behavior is PENDING. Owner P20: physical target capture.",
+          "resolution": "Acquire the physical target observation described in reason; retain pending until reviewed."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "Native rejects Step=0 with Range ERROR as a safe bound (no rows published, x untouched). The manual names no error for a zero step; exact target behavior is PENDING. Owner P20: physical target capture."
+    },
+    {
+      "id": "P16-TABLE-27",
+      "title": "negative Step exact target error",
+      "app": "Table",
+      "surface": "negative Step exact target error",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__creating_a_number_table.html.txt",
+          "section": "negative Step exact target error"
+        }
+      ],
+      "initial": {
+        "app": "Table",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        "1",
+        "EXE",
+        "5",
+        "EXE",
+        "SUBTRACT",
+        "1",
+        "EXE",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-TABLE-27-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P16",
+          "reason": "Native rejects a negative Step with Range ERROR as a safe bound (no rows published, x untouched). The manual names no error for a negative step; exact target behavior is PENDING. Owner P20: physical target capture.",
+          "pending_reason": "Native rejects a negative Step with Range ERROR as a safe bound (no rows published, x untouched). The manual names no error for a negative step; exact target behavior is PENDING. Owner P20: physical target capture.",
+          "resolution": "Acquire the physical target observation described in reason; retain pending until reviewed."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "Native rejects a negative Step with Range ERROR as a safe bound (no rows published, x untouched). The manual names no error for a negative step; exact target behavior is PENDING. Owner P20: physical target capture."
+    },
+    {
+      "id": "P16-TABLE-28",
+      "title": "Start greater than End exact target error",
+      "app": "Table",
+      "surface": "Start greater than End exact target error",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__creating_a_number_table.html.txt",
+          "section": "Start greater than End exact target error"
+        }
+      ],
+      "initial": {
+        "app": "Table",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "OK",
+        "5",
+        "EXE",
+        "1",
+        "EXE",
+        "1",
+        "EXE",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-TABLE-28-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P16",
+          "reason": "Native rejects Start>End with Range ERROR as a safe bound instead of generating a descending range, which the manual never defines. Exact target behavior is PENDING; do not invent descending ranges. Owner P20: physical target capture.",
+          "pending_reason": "Native rejects Start>End with Range ERROR as a safe bound instead of generating a descending range, which the manual never defines. Exact target behavior is PENDING; do not invent descending ranges. Owner P20: physical target capture.",
+          "resolution": "Acquire the physical target observation described in reason; retain pending until reviewed."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "Native rejects Start>End with Range ERROR as a safe bound instead of generating a descending range, which the manual never defines. Exact target behavior is PENDING; do not invent descending ranges. Owner P20: physical target capture."
+    },
+    {
+      "id": "P16-TABLE-29",
+      "title": "Insert Row at capacity exact target error",
+      "app": "Table",
+      "surface": "Insert Row at capacity exact target error",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__creating_a_number_table.html.txt",
+          "section": "Insert Row at capacity exact target error"
+        }
+      ],
+      "initial": {
+        "app": "Table",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TOOLS",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "DOWN",
+        "OK",
+        "TOOLS",
+        "OK",
+        "1",
+        "EXE",
+        "4",
+        "5",
+        "EXE",
+        "1",
+        "EXE",
+        "EXE",
+        "TOOLS",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "OK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-TABLE-29-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P16",
+          "reason": "Native rejects Insert Row at capacity with Range ERROR as a safe bound (rows unchanged). The manual confirms the 45/30 maximum but names no error for row insertion at capacity; exact target behavior is PENDING. Owner P20: physical target capture.",
+          "pending_reason": "Native rejects Insert Row at capacity with Range ERROR as a safe bound (rows unchanged). The manual confirms the 45/30 maximum but names no error for row insertion at capacity; exact target behavior is PENDING. Owner P20: physical target capture.",
+          "resolution": "Acquire the physical target observation described in reason; retain pending until reviewed."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "Native rejects Insert Row at capacity with Range ERROR as a safe bound (rows unchanged). The manual confirms the 45/30 maximum but names no error for row insertion at capacity; exact target behavior is PENDING. Owner P20: physical target capture."
+    }
+  ]
+}

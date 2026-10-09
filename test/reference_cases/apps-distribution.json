@@ -1,0 +1,2432 @@
+{
+ "schema": 1,
+ "phase": "P17",
+ "cases": [
+  {
+   "id": "DIST-01",
+   "title": "Distribution type menu",
+   "app": "Distribution",
+   "surface": "launch",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "Distribution calculation types"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-01-1",
+     "capture": "final",
+     "expect": {
+      "screen": {
+       "id": "DistributionType"
+      },
+      "menu": {
+       "labels": [
+        "Binomial PD",
+        "Binomial CD",
+        "Normal PD",
+        "Normal CD",
+        "Inverse Normal",
+        "Poisson PD",
+        "Poisson CD"
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-02",
+   "title": "Binomial PD variable",
+   "app": "Distribution",
+   "surface": "input",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "General procedure; List/Variable input method"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "DOWN",
+    "OK",
+    "OK",
+    "2",
+    "EXE",
+    "5",
+    "EXE",
+    "0",
+    "DOT",
+    "5",
+    "EXE",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-02-1",
+     "capture": "final",
+     "expect": {
+      "screen": {
+       "id": "DistributionResult"
+      },
+      "result": {
+       "text": "0.3125"
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-03",
+   "title": "Binomial PD list",
+   "app": "Distribution",
+   "surface": "input",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "List screen: up to 45 x items with P results"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "OK",
+    "2",
+    "EXE",
+    "3",
+    "EXE",
+    "OK",
+    "5",
+    "EXE",
+    "0",
+    "DOT",
+    "5",
+    "EXE",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-03-1",
+     "capture": "final",
+     "expect": {
+      "grid": {
+       "rows": 2,
+       "cells": [
+        "2",
+        "0.3125",
+        "3",
+        "0.3125"
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-04",
+   "title": "Binomial CD variable",
+   "app": "Distribution",
+   "surface": "input",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "General procedure with Binomial CD"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "OK",
+    "DOWN",
+    "OK",
+    "OK",
+    "4",
+    "EXE",
+    "5",
+    "EXE",
+    "0",
+    "DOT",
+    "5",
+    "EXE",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-04-1",
+     "capture": "final",
+     "expect": {
+      "result": {
+       "text": "0.96875"
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-05",
+   "title": "manual Binomial CD list example",
+   "app": "Distribution",
+   "surface": "input",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "General procedure example: x {2,3,4,5}, N=5, p=0.5"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "OK",
+    "OK",
+    "2",
+    "EXE",
+    "3",
+    "EXE",
+    "4",
+    "EXE",
+    "5",
+    "EXE",
+    "OK",
+    "5",
+    "EXE",
+    "0",
+    "DOT",
+    "5",
+    "EXE",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-05-1",
+     "capture": "final",
+     "expect": {
+      "grid": {
+       "rows": 4,
+       "cells": [
+        "2",
+        "0.5",
+        "3",
+        "0.8125",
+        "4",
+        "0.96875",
+        "5",
+        "1"
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-06",
+   "title": "Normal PD manual example",
+   "app": "Distribution",
+   "surface": "input",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "Calculation example: Normal PD x=36, mu=35, sigma=2"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "DOWN",
+    "OK",
+    "3",
+    "6",
+    "EXE",
+    "3",
+    "5",
+    "EXE",
+    "2",
+    "EXE",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-06-1",
+     "capture": "final",
+     "expect": {
+      "result": {
+       "text": "0.1760326634"
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-07",
+   "title": "Normal CD symmetric bounds",
+   "app": "Distribution",
+   "surface": "input",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "Parameter list: Normal CD Lower/Upper/mu/sigma"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "SUBTRACT",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "0",
+    "EXE",
+    "1",
+    "EXE",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-07-1",
+     "capture": "final",
+     "expect": {
+      "result": {
+       "text": "0.6826894921"
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-08",
+   "title": "Inverse Normal value",
+   "app": "Distribution",
+   "surface": "input",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "Inverse Normal returns xInv from Area"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "0",
+    "DOT",
+    "9",
+    "7",
+    "5",
+    "EXE",
+    "DOWN",
+    "DOWN",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-08-1",
+     "capture": "final",
+     "expect": {
+      "result": {
+       "text": "1.959963985"
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-09",
+   "title": "Poisson PD variable",
+   "app": "Distribution",
+   "surface": "input",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "Parameter list: Poisson PD x/lambda"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "DOWN",
+    "OK",
+    "OK",
+    "5",
+    "EXE",
+    "4",
+    "EXE",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-09-1",
+     "capture": "final",
+     "expect": {
+      "result": {
+       "text": "0.1562934519"
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-10",
+   "title": "Poisson PD list",
+   "app": "Distribution",
+   "surface": "input",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "List screen with Poisson PD"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "OK",
+    "0",
+    "EXE",
+    "1",
+    "EXE",
+    "2",
+    "EXE",
+    "OK",
+    "4",
+    "EXE",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-10-1",
+     "capture": "final",
+     "expect": {
+      "grid": {
+       "cells": [
+        "0",
+        "0.01831563889",
+        "1",
+        "0.07326255555",
+        "2",
+        "0.1465251111"
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-11",
+   "title": "Poisson CD variable",
+   "app": "Distribution",
+   "surface": "input",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "Parameter list: Poisson CD"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "DOWN",
+    "OK",
+    "OK",
+    "4",
+    "EXE",
+    "4",
+    "EXE",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-11-1",
+     "capture": "final",
+     "expect": {
+      "result": {
+       "text": "0.6288369352"
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-12",
+   "title": "Poisson CD list",
+   "app": "Distribution",
+   "surface": "input",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "List screen with Poisson CD"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "OK",
+    "0",
+    "EXE",
+    "4",
+    "EXE",
+    "OK",
+    "4",
+    "EXE",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-12-1",
+     "capture": "final",
+     "expect": {
+      "grid": {
+       "cells": [
+        "0",
+        "0.01831563889",
+        "4",
+        "0.6288369352"
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-13",
+   "title": "list capacity 45",
+   "app": "Distribution",
+   "surface": "input",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "List screen: up to 45 x items"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "OK",
+    "OK",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    "1",
+    "EXE",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-13-1",
+     "capture": "final",
+     "expect": {
+      "grid": {
+       "rows": 45
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-14",
+   "title": "edit a list row",
+   "app": "Distribution",
+   "surface": "input",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "Editing the list screen: changing x"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "OK",
+    "2",
+    "EXE",
+    "3",
+    "EXE",
+    "UP",
+    "UP",
+    "5",
+    "EXE",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-14-1",
+     "capture": "final",
+     "expect": {
+      "grid": {
+       "cells": [
+        "5",
+        "",
+        "3",
+        ""
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-15",
+   "title": "delete a list row",
+   "app": "Distribution",
+   "surface": "input",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "Editing the list screen: deleting a row"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "OK",
+    "2",
+    "EXE",
+    "3",
+    "EXE",
+    "UP",
+    "DEL",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-15-1",
+     "capture": "final",
+     "expect": {
+      "grid": {
+       "rows": 1,
+       "cells": [
+        "2",
+        ""
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-16",
+   "title": "insert row defaults 0",
+   "app": "Distribution",
+   "surface": "input",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "Editing the list screen: inserting a row defaults to 0"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "OK",
+    "2",
+    "EXE",
+    "TOOLS",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-16-1",
+     "capture": "final",
+     "expect": {
+      "grid": {
+       "cells": [
+        "2",
+        "",
+        "0",
+        ""
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-17",
+   "title": "Delete All list",
+   "app": "Distribution",
+   "surface": "input",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "Deleting all list contents"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "OK",
+    "2",
+    "EXE",
+    "TOOLS",
+    "DOWN",
+    "OK",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-17-1",
+     "capture": "final",
+     "expect": {
+      "grid": {
+       "rows": 0
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-18",
+   "title": "edit after results clears P",
+   "app": "Distribution",
+   "surface": "input",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "Editing the result list clears all calculation results"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "OK",
+    "OK",
+    "2",
+    "EXE",
+    "3",
+    "EXE",
+    "OK",
+    "5",
+    "EXE",
+    "0",
+    "DOT",
+    "5",
+    "EXE",
+    "OK",
+    "UP",
+    "UP",
+    "4",
+    "EXE",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-18-1",
+     "capture": "final",
+     "expect": {
+      "grid": {
+       "cells": [
+        "4",
+        "",
+        "3",
+        ""
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-19",
+   "title": "per-row ERROR for bad x",
+   "app": "Distribution",
+   "surface": "error",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "ERROR appears in P when an input value is outside the domain"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "OK",
+    "OK",
+    "6",
+    "EXE",
+    "3",
+    "EXE",
+    "OK",
+    "5",
+    "EXE",
+    "0",
+    "DOT",
+    "5",
+    "EXE",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-19-1",
+     "capture": "final",
+     "expect": {
+      "grid": {
+       "cells": [
+        "6",
+        "ERROR",
+        "3",
+        "0.8125"
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-20",
+   "title": "variable result presentation",
+   "app": "Distribution",
+   "surface": "result",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "Variable input stores the result in Ans"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "DOWN",
+    "OK",
+    "OK",
+    "2",
+    "EXE",
+    "5",
+    "EXE",
+    "0",
+    "DOT",
+    "5",
+    "EXE",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-20-1",
+     "capture": "final",
+     "expect": {
+      "screen": {
+       "id": "DistributionResult"
+      },
+      "result": {
+       "text": "0.3125"
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-21",
+   "title": "list results and Ans",
+   "app": "Distribution",
+   "surface": "result",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "List-mode P rows versus Ans"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "OK",
+    "OK",
+    "2",
+    "EXE",
+    "OK",
+    "5",
+    "EXE",
+    "0",
+    "DOT",
+    "5",
+    "EXE",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-21-1",
+     "capture": "final",
+     "expect": null,
+     "native": "pending",
+     "evidence": "PENDING",
+     "confidence": "UNKNOWN",
+     "owner": "P17",
+     "reason": "Ans is not snapshot-observable; target is silent",
+     "resolution": "memory observation or target evidence"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pending",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-22",
+   "title": "parameter N shared PD to CD",
+   "app": "Distribution",
+   "surface": "retention",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "Parameter values persist by name across screens"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "DOWN",
+    "OK",
+    "DOWN",
+    "7",
+    "EXE",
+    "HOME",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "RIGHT",
+    "RIGHT",
+    "OK",
+    "DOWN",
+    "OK",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-22-1",
+     "capture": "final",
+     "expect": {
+      "menu": {
+       "labels": [
+        "x=0",
+        "N=7",
+        "p=0.5",
+        "Execute"
+       ]
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-23",
+   "title": "other-app launch clears the list",
+   "app": "Distribution",
+   "surface": "retention",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "List x clears when HOME launches another calculator app"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "OK",
+    "OK",
+    "3",
+    "EXE",
+    "HOME",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "OK",
+    "HOME",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "LEFT",
+    "RIGHT",
+    "RIGHT",
+    "OK",
+    "DOWN",
+    "OK",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-23-1",
+     "capture": "final",
+     "expect": {
+      "grid": {
+       "rows": 0
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-24",
+   "title": "reset clears parameters",
+   "app": "Distribution",
+   "surface": "retention",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "Parameters persist until Settings&Data or Initialize All"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-24-1",
+     "capture": "final",
+     "expect": null,
+     "native": "pending",
+     "evidence": "PENDING",
+     "confidence": "UNKNOWN",
+     "owner": "P17",
+     "reason": "reset flow is not key-stable in the runner",
+     "resolution": "native coverage in calculator_apps_p17_test.h"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pending",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-25",
+   "title": "store a list cell",
+   "app": "Distribution",
+   "surface": "menu",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "List screen: storing a cell value in a variable"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "OK",
+    "2",
+    "EXE",
+    "UP",
+    "VARIABLE",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "UP",
+    "LEFT",
+    "OK",
+    "DOWN",
+    "OK",
+    "BACK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-25-1",
+     "capture": "final",
+     "expect": {
+      "screen": {
+       "id": "DistributionList"
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-26",
+   "title": "stale list execution",
+   "app": "Distribution",
+   "surface": "stale job",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "Distribution ownership snapshot"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "OK",
+    "OK",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-26-1",
+     "capture": "final",
+     "expect": null,
+     "native": "pending",
+     "evidence": "PENDING",
+     "confidence": "UNKNOWN",
+     "owner": "P17",
+     "reason": "runner drains every key; no interleaving",
+     "resolution": "native coverage in calculator_apps_p17_test.h"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pending",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-27",
+   "title": "normal tail interval",
+   "app": "Distribution",
+   "surface": "result",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "Distribution accuracy including tails"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "SUBTRACT",
+    "6",
+    "EXE",
+    "6",
+    "EXE",
+    "0",
+    "EXE",
+    "1",
+    "EXE",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-27-1",
+     "capture": "final",
+     "expect": {
+      "result": {
+       "text": "0.999999998"
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-28",
+   "title": "inverse normal tail",
+   "app": "Distribution",
+   "surface": "result",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "Inverse Normal in the far tail"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "0",
+    "DOT",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "1",
+    "EXE",
+    "DOWN",
+    "DOWN",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-28-1",
+     "capture": "final",
+     "expect": {
+      "result": {
+       "text": "-5.612001244"
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-29",
+   "title": "binomial tail",
+   "app": "Distribution",
+   "surface": "result",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "Binomial CD with small p and large N"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "OK",
+    "DOWN",
+    "OK",
+    "OK",
+    "1",
+    "0",
+    "EXE",
+    "1",
+    "0",
+    "0",
+    "0",
+    "EXE",
+    "0",
+    "DOT",
+    "0",
+    "1",
+    "EXE",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-29-1",
+     "capture": "final",
+     "expect": {
+      "result": {
+       "text": "0.5830408033"
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-30",
+   "title": "poisson far tail",
+   "app": "Distribution",
+   "surface": "result",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "Poisson CD far above the mean"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "DOWN",
+    "OK",
+    "OK",
+    "1",
+    "5",
+    "0",
+    "EXE",
+    "1",
+    "0",
+    "0",
+    "EXE",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-30-1",
+     "capture": "final",
+     "expect": {
+      "result": {
+       "text": "0.9999987669"
+      }
+     },
+     "native": "pass",
+     "evidence": "880-MAN",
+     "confidence": "STRONG",
+     "owner": "P17"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pass",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-31",
+   "title": "type and list raster",
+   "app": "Distribution",
+   "surface": "render reference",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "Distribution screenshots"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-31-1",
+     "capture": "final",
+     "expect": null,
+     "native": "pending",
+     "evidence": "PENDING",
+     "confidence": "UNKNOWN",
+     "owner": "P17",
+     "reason": "exact raster needs hardware captures",
+     "resolution": "P20 panel captures"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pending",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-32",
+   "title": "Lower above Upper",
+   "app": "Distribution",
+   "surface": "error",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "Parameter list: Normal CD Lower/Upper"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "1",
+    "EXE",
+    "SUBTRACT",
+    "1",
+    "EXE",
+    "0",
+    "EXE",
+    "1",
+    "EXE",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-32-1",
+     "capture": "final",
+     "expect": null,
+     "native": "pending",
+     "evidence": "PENDING",
+     "confidence": "UNKNOWN",
+     "owner": "P17",
+     "reason": "Lower>Upper target behavior is unresolved (O-2); provisional Argument ERROR",
+     "resolution": "target error evidence"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pending",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-33",
+   "title": "inverse endpoints",
+   "app": "Distribution",
+   "surface": "error",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "Inverse Normal Area domain 0<=Area<=1"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "DOWN",
+    "OK",
+    "0",
+    "EXE",
+    "DOWN",
+    "DOWN",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-33-1",
+     "capture": "final",
+     "expect": null,
+     "native": "pending",
+     "evidence": "PENDING",
+     "confidence": "UNKNOWN",
+     "owner": "P17",
+     "reason": "exact Area=0/1 target behavior is unresolved (O-2)",
+     "resolution": "target endpoint evidence"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pending",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-34",
+   "title": "list result Ans behavior",
+   "app": "Distribution",
+   "surface": "result",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "Variable-mode result is stored in Ans"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "OK",
+    "2",
+    "EXE",
+    "OK",
+    "5",
+    "EXE",
+    "0",
+    "DOT",
+    "5",
+    "EXE",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-34-1",
+     "capture": "final",
+     "expect": null,
+     "native": "pending",
+     "evidence": "PENDING",
+     "confidence": "UNKNOWN",
+     "owner": "P17",
+     "reason": "Ans is not snapshot-observable",
+     "resolution": "memory observation"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pending",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  },
+  {
+   "id": "DIST-35",
+   "title": "parameter defaults",
+   "app": "Distribution",
+   "surface": "retention",
+   "scope": {
+    "reference_model": "fx-880BTG PLUS",
+    "target_applicability": "STRONG"
+   },
+   "sources": [
+    {
+     "kind": "880-MAN",
+     "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__distribution_calculations.html.txt",
+     "section": "Parameter initial values"
+    }
+   ],
+   "initial": {
+    "app": "Distribution",
+    "settings": {
+     "inputOutput": "MathMath",
+     "angle": "Degree",
+     "number": "Norm1"
+    },
+    "memory": "cleared",
+    "history": []
+   },
+   "keys": [
+    "OK",
+    "OK",
+    "OK",
+    {
+     "capture": "final"
+    }
+   ],
+   "checks": [
+    {
+     "id": "DIST-35-1",
+     "capture": "final",
+     "expect": null,
+     "native": "pending",
+     "evidence": "PENDING",
+     "confidence": "UNKNOWN",
+     "owner": "P17",
+     "reason": "initial parameter values are provisional (O-2)",
+     "resolution": "target default evidence"
+    }
+   ],
+   "confidence": "STRONG",
+   "native": "pending",
+   "owner": "P17",
+   "gap_ids": [],
+   "notes": "880-MAN logical behavior; kernels and controller additionally covered in calculator_apps_p17_test.h. Raster is not a target pass."
+  }
+ ]
+}

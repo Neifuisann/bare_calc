@@ -1,0 +1,11 @@
+* text=auto
+*.bin binary
+*.pbm binary
+*.pgm binary
+*.bmp binary
+*.png binary
+*.otf binary
+# Licence texts stay byte-for-byte as distributed.
+assets/fonts/OFL.txt -text
+lib/*/license.txt -text
+lib/*/LICENSE.txt -text

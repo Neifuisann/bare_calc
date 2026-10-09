@@ -1,0 +1,41 @@
+{
+  "phase": "P1",
+  "date": "2026-09-13",
+  "captures": [
+    {
+      "id": "880hw-settings-root",
+      "path": "test/calculator_references/880hw-settings-root.bin",
+      "status": "blocked",
+      "sha256": null,
+      "resolves": [
+        "M-03",
+        "target menu Latin glyph height and bar geometry"
+      ],
+      "owner": "Physical fx-880 bench operator",
+      "reason": "The 2026-09-14 supplied Settings BMP was clarified by its provider as another emulator pasted into Paint. It is not a physical target capture; its raw palette is 0/128/192/255.",
+      "next": "Supply an original physical target raster and capture-pipeline level mapping. Compare Settings glyphs and all framing anchors before adopting candidate typography or arrow levels.",
+      "comparison_evidence": "test/calculator_references/settings-root-emulator-paint-original.bmp",
+      "comparison_audit": "test/calculator_references/settings-root-emulator-audit.json"
+    },
+    {
+      "id": "880hw-pow93",
+      "path": "test/calculator_references/880hw-pow93.bin",
+      "status": "blocked",
+      "sha256": null,
+      "resolves": [
+        "target glyph heights",
+        "target active-field grey",
+        "target exponent caret"
+      ],
+      "owner": "Physical fx-880 bench operator",
+      "reason": "No physical capture performed; the required Diagnostics bus-sniffer path was removed before P1.",
+      "next": "On the physical Casio Calculate entry type 9 POWER 3, capture both blink phases three times using an authorized capture setup, review 2-bpp planes and status segments."
+    }
+  ],
+  "runtime_baseline": {
+    "free_internal_heap": null,
+    "worker_stack_high_water": null,
+    "status": "blocked",
+    "reason": "Host tests and firmware size do not measure device runtime heap or worker stack."
+  }
+}

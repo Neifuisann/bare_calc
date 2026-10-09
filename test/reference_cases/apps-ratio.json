@@ -1,0 +1,973 @@
+{
+  "schema": 1,
+  "phase": "P16",
+  "cases": [
+    {
+      "id": "P16-RATIO-01",
+      "title": "launch type menu",
+      "app": "Ratio",
+      "surface": "launch type menu",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__ratio.html.txt",
+          "section": "launch type menu"
+        }
+      ],
+      "initial": {
+        "app": "Ratio",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-RATIO-01-1",
+          "capture": "final",
+          "expect": {
+            "menu": {
+              "labels": [
+                "A:B=X:D",
+                "A:B=C:X"
+              ]
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-RATIO-02",
+      "title": "first form coefficient editor",
+      "app": "Ratio",
+      "surface": "first form coefficient editor",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__ratio.html.txt",
+          "section": "first form coefficient editor"
+        }
+      ],
+      "initial": {
+        "app": "Ratio",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "OK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-RATIO-02-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "RatioCoefficients"
+            },
+            "grid": {
+              "cols": 3,
+              "cells": [
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-RATIO-03",
+      "title": "coefficient navigation",
+      "app": "Ratio",
+      "surface": "coefficient navigation",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__ratio.html.txt",
+          "section": "coefficient navigation"
+        }
+      ],
+      "initial": {
+        "app": "Ratio",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "OK",
+        "RIGHT",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-RATIO-03-1",
+          "capture": "final",
+          "expect": {
+            "grid": {
+              "col": 1
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-RATIO-04",
+      "title": "3:8=X:12 exact solution",
+      "app": "Ratio",
+      "surface": "3:8=X:12 exact solution",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__ratio.html.txt",
+          "section": "3:8=X:12 exact solution"
+        }
+      ],
+      "initial": {
+        "app": "Ratio",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "OK",
+        "3",
+        "EXE",
+        "8",
+        "EXE",
+        "1",
+        "2",
+        "EXE",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-RATIO-04-1",
+          "capture": "final",
+          "expect": {
+            "result": {
+              "text": "9/2",
+              "hasResult": true
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-RATIO-05",
+      "title": "second form selection",
+      "app": "Ratio",
+      "surface": "second form selection",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__ratio.html.txt",
+          "section": "second form selection"
+        }
+      ],
+      "initial": {
+        "app": "Ratio",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "DOWN",
+        "OK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-RATIO-05-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "RatioCoefficients"
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-RATIO-06",
+      "title": "2:3=4:X exact solution",
+      "app": "Ratio",
+      "surface": "2:3=4:X exact solution",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__ratio.html.txt",
+          "section": "2:3=4:X exact solution"
+        }
+      ],
+      "initial": {
+        "app": "Ratio",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "DOWN",
+        "OK",
+        "2",
+        "EXE",
+        "3",
+        "EXE",
+        "4",
+        "EXE",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-RATIO-06-1",
+          "capture": "final",
+          "expect": {
+            "result": {
+              "text": "6"
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-RATIO-07",
+      "title": "zero A",
+      "app": "Ratio",
+      "surface": "zero A",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__ratio.html.txt",
+          "section": "zero A"
+        }
+      ],
+      "initial": {
+        "app": "Ratio",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "OK",
+        "0",
+        "EXE",
+        "8",
+        "EXE",
+        "1",
+        "2",
+        "EXE",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-RATIO-07-1",
+          "capture": "final",
+          "expect": {
+            "error": {
+              "title": "Math ERROR"
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-RATIO-08",
+      "title": "zero B",
+      "app": "Ratio",
+      "surface": "zero B",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__ratio.html.txt",
+          "section": "zero B"
+        }
+      ],
+      "initial": {
+        "app": "Ratio",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "OK",
+        "3",
+        "EXE",
+        "0",
+        "EXE",
+        "1",
+        "2",
+        "EXE",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-RATIO-08-1",
+          "capture": "final",
+          "expect": {
+            "error": {
+              "title": "Math ERROR"
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-RATIO-09",
+      "title": "zero third coefficient",
+      "app": "Ratio",
+      "surface": "zero third coefficient",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__ratio.html.txt",
+          "section": "zero third coefficient"
+        }
+      ],
+      "initial": {
+        "app": "Ratio",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "OK",
+        "3",
+        "EXE",
+        "8",
+        "EXE",
+        "0",
+        "EXE",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-RATIO-09-1",
+          "capture": "final",
+          "expect": {
+            "error": {
+              "title": "Math ERROR"
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-RATIO-10",
+      "title": "BACK result return",
+      "app": "Ratio",
+      "surface": "BACK result return",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__ratio.html.txt",
+          "section": "BACK result return"
+        }
+      ],
+      "initial": {
+        "app": "Ratio",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "OK",
+        "3",
+        "EXE",
+        "8",
+        "EXE",
+        "1",
+        "2",
+        "EXE",
+        "EXE",
+        "BACK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-RATIO-10-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "RatioCoefficients"
+            },
+            "grid": {
+              "cells": [
+                "3",
+                "8",
+                "12"
+              ]
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-RATIO-11",
+      "title": "shared Store result return",
+      "app": "Ratio",
+      "surface": "shared Store result return",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__ratio.html.txt",
+          "section": "shared Store result return"
+        }
+      ],
+      "initial": {
+        "app": "Ratio",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "OK",
+        "3",
+        "EXE",
+        "8",
+        "EXE",
+        "1",
+        "2",
+        "EXE",
+        "EXE",
+        "VARIABLE",
+        "OK",
+        "DOWN",
+        "OK",
+        "BACK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-RATIO-11-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "RatioResult"
+            },
+            "result": {
+              "text": "9/2"
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-RATIO-12",
+      "title": "BACK type change resets",
+      "app": "Ratio",
+      "surface": "BACK type change resets",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__ratio.html.txt",
+          "section": "BACK type change resets"
+        }
+      ],
+      "initial": {
+        "app": "Ratio",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "OK",
+        "3",
+        "EXE",
+        "8",
+        "EXE",
+        "1",
+        "2",
+        "EXE",
+        "BACK",
+        "DOWN",
+        "OK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-RATIO-12-1",
+          "capture": "final",
+          "expect": {
+            "grid": {
+              "cells": [
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-RATIO-13",
+      "title": "AC coefficient reset",
+      "app": "Ratio",
+      "surface": "AC coefficient reset",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__ratio.html.txt",
+          "section": "AC coefficient reset"
+        }
+      ],
+      "initial": {
+        "app": "Ratio",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "OK",
+        "3",
+        "EXE",
+        "8",
+        "EXE",
+        "1",
+        "2",
+        "EXE",
+        "AC",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-RATIO-13-1",
+          "capture": "final",
+          "expect": {
+            "grid": {
+              "cells": [
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-RATIO-14",
+      "title": "async timing evidence",
+      "app": "Ratio",
+      "surface": "async timing evidence",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__ratio.html.txt",
+          "section": "async timing evidence"
+        }
+      ],
+      "initial": {
+        "app": "Ratio",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-RATIO-14-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P16",
+          "reason": "Native leave/edit/type stale-job guards are tested. Target timing and busy raster need a physical capture; P20 owns capture.",
+          "pending_reason": "Native leave/edit/type stale-job guards are tested. Target timing and busy raster need a physical capture; P20 owns capture.",
+          "resolution": "Acquire the physical target observation described in reason; retain pending until reviewed."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "Native leave/edit/type stale-job guards are tested. Target timing and busy raster need a physical capture; P20 owns capture."
+    },
+    {
+      "id": "P16-RATIO-15",
+      "title": "HOME clears coefficients",
+      "app": "Ratio",
+      "surface": "HOME clears coefficients",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__ratio.html.txt",
+          "section": "HOME clears coefficients"
+        }
+      ],
+      "initial": {
+        "app": "Ratio",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "OK",
+        "3",
+        "EXE",
+        "8",
+        "EXE",
+        "1",
+        "2",
+        "EXE",
+        "HOME",
+        "OK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-RATIO-15-1",
+          "capture": "final",
+          "expect": {
+            "grid": {
+              "cells": [
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P16"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "880-MAN logical behavior; controller and exact arithmetic safety additionally tested in calculator_apps_p16_test.h. Raster is not a target pass."
+    },
+    {
+      "id": "P16-RATIO-16",
+      "title": "physical menu icons raster",
+      "app": "Ratio",
+      "surface": "physical menu icons raster",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__ratio.html.txt",
+          "section": "physical menu icons raster"
+        }
+      ],
+      "initial": {
+        "app": "Ratio",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P16-RATIO-16-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P16",
+          "reason": "No physical fx-880 Ratio frames. Owner P20: capture both formula grids, exact fraction result and icon states.",
+          "pending_reason": "No physical fx-880 Ratio frames. Owner P20: capture both formula grids, exact fraction result and icon states.",
+          "resolution": "Acquire the physical target observation described in reason; retain pending until reviewed."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "owner": "P16",
+      "gap_ids": [],
+      "notes": "No physical fx-880 Ratio frames. Owner P20: capture both formula grids, exact fraction result and icon states."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "decNumber",
+  "version": "3.68.0",
+  "license": "ICU",
+  "build": { "flags": ["-DDECNUMDIGITS=40"] }
+}

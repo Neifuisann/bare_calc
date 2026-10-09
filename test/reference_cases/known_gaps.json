@@ -1,0 +1,242 @@
+{
+  "E-01": {
+    "reference": "9 ^ 3 leaves the cursor at the exponent end; a digit extends the exponent; ▶ exits after the power",
+    "checks": []
+  },
+  "E-17": {
+    "reference": "**Power is a postfix script on the preceding atom.** Typing before a power's base joins that atom (29³); one cursor stop before the base; DEL at the exponent start splices \"9▌3\"",
+    "checks": []
+  },
+  "E-02": {
+    "reference": "▼ from an exponent: no-op at root level; to the denominator when the power is in a numerator (outward walk)",
+    "checks": []
+  },
+  "E-03": {
+    "reference": "▲ from a base: no-op",
+    "checks": []
+  },
+  "E-04": {
+    "reference": "▶ at root end wraps to root start",
+    "checks": []
+  },
+  "E-05": {
+    "reference": "◀ at root start wraps to root end",
+    "checks": []
+  },
+  "E-06": {
+    "reference": "▶ at the end of a numerator leaves the fraction",
+    "checks": []
+  },
+  "E-07": {
+    "reference": "◀ at the start of a denominator (empty or not) leaves to before the fraction",
+    "checks": []
+  },
+  "E-08": {
+    "reference": "DEL with nothing to the left deletes forward: at root offset 0 the next item; at a fraction's numerator start when the fraction has nothing to its left, the numerator's first item",
+    "checks": []
+  },
+  "E-09": {
+    "reference": "DEL directly after a structure deletes its last field's last item",
+    "checks": []
+  },
+  "E-10": {
+    "reference": "DEL at the start of a non-first field (empty or not) removes the structure and splices all field contents in order; cursor at the splice point",
+    "checks": []
+  },
+  "E-11": {
+    "reference": "SHIFT DEL (INS) in Math input: the next template key wraps the **following** operand",
+    "checks": []
+  },
+  "E-12": {
+    "reference": "SHIFT◀/▶ inside mixed/∫/Σ/Π: to just before/after that template",
+    "checks": []
+  },
+  "E-13": {
+    "reference": "TOOLS > Undo undoes the last editing operation, including menu insertions",
+    "checks": []
+  },
+  "E-14": {
+    "reference": "after an error, the cursor sits before the offending token (`1×▌×2`)",
+    "checks": []
+  },
+  "E-15": {
+    "reference": "×10^x key follows the Scientific-key setting",
+    "checks": []
+  },
+  "E-16": {
+    "reference": "function keys insert an open call `sin(`; `)` closes it; DEL removes `)`, contents, then `sin(` as one token",
+    "checks": []
+  },
+  "L-01": {
+    "reference": "normal digits 12 rows, script 9",
+    "checks": []
+  },
+  "L-02": {
+    "reference": "first ink at x2, y0",
+    "checks": []
+  },
+  "L-03": {
+    "reference": "caret width 3, height = the owning field's box (13 / 9 minimum; 17 with an exponent; 30 beside a fraction), top = box top",
+    "checks": []
+  },
+  "L-04": {
+    "reference": "fraction W = content + 4, rule [x+1, x+W), gaps 2/2",
+    "checks": []
+  },
+  "L-05": {
+    "reference": "level 2 outside the active field subtree",
+    "checks": []
+  },
+  "L-06": {
+    "reference": "ink may extend past the advance",
+    "checks": []
+  },
+  "L-07": {
+    "reference": "root-index geometry",
+    "checks": []
+  },
+  "L-08": {
+    "reference": "long-line ◀▶ raster arrows with clipping band",
+    "checks": []
+  },
+  "L-09": {
+    "reference": "linear display uses calculator linear tokens",
+    "checks": []
+  },
+  "L-10": {
+    "reference": "insert/overwrite/INS-armed caret shapes differ",
+    "checks": []
+  },
+  "L-11": {
+    "reference": "exponent ink bottom 7 rows above base ink bottom; exponent top at line top",
+    "checks": []
+  },
+  "R-01": {
+    "reference": "SHIFT EXE shows the decimal result",
+    "checks": []
+  },
+  "R-02": {
+    "reference": "multi-value separator follows the decimal mark (comma for dot-decimal, semicolon for comma-decimal)",
+    "checks": []
+  },
+  "R-03": {
+    "reference": "sexagesimal ° ′ ″ distinct",
+    "checks": []
+  },
+  "R-04": {
+    "reference": "structured result (fraction, radical, π, ×10ⁿ, recurring)",
+    "checks": []
+  },
+  "R-05": {
+    "reference": "FORMAT items depend on the result; no menu if none applies",
+    "checks": []
+  },
+  "R-06": {
+    "reference": "Norm 1 decimal shows 10 significant digits, right-aligned",
+    "checks": []
+  },
+  "A-01": {
+    "reference": "▲▼ browse history showing expression **and answer**; ◀▶/BACK edit it; EXE re-executes",
+    "checks": []
+  },
+  "A-02": {
+    "reference": "history browsable from an empty line after AC; ▲ lit",
+    "checks": []
+  },
+  "A-03": {
+    "reference": "◀/▶ on the empty line after AC recall the last expression (cursor end/start)",
+    "checks": []
+  },
+  "A-04": {
+    "reference": "AC closes user-opened menus and keeps the expression; FORMAT menu returns to the result",
+    "checks": []
+  },
+  "A-05": {
+    "reference": "errors are a modal dialog; OK/AC/BACK dismiss to editing at the error position",
+    "checks": []
+  },
+  "A-06": {
+    "reference": "BACK on the Calculate entry opens HOME",
+    "checks": [
+      "C65-1"
+    ]
+  },
+  "A-07": {
+    "reference": "long result: ◀▶ scroll it first; BACK/AC then edit",
+    "checks": []
+  },
+  "A-08": {
+    "reference": "SETTINGS root: Calc Settings ▸ / System Settings ▸ / Reset ▸",
+    "checks": []
+  },
+  "A-09": {
+    "reference": "SETTINGS on HOME → Get Started",
+    "checks": []
+  },
+  "A-10": {
+    "reference": "CALC: prompts linear; parent keeps its natural display; final EXE; EXE on the CALC result reopens the prompts",
+    "checks": []
+  },
+  "A-11": {
+    "reference": "Statistics, Distribution, Table, Spreadsheet, Ratio, MathBox exist",
+    "checks": []
+  },
+  "A-12": {
+    "reference": "2026 fx-880 Home has one more native app",
+    "checks": []
+  },
+  "M-01": {
+    "reference": "bar 15 rows × x0-187",
+    "checks": []
+  },
+  "M-02": {
+    "reference": "scrollbar level 2, 2-px blank before it",
+    "checks": []
+  },
+  "M-03": {
+    "reference": "menu text face 12-row ink",
+    "checks": []
+  },
+  "M-04": {
+    "reference": "VARIABLE grid geometry per §3.6",
+    "checks": []
+  },
+  "M-05": {
+    "reference": "Up/Down wrap",
+    "checks": []
+  },
+  "M-06": {
+    "reference": "error dialog layout per §3.6",
+    "checks": []
+  },
+  "I-01": {
+    "reference": "▲ lit after AC while history exists",
+    "checks": []
+  },
+  "I-02": {
+    "reference": "menus and dialogs clear all segments",
+    "checks": []
+  },
+  "I-03": {
+    "reference": "SUN always lit in the emulator",
+    "checks": []
+  },
+  "I-04": {
+    "reference": "◀▶ segments stay off during horizontal scroll",
+    "checks": []
+  },
+  "I-05": {
+    "reference": "S toggles with SHIFT",
+    "checks": []
+  },
+  "I-06": {
+    "reference": "MATH + angle on entry; newest history entry ▲ only, oldest ▼ only",
+    "checks": []
+  },
+  "A-13": {
+    "reference": "C48: BACK on a successful result edits at the expression end; 1 EXE BACK 2 must give 12.",
+    "discovered": "P1 full-controller replay: native gives 21 because result.position is used for successful results.",
+    "phase": "P11",
+    "checks": []
+  }
+}

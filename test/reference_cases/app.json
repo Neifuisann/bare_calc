@@ -1,0 +1,3785 @@
+{
+  "schema": 1,
+  "spec_sha256": "b43625c926d6f402c568704447f9220b4980f28149939ebf79de1b176587ebd3",
+  "cases": [
+    {
+      "id": "C44",
+      "title": "9³ top-left, 729 right-aligned; ▲ lit",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "key-audit 60-b",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.5"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "9",
+        "POWER",
+        "3",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C44-1",
+          "capture": "final",
+          "expect": {
+            "result": {
+              "text": "729",
+              "hasResult": true
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C44-2",
+          "capture": "final",
+          "expect": {
+            "icons": {
+              "UP": true
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "keys": "9 ^ 3 EXE",
+        "outcome": "9³ top-left, 729 right-aligned; ▲ lit",
+        "research_verdict": "layout differs (L-02)"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "C45",
+      "title": "new expression \"2\"",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "key-audit 60-c",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.5"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "9",
+        "POWER",
+        "3",
+        "EXE",
+        "2",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C45-1",
+          "capture": "final",
+          "expect": {
+            "logical": {
+              "source": "2"
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "keys": "9 ^ 3 EXE 2",
+        "outcome": "new expression \"2\"",
+        "research_verdict": "MATCH"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "C46",
+      "title": "Ans+2",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "s21",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.5"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "1",
+        "EXE",
+        "ADD",
+        "2",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C46-1",
+          "capture": "final",
+          "expect": {
+            "logical": {
+              "source": "Ans+2"
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "keys": "1 EXE + 2",
+        "outcome": "Ans+2",
+        "research_verdict": "MATCH"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "C47",
+      "title": "edit \"1÷3▌\" / \"▌1÷3\"",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "seq2 26-i, 46-i",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.5"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "1",
+        "DIVIDE",
+        "3",
+        "EXE",
+        "LEFT",
+        {
+          "capture": "final"
+        },
+        "EXE",
+        "RIGHT",
+        {
+          "capture": "step1"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C47-1",
+          "capture": "final",
+          "expect": {
+            "logical": {
+              "source": "1/3",
+              "cursor": 3
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C47-2",
+          "capture": "step1",
+          "expect": {
+            "logical": {
+              "source": "1/3",
+              "cursor": 0
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "keys": "1 ÷ 3 EXE ◀ / ▶",
+        "outcome": "edit \"1÷3▌\" / \"▌1÷3\"",
+        "research_verdict": "MATCH"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "C48",
+      "title": "edit \"1▌\" → 12",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "s32",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.5"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "1",
+        "EXE",
+        "BACK",
+        "2",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C48-1",
+          "capture": "final",
+          "expect": {
+            "logical": {
+              "source": "12"
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "keys": "1 EXE BACK 2",
+        "outcome": "edit \"1▌\" → 12",
+        "research_verdict": "LIKELY MATCH (verify position)"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "C49",
+      "title": "0.3333333333",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "s13",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.5"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "1",
+        "DIVIDE",
+        "3",
+        "SHIFT",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C49-1",
+          "capture": "final",
+          "expect": {
+            "result": {
+              "text": "0.3333333333",
+              "hasResult": true
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "keys": "1 ÷ 3 SHIFT EXE",
+        "outcome": "0.3333333333",
+        "research_verdict": "**DIFF R-01**"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "C50",
+      "title": "FORMAT menu / back to the result",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "seq2 61-i,j",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.5"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1",
+          "formatMenu": "Menu"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "1",
+        "DIVIDE",
+        "3",
+        "EXE",
+        "FORMAT",
+        {
+          "capture": "final"
+        },
+        "SHIFT",
+        "FORMAT",
+        {
+          "capture": "step1"
+        },
+        "AC",
+        {
+          "capture": "step2"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C50-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Format"
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C50-2",
+          "capture": "step1",
+          "expect": {
+            "screen": {
+              "id": "Format"
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C50-3",
+          "capture": "step2",
+          "expect": {
+            "screen": {
+              "id": "Result"
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations. Emulator evidence captured with FORMAT Key=Menu; initial settings pin that choice.",
+      "reference": {
+        "keys": "1 ÷ 3 EXE FORMAT / AC",
+        "outcome": "FORMAT menu / back to the result",
+        "research_verdict": "**DIFF A-04**"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "C51",
+      "title": "2 joins the base: 29³ = **24389**",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "s51",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.5"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "9",
+        "POWER",
+        "3",
+        "PAGE_UP",
+        "2",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C51-1",
+          "capture": "final",
+          "expect": {
+            "result": {
+              "text": "24389",
+              "hasResult": true
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "keys": "9 ^ 3 START 2 EXE",
+        "outcome": "2 joins the base: 29³ = **24389**",
+        "research_verdict": "**DIFF E-17**"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "C52",
+      "title": "▶ lands after 9 (visible move) → 92³ = **778688**",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "s52, native-probe5",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.5"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "9",
+        "POWER",
+        "3",
+        "PAGE_UP",
+        "RIGHT",
+        "2",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C52-1",
+          "capture": "final",
+          "expect": {
+            "result": {
+              "text": "778688",
+              "hasResult": true
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "keys": "9 ^ 3 START ▶ 2 EXE",
+        "outcome": "▶ lands after 9 (visible move) → 92³ = **778688**",
+        "research_verdict": "**DIFF E-17**"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "C53",
+      "title": "shows \"1 … 1\" (answer kept, no caret, ▼ only) / stays / \"2 … 2\" (▲ only)",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "s10",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.5"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "1",
+        "EXE",
+        "2",
+        "EXE",
+        "UP",
+        {
+          "capture": "final"
+        },
+        "UP",
+        {
+          "capture": "step2"
+        },
+        "DOWN",
+        {
+          "capture": "step3"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C53-1",
+          "capture": "final",
+          "expect": {
+            "result": {
+              "hasResult": true,
+              "text": "1"
+            },
+            "caret": {
+              "visible": false
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C53-2",
+          "capture": "final",
+          "expect": {
+            "icons": {
+              "UP": false,
+              "DOWN": true
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C53-3",
+          "capture": "step2",
+          "expect": {
+            "result": {
+              "hasResult": true,
+              "text": "1"
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C53-4",
+          "capture": "step3",
+          "expect": {
+            "result": {
+              "hasResult": true,
+              "text": "2"
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "keys": "1 EXE 2 EXE ▲ / ▲ / ▼",
+        "outcome": "shows \"1 … 1\" (answer kept, no caret, ▼ only) / stays / \"2 … 2\" (▲ only)",
+        "research_verdict": "**DIFF A-01**"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "C54",
+      "title": "shows \"1 … 1\"",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "s33",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.5"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "1",
+        "EXE",
+        "AC",
+        "UP",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C54-1",
+          "capture": "final",
+          "expect": {
+            "result": {
+              "text": "1",
+              "hasResult": true
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C54-2",
+          "capture": "final",
+          "expect": {
+            "icons": {
+              "UP": true
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "keys": "1 EXE AC ▲",
+        "outcome": "shows \"1 … 1\"",
+        "research_verdict": "**DIFF A-02**"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "C55",
+      "title": "edits the history entry \"13\"",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "s36",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.5"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "1",
+        "EXE",
+        "2",
+        "EXE",
+        "UP",
+        "LEFT",
+        "3",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C55-1",
+          "capture": "final",
+          "expect": {
+            "logical": {
+              "source": "13"
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "keys": "1 EXE 2 EXE ▲ ◀ 3",
+        "outcome": "edits the history entry \"13\"",
+        "research_verdict": "**DIFF A-01**"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "C56",
+      "title": "re-executes 1 = 1",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "s37",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.5"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "1",
+        "EXE",
+        "2",
+        "EXE",
+        "UP",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C56-1",
+          "capture": "final",
+          "expect": {
+            "result": {
+              "text": "1",
+              "hasResult": true
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "keys": "1 EXE 2 EXE ▲ EXE",
+        "outcome": "re-executes 1 = 1",
+        "research_verdict": "MATCH"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "C57",
+      "title": "recalls \"1÷3▌\" / \"▌1÷3\"",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "seq2 26-k, 46-k",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.5"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "1",
+        "DIVIDE",
+        "3",
+        "EXE",
+        "AC",
+        "LEFT",
+        {
+          "capture": "final"
+        },
+        "AC",
+        "RIGHT",
+        {
+          "capture": "step1"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C57-1",
+          "capture": "final",
+          "expect": {
+            "logical": {
+              "source": "1/3",
+              "cursor": 3
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C57-2",
+          "capture": "step1",
+          "expect": {
+            "logical": {
+              "source": "1/3",
+              "cursor": 0
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "keys": "1 ÷ 3 EXE AC ◀ / ▶",
+        "outcome": "recalls \"1÷3▌\" / \"▌1÷3\"",
+        "research_verdict": "**DIFF A-03**"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "C58",
+      "title": "Math ERROR dialog; each key returns to \"1÷0▌\"",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "s11, s25-s27",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.5"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "1",
+        "DIVIDE",
+        "0",
+        "EXE",
+        {
+          "capture": "final"
+        },
+        "OK",
+        {
+          "capture": "step3"
+        },
+        "AC",
+        "1",
+        "DIVIDE",
+        "0",
+        "EXE",
+        "AC",
+        {
+          "capture": "step4"
+        },
+        "AC",
+        "1",
+        "DIVIDE",
+        "0",
+        "EXE",
+        "BACK",
+        {
+          "capture": "step5"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C58-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "ErrorDialog"
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C58-2",
+          "capture": "final",
+          "expect": {
+            "icons": {
+              "allOff": true
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C58-3",
+          "capture": "final",
+          "expect": {
+            "error": {
+              "title": "Math ERROR",
+              "origin": "Entry",
+              "cursor": 3
+            },
+            "caret": {
+              "visible": false
+            },
+            "result": {
+              "hasResult": false
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C58-4",
+          "capture": "step3",
+          "expect": {
+            "screen": {
+              "id": "Entry"
+            },
+            "logical": {
+              "source": "1/0",
+              "cursor": 3
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C58-5",
+          "capture": "step4",
+          "expect": {
+            "screen": {
+              "id": "Entry"
+            },
+            "logical": {
+              "source": "1/0",
+              "cursor": 3
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C58-6",
+          "capture": "step5",
+          "expect": {
+            "screen": {
+              "id": "Entry"
+            },
+            "logical": {
+              "source": "1/0",
+              "cursor": 3
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "keys": "1 ÷ 0 EXE, then OK / AC / BACK",
+        "outcome": "Math ERROR dialog; each key returns to \"1÷0▌\"",
+        "research_verdict": "**DIFF A-05**"
+      },
+      "aliases": [
+        "APP-ERR-01",
+        "APP-ERR-02"
+      ],
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "C59",
+      "title": "Syntax ERROR; BACK → \"1×▌×2\" → 1×3×2",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "s12, s28",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.5"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "1",
+        "MULTIPLY",
+        "MULTIPLY",
+        "2",
+        "EXE",
+        {
+          "capture": "final"
+        },
+        "BACK",
+        {
+          "capture": "step2"
+        },
+        "3",
+        {
+          "capture": "step3"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C59-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "ErrorDialog"
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C59-2",
+          "capture": "final",
+          "expect": {
+            "error": {
+              "title": "Syntax ERROR",
+              "origin": "Entry",
+              "cursor": 2
+            },
+            "logical": {
+              "source": "1**2"
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C59-3",
+          "capture": "step2",
+          "expect": {
+            "logical": {
+              "source": "1**2",
+              "cursor": 2
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C59-4",
+          "capture": "step3",
+          "expect": {
+            "logical": {
+              "source": "1*3*2"
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "keys": "1 × × 2 EXE BACK 3",
+        "outcome": "Syntax ERROR; BACK → \"1×▌×2\" → 1×3×2",
+        "research_verdict": "**DIFF A-05, E-14**"
+      },
+      "aliases": [
+        "APP-ERR-03"
+      ],
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "C60",
+      "title": "closes to the entry",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "s14-s17, s24",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.5"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "CATALOG",
+        "AC",
+        {
+          "capture": "final"
+        },
+        "BACK",
+        "TOOLS",
+        "AC",
+        {
+          "capture": "step1"
+        },
+        "BACK",
+        "SETTINGS",
+        "AC",
+        {
+          "capture": "step2"
+        },
+        "BACK",
+        "VARIABLE",
+        "AC",
+        {
+          "capture": "step3"
+        },
+        "BACK",
+        "FUNCTION",
+        "AC",
+        {
+          "capture": "step4"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C60-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Entry"
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C60-2",
+          "capture": "step1",
+          "expect": {
+            "screen": {
+              "id": "Entry"
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C60-3",
+          "capture": "step2",
+          "expect": {
+            "screen": {
+              "id": "Entry"
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C60-4",
+          "capture": "step3",
+          "expect": {
+            "screen": {
+              "id": "Entry"
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C60-5",
+          "capture": "step4",
+          "expect": {
+            "screen": {
+              "id": "Entry"
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "keys": "CATALOG / TOOLS / SETTINGS / VARIABLE / FUNCTION, then AC",
+        "outcome": "closes to the entry",
+        "research_verdict": "**DIFF A-04**"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "C61",
+      "title": "\"1▌\" kept",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "s29",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.5"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "1",
+        "CATALOG",
+        "AC",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C61-1",
+          "capture": "final",
+          "expect": {
+            "logical": {
+              "source": "1"
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C61-2",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Entry"
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "keys": "1 CATALOG AC",
+        "outcome": "\"1▌\" kept",
+        "research_verdict": "**DIFF A-04**"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "C62",
+      "title": "Calc Settings → Settings root → entry",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "s18",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.5"
+        },
+        {
+          "kind": "user-supplied-emulator",
+          "evidence": "test/calculator_references/settings-root-emulator-paint-original.bmp"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "SETTINGS",
+        {
+          "capture": "final"
+        },
+        "OK",
+        {
+          "capture": "step1"
+        },
+        "BACK",
+        {
+          "capture": "step2"
+        },
+        "BACK",
+        {
+          "capture": "step3"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C62-1",
+          "capture": "final",
+          "expect": {
+            "menu": {
+              "labels": [
+                "Calc Settings",
+                "System Settings",
+                "Reset",
+                "Get Started"
+              ]
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C62-2",
+          "capture": "step1",
+          "expect": {
+            "screen": {
+              "id": "CalcSettings"
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C62-3",
+          "capture": "step2",
+          "expect": {
+            "screen": {
+              "id": "Settings"
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C62-4",
+          "capture": "step3",
+          "expect": {
+            "screen": {
+              "id": "Entry"
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations. Four-row root explicitly requested; supplied BMP was clarified as another emulator pasted into Paint, not physical evidence. Get Started destination pending.",
+      "reference": {
+        "keys": "SETTINGS OK BACK BACK",
+        "outcome": "Calc Settings → Settings root → entry",
+        "research_verdict": "**DIFF A-08**"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "C63",
+      "title": "wraps to last / wraps",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "s20",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.5"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "SETTINGS",
+        "UP",
+        {
+          "capture": "final"
+        },
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        {
+          "capture": "step1"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C63-1",
+          "capture": "final",
+          "expect": {
+            "menu": {
+              "lastSelected": true
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C63-2",
+          "capture": "step1",
+          "expect": {
+            "menu": {
+              "selection": 2
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "keys": "SETTINGS ▲ (first row) / ▼▼▼",
+        "outcome": "wraps to last / wraps",
+        "research_verdict": "MATCH"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "C64",
+      "title": "Home",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "s19",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.5"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "SETTINGS",
+        "OK",
+        "HOME",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C64-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Home"
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "keys": "SETTINGS OK HOME",
+        "outcome": "Home",
+        "research_verdict": "test"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "C65",
+      "title": "Home",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "s23",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.5"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "1",
+        "2",
+        "BACK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C65-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Home"
+            }
+          },
+          "native": {
+            "gap": "A-06"
+          }
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "keys": "1 2 BACK",
+        "outcome": "Home",
+        "research_verdict": "**DIFF A-06**"
+      },
+      "gap_ids": [
+        "A-06"
+      ],
+      "native": {
+        "gap": "A-06"
+      }
+    },
+    {
+      "id": "C66",
+      "title": "horizontal scroll, raster ◀ at x2-9 / ▶ at x183-190; no ◀▶ segments",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "s35",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.5"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        {
+          "capture": "final"
+        },
+        "PAGE_UP",
+        {
+          "capture": "step2"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C66-1",
+          "capture": "final",
+          "expect": {
+            "icons": {
+              "LEFT": false,
+              "RIGHT": false
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C66-2",
+          "capture": "final",
+          "expect": {
+            "bbox": [
+              2,
+              3,
+              8,
+              7
+            ]
+          },
+          "native": "pass",
+          "measure": {
+            "region": [
+              0,
+              0,
+              10,
+              14
+            ]
+          }
+        },
+        {
+          "id": "C66-3",
+          "capture": "step2",
+          "expect": {
+            "icons": {
+              "LEFT": false,
+              "RIGHT": false
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C66-4",
+          "capture": "step2",
+          "expect": {
+            "bbox": [
+              183,
+              3,
+              8,
+              7
+            ]
+          },
+          "native": "pass",
+          "measure": {
+            "region": [
+              183,
+              0,
+              9,
+              14
+            ]
+          }
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "keys": "twenty 9s / START",
+        "outcome": "horizontal scroll, raster ◀ at x2-9 / ▶ at x183-190; no ◀▶ segments",
+        "research_verdict": "**DIFF L-08**"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "C67",
+      "title": "2×5 grid A..F,x,y,z / \"A=2\" entry",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "key-audit 15",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.5"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "VARIABLE",
+        {
+          "capture": "final"
+        },
+        "2",
+        {
+          "capture": "step1"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C67-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Variables"
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C67-2",
+          "capture": "step1",
+          "expect": {
+            "screen": {
+              "id": "Store"
+            },
+            "logical": {
+              "source": "2"
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "keys": "VARIABLE / 2",
+        "outcome": "2×5 grid A..F,x,y,z / \"A=2\" entry",
+        "research_verdict": "geometry M-04"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "C68",
+      "title": "f(x), g(x), Define f(x), Define g(x)",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "key-audit 25",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.5"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "FUNCTION",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C68-1",
+          "capture": "final",
+          "expect": {
+            "menu": {
+              "labels": [
+                "f(x)",
+                "g(x)",
+                "Define f(x)",
+                "Define g(x)"
+              ]
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "keys": "FUNCTION",
+        "outcome": "f(x), g(x), Define f(x), Define g(x)",
+        "research_verdict": "MATCH"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "C69",
+      "title": "\"×10^□\"",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "key-audit 62",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.5"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "TIMES_TEN_POWER",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C69-1",
+          "capture": "final",
+          "expect": {
+            "logical": {
+              "source": "*10^()"
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "keys": "×10^x",
+        "outcome": "\"×10^□\"",
+        "research_verdict": "logic MATCH, source form E-17"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "C70",
+      "title": "`log□(□)` cursor in base",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "MODEL-SPECIFIC"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "key-audit 54",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.5"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "LOG",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C70-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "CN CW log-base key is not target evidence. Follow fx-880 manual; target log/template and cursor capture required.",
+          "owner": "ClassWiz reference maintainer",
+          "resolution": "Physical fx-880 capture or approved reference-kit probe"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "keys": "log key (CN CW)",
+        "outcome": "`log□(□)` cursor in base",
+        "research_verdict": "MODEL-SPECIFIC, follow `[880-MAN]`"
+      },
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "C71",
+      "title": "C71",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "POWER",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C71-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "Power with no preceding operand: authentic ClassWiz base-slot behavior UNKNOWN. Native retains pow(,) fallback.",
+          "owner": "ClassWiz reference maintainer",
+          "resolution": "Physical fx-880 capture or approved reference-kit probe"
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "C72",
+      "title": "C72",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "SUBTRACT",
+        "2",
+        "POWER",
+        "2",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C72-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "-2^(2) sign convention UNKNOWN: requires reference-kit EXE value before asserting.",
+          "owner": "ClassWiz reference maintainer",
+          "resolution": "Physical fx-880 capture or approved reference-kit probe"
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "C73",
+      "title": "C73",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "SHIFT",
+        "FRACTION",
+        "1",
+        "RIGHT",
+        "2",
+        "RIGHT",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C73-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "Right at the numerator end of a mixed number UNKNOWN: only Fraction numerator-exit is reference-covered.",
+          "owner": "ClassWiz reference maintainer",
+          "resolution": "Physical fx-880 capture or approved reference-kit probe"
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "C74",
+      "title": "C74",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "SHIFT",
+        "SQUARE",
+        "2",
+        "RIGHT",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C74-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "Right from a log-base field UNKNOWN: E-06 covers Fraction only.",
+          "owner": "ClassWiz reference maintainer",
+          "resolution": "Physical fx-880 capture or approved reference-kit probe"
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "C75",
+      "title": "C75",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "FRACTION",
+        "1",
+        "DOWN",
+        "9",
+        "POWER",
+        "3",
+        "DOWN",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C75-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "Down from an exponent nested inside a denominator UNKNOWN: E-02 covers root level and numerator nesting only.",
+          "owner": "ClassWiz reference maintainer",
+          "resolution": "Physical fx-880 capture or approved reference-kit probe"
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "C76",
+      "title": "C76",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "VARIABLE",
+        "2",
+        "PAGE_UP",
+        "LEFT",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C76-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "Horizontal wrapping in the Store field UNKNOWN: P3 enables wrap for the main Calculate editor only.",
+          "owner": "ClassWiz reference maintainer",
+          "resolution": "Physical fx-880 capture or approved reference-kit probe"
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "C77",
+      "title": "C77",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "FUNCTION",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "1",
+        "PAGE_UP",
+        "LEFT",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C77-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "Horizontal wrapping in the Define field UNKNOWN: P3 enables wrap for the main Calculate editor only.",
+          "owner": "ClassWiz reference maintainer",
+          "resolution": "Physical fx-880 capture or approved reference-kit probe"
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "C78",
+      "title": "C78",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "X",
+        "TOOLS",
+        "OK",
+        "5",
+        "PAGE_UP",
+        "LEFT",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C78-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "Horizontal wrapping in the CALC field UNKNOWN: P3 enables wrap for the main Calculate editor only.",
+          "owner": "ClassWiz reference maintainer",
+          "resolution": "Physical fx-880 capture or approved reference-kit probe"
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "C79",
+      "title": "C79",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "FRACTION",
+        "DOWN",
+        "2",
+        "UP",
+        "DEL",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C79-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "DEL at the start of an empty first field UNKNOWN: E-08 covers forward delete into a populated first field only.",
+          "owner": "ClassWiz reference maintainer",
+          "resolution": "Physical fx-880 capture or approved reference-kit probe"
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "C80",
+      "title": "C80",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "SHIFT",
+        "FRACTION",
+        "1",
+        "DOWN",
+        "2",
+        "UP",
+        "DEL",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C80-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "DEL at the start of a Mixed numerator (non-first field) UNKNOWN: E-10 covers Fraction and Power/Script only.",
+          "owner": "ClassWiz reference maintainer",
+          "resolution": "Physical fx-880 capture or approved reference-kit probe"
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "C81",
+      "title": "C81",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "SHIFT",
+        "SQUARE",
+        "2",
+        "RIGHT",
+        "DEL",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C81-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "DEL at the start of a Log argument UNKNOWN: E-10 covers Fraction and Power/Script only.",
+          "owner": "ClassWiz reference maintainer",
+          "resolution": "Physical fx-880 capture or approved reference-kit probe"
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "C82",
+      "title": "C82",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "SHIFT",
+        "ROOT",
+        "3",
+        "RIGHT",
+        "DEL",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C82-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "DEL at the start of a Root radicand (non-first field) UNKNOWN: E-10 covers Fraction and Power/Script only.",
+          "owner": "ClassWiz reference maintainer",
+          "resolution": "Physical fx-880 capture or approved reference-kit probe"
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "C83",
+      "title": "C83",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "CATALOG",
+        "OK",
+        "DOWN",
+        "OK",
+        "1",
+        "DOWN",
+        "DEL",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C83-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "DEL at the start of an Integral lower limit UNKNOWN: E-10 covers Fraction and Power/Script only.",
+          "owner": "ClassWiz reference maintainer",
+          "resolution": "Physical fx-880 capture or approved reference-kit probe"
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "C84",
+      "title": "C84",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "CATALOG",
+        "OK",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "1",
+        "DOWN",
+        "DEL",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C84-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "DEL at the start of a Sum lower limit UNKNOWN: E-10 covers Fraction and Power/Script only.",
+          "owner": "ClassWiz reference maintainer",
+          "resolution": "Physical fx-880 capture or approved reference-kit probe"
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "C85",
+      "title": "C85",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "CATALOG",
+        "OK",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "1",
+        "DOWN",
+        "DEL",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C85-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "DEL at the start of a Product lower limit UNKNOWN: E-10 covers Fraction and Power/Script only.",
+          "owner": "ClassWiz reference maintainer",
+          "resolution": "Physical fx-880 capture or approved reference-kit probe"
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "C86",
+      "title": "C86",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "FRACTION",
+        "FRACTION",
+        "1",
+        "LEFT",
+        "DEL",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C86-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "Forward DEL inside a nested first field UNKNOWN: E-08 covers a first field at the root start only.",
+          "owner": "ClassWiz reference maintainer",
+          "resolution": "Physical fx-880 capture or approved reference-kit probe"
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "C87",
+      "title": "C87",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "FRACTION",
+        "1",
+        "DOWN",
+        "2",
+        "PAGE_UP",
+        "DEL",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C87-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "Forward DEL when the next item is a complete structure UNKNOWN: E-08 covers the next item being an ordinary glyph.",
+          "owner": "ClassWiz reference maintainer",
+          "resolution": "Physical fx-880 capture or approved reference-kit probe"
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "C88",
+      "title": "C88",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "FRACTION",
+        "FRACTION",
+        "1",
+        "DOWN",
+        "2",
+        "RIGHT",
+        "DEL",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C88-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "DEL after a nested structure UNKNOWN: E-09 covers a structure directly in its own field.",
+          "owner": "ClassWiz reference maintainer",
+          "resolution": "Physical fx-880 capture or approved reference-kit probe"
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "C89",
+      "title": "C89",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "POWER",
+        "9",
+        "RIGHT",
+        "3",
+        "LEFT",
+        "DEL",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C89-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "DEL at the start of a legacy pow exponent UNKNOWN: E-10 names Power, but no reference case builds a legacy pow since P2 made new powers postfix Scripts.",
+          "owner": "ClassWiz reference maintainer",
+          "resolution": "Physical fx-880 capture or approved reference-kit probe"
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "C90",
+      "title": "C90",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "CATALOG",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "OK",
+        {
+          "capture": "final"
+        },
+        "TOOLS",
+        "DOWN",
+        "OK",
+        {
+          "capture": "step1"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C90-1",
+          "capture": "final",
+          "expect": {
+            "logical": {
+              "source": "sin(",
+              "cursor": 4
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "C90-2",
+          "capture": "step1",
+          "expect": {
+            "logical": {
+              "source": "",
+              "cursor": 0
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "C91",
+      "title": "C91",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "1",
+        "ADD",
+        "FRACTION",
+        "7",
+        "DOWN",
+        "6",
+        "LEFT",
+        "LEFT",
+        "SHIFT",
+        "DEL",
+        "ROOT",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C91-1",
+          "capture": "final",
+          "expect": {
+            "logical": {
+              "source": "1+sqrt(frac(7,6))"
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "C92",
+      "title": "C92",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "CATALOG",
+        "OK",
+        "DOWN",
+        "OK",
+        "1",
+        "DOWN",
+        "SHIFT",
+        "RIGHT",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C92-1",
+          "capture": "final",
+          "expect": {
+            "logical": {
+              "source": "integral(1,,)",
+              "cursor": 13
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "C93",
+      "title": "C93",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "CATALOG",
+        "OK",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "1",
+        "SHIFT",
+        "LEFT",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C93-1",
+          "capture": "final",
+          "expect": {
+            "logical": {
+              "source": "sum(1,,)",
+              "cursor": 0
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "C94",
+      "title": "C94",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "9",
+        "POWER",
+        "3",
+        "RIGHT",
+        "PAGE_UP",
+        "SHIFT",
+        "DEL",
+        "2",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C94-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "INS followed by a non-template key UNKNOWN: the manual only pins consumption by a template key.",
+          "owner": "ClassWiz reference maintainer",
+          "resolution": "Physical fx-880 capture or approved reference-kit probe"
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "C95",
+      "title": "C95",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "9",
+        "POWER",
+        "3",
+        "RIGHT",
+        "PAGE_UP",
+        "SHIFT",
+        "DEL",
+        "CATALOG",
+        "BACK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C95-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "INS followed by a menu open UNKNOWN: no target capture pins whether arming survives.",
+          "owner": "ClassWiz reference maintainer",
+          "resolution": "Physical fx-880 capture or approved reference-kit probe"
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "C96",
+      "title": "C96",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "9",
+        "POWER",
+        "3",
+        "RIGHT",
+        "PAGE_UP",
+        "SHIFT",
+        "DEL",
+        "FRACTION",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C96-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "INS followed by a Fraction key UNKNOWN: only Root consumption is reference-covered.",
+          "owner": "ClassWiz reference maintainer",
+          "resolution": "Physical fx-880 capture or approved reference-kit probe"
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "C97",
+      "title": "C97",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "ROOT",
+        "9",
+        "SHIFT",
+        "RIGHT",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C97-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "SHIFT arrows inside sqrt/unsupported structures UNKNOWN: E-12 covers Mixed/Integral/Sum/Product only.",
+          "owner": "ClassWiz reference maintainer",
+          "resolution": "Physical fx-880 capture or approved reference-kit probe"
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "C98",
+      "title": "C98",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "SIN",
+        "3",
+        "CLOSE",
+        "CLOSE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C98-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "Close on an already-closed ordinary call UNKNOWN: no target capture pins the second close.",
+          "owner": "ClassWiz reference maintainer",
+          "resolution": "Physical fx-880 capture or approved reference-kit probe"
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "C100",
+      "title": "C100",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "9",
+        "POWER",
+        "3",
+        "RIGHT",
+        "PAGE_UP",
+        "SHIFT",
+        "DEL",
+        "SHIFT",
+        "ROOT",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C100-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "INS followed by a shifted Root (nth-root) UNKNOWN: only unshifted Root consumption is reference-covered.",
+          "owner": "ClassWiz reference maintainer",
+          "resolution": "Physical fx-880 capture or approved reference-kit probe"
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "C99",
+      "title": "C99",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "CATALOG",
+        "OK",
+        "DOWN",
+        "OK",
+        "CATALOG",
+        "OK",
+        "DOWN",
+        "DOWN",
+        "OK",
+        "1",
+        "DOWN",
+        "SHIFT",
+        "RIGHT",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "C99-1",
+          "capture": "final",
+          "expect": {
+            "logical": {
+              "source": "integral(sum(1,,),,)",
+              "cursor": 17
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pass"
+    }
+  ]
+}

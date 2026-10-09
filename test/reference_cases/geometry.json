@@ -1,0 +1,1735 @@
+{
+  "schema": 1,
+  "spec_sha256": "b43625c926d6f402c568704447f9220b4980f28149939ebf79de1b176587ebd3",
+  "cases": [
+    {
+      "id": "GEO-P01",
+      "title": "12/3 multi-width alignment",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "FRACTION",
+        "1",
+        "2",
+        "DOWN",
+        "3",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "GEO-P01-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "12/3 multi-width alignment: no authoritative raster coordinates in spec 3.6; native output is not evidence.",
+          "owner": "P7 geometry / ClassWiz reference maintainer",
+          "resolution": "Capture this exact probe on the target or approved reference kit; measure ink, fields and rules before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "GEO-P02",
+      "title": "1/23 multi-width alignment",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "FRACTION",
+        "1",
+        "DOWN",
+        "2",
+        "3",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "GEO-P02-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "1/23 multi-width alignment: no authoritative raster coordinates in spec 3.6; native output is not evidence.",
+          "owner": "P7 geometry / ClassWiz reference maintainer",
+          "resolution": "Capture this exact probe on the target or approved reference kit; measure ink, fields and rules before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "GEO-P03",
+      "title": "Nested fraction alignment",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "FRACTION",
+        "FRACTION",
+        "1",
+        "DOWN",
+        "2",
+        "RIGHT",
+        "DOWN",
+        "3",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "GEO-P03-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "Nested fraction alignment: no authoritative raster coordinates in spec 3.6; native output is not evidence.",
+          "owner": "P7 geometry / ClassWiz reference maintainer",
+          "resolution": "Capture this exact probe on the target or approved reference kit; measure ink, fields and rules before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "GEO-P04",
+      "title": "Nth-root index geometry",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "spec section 3.6",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "SHIFT",
+        "ROOT",
+        "3",
+        "DOWN",
+        "X",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "GEO-P04-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "Nth-root index geometry: no authoritative raster coordinates in spec 3.6; native output is not evidence.",
+          "owner": "P7 geometry / ClassWiz reference maintainer",
+          "resolution": "Capture this exact probe on the target or approved reference kit; measure ink, fields and rules before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "gap_ids": [],
+      "native": "pending"
+    },
+    {
+      "id": "GEO-01",
+      "title": "Empty-line caret",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "emulator-okay / entry-empty.pbm",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "GEO-01-1",
+          "capture": "final",
+          "expect": {
+            "caret": {
+              "rect": [
+                0,
+                0,
+                3,
+                13
+              ]
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "quantity": "Empty-line caret",
+        "outcome": "x0-2, y0-12 (3×13)",
+        "evidence": "emulator-okay / entry-empty.pbm"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "GEO-02",
+      "title": "Normal digit ink",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "emulator-nine, 46-h-result / result-one-third.pbm",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "9",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "GEO-02-1",
+          "capture": "final",
+          "expect": {
+            "bbox": [
+              2,
+              0,
+              8,
+              12
+            ]
+          },
+          "native": "pass",
+          "measure": {
+            "region": [
+              0,
+              0,
+              11,
+              30
+            ],
+            "maskCaret": true
+          }
+        },
+        {
+          "id": "GEO-02-2",
+          "capture": "final",
+          "expect": {
+            "width": 8,
+            "height": 12
+          },
+          "native": "pass",
+          "measure": {
+            "region": [
+              0,
+              0,
+              11,
+              30
+            ],
+            "maskCaret": true
+          }
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "quantity": "Normal digit ink",
+        "outcome": "8 wide × **12** rows; first glyph ink starts x2, y0",
+        "evidence": "emulator-nine, 46-h-result / result-one-third.pbm"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "GEO-03",
+      "title": "Normal advance",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "same",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "9",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "GEO-03-1",
+          "capture": "final",
+          "expect": {
+            "caret": {
+              "x": 11
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "quantity": "Normal advance",
+        "outcome": "11",
+        "evidence": "same"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "GEO-04",
+      "title": "Caret after \"9\"",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "emulator-nine / probe slot 13 − 2",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "9",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "GEO-04-1",
+          "capture": "final",
+          "expect": {
+            "caret": {
+              "x": 11,
+              "width": 3
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "quantity": "Caret after \"9\"",
+        "outcome": "x11-13",
+        "evidence": "emulator-nine / probe slot 13 − 2"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "GEO-05",
+      "title": "Script digit ink",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "emulator-power-three / entry-power-exponent-3.pbm",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "9",
+        "POWER",
+        "3",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "GEO-05-1",
+          "capture": "final",
+          "expect": {
+            "width": 5,
+            "height": 9
+          },
+          "native": "pass",
+          "measure": {
+            "region": [
+              11,
+              0,
+              8,
+              20
+            ],
+            "maskCaret": true
+          }
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "quantity": "Script digit ink",
+        "outcome": "5 × **9**",
+        "evidence": "emulator-power-three / entry-power-exponent-3.pbm"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "GEO-06",
+      "title": "Script advance / caret",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "same",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "9",
+        "POWER",
+        "3",
+        {
+          "capture": "final"
+        },
+        "2",
+        {
+          "capture": "step1"
+        }
+      ],
+      "checks": [
+        {
+          "id": "GEO-06-1",
+          "capture": "final",
+          "expect": {
+            "caret": {
+              "width": 3,
+              "height": 9
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "GEO-06-2",
+          "capture": "step1",
+          "expect": {
+            "value": 6
+          },
+          "native": "pass",
+          "delta": {
+            "capture": "final",
+            "path": [
+              "caret",
+              "x"
+            ]
+          }
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "quantity": "Script advance / caret",
+        "outcome": "6 / 3×9 starting at the script top row",
+        "evidence": "same"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "GEO-07",
+      "title": "Exponent placement",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "same",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "9",
+        "POWER",
+        "3",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "GEO-07-1",
+          "capture": "final",
+          "expect": {
+            "bbox": [
+              2,
+              4,
+              8,
+              12
+            ]
+          },
+          "native": "pass",
+          "measure": {
+            "region": [
+              0,
+              0,
+              11,
+              30
+            ],
+            "maskCaret": true
+          }
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "quantity": "Exponent placement",
+        "outcome": "base ink y4-15, exponent ink y0-8: exponent ink bottom 7 rows above base ink bottom; exponent cell starts at the base's advance end",
+        "evidence": "same"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "GEO-08",
+      "title": "Empty normal slot box",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "16-e-frac1 / entry-fraction-numerator.pbm",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "FRACTION",
+        "1",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "GEO-08-1",
+          "capture": "final",
+          "expect": {
+            "bbox": [
+              3,
+              17,
+              10,
+              13
+            ]
+          },
+          "native": "pass",
+          "measure": {
+            "region": [
+              0,
+              17,
+              16,
+              20
+            ],
+            "maskCaret": true
+          }
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "quantity": "Empty normal slot box",
+        "outcome": "10×13 outline (x3-12 when the cell starts at x2)",
+        "evidence": "16-e-frac1 / entry-fraction-numerator.pbm"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "GEO-09",
+      "title": "Empty script slot box",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "emulator-power",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "9",
+        "POWER",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "GEO-09-1",
+          "capture": "final",
+          "expect": {
+            "width": 6,
+            "height": 9
+          },
+          "native": "pass",
+          "measure": {
+            "region": [
+              11,
+              0,
+              12,
+              20
+            ],
+            "caretOff": true
+          }
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "quantity": "Empty script slot box",
+        "outcome": "6×9 (caret overlaps its left edge)",
+        "evidence": "emulator-power"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "GEO-10",
+      "title": "Fraction width",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "46-h-result, 16-e-frac1 / result-one-third.pbm",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "FRACTION",
+        "1",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "GEO-10-1",
+          "capture": "final",
+          "expect": {
+            "bbox": [
+              1,
+              14,
+              14,
+              1
+            ]
+          },
+          "native": "pass",
+          "measure": {
+            "region": [
+              0,
+              14,
+              18,
+              1
+            ]
+          }
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "quantity": "Fraction width",
+        "outcome": "W = content advance + 4; rule occupies [x+1, x+W) (14 px for one digit); content starts x+2",
+        "evidence": "46-h-result, 16-e-frac1 / result-one-third.pbm"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "GEO-11",
+      "title": "Fraction gaps",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "same",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "FRACTION",
+        "1",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "GEO-11-1",
+          "capture": "final",
+          "expect": {
+            "blankAboveRule": 2,
+            "blankBelowRule": 2
+          },
+          "native": "pass",
+          "measure": {
+            "region": [
+              0,
+              0,
+              18,
+              40
+            ],
+            "fractionGaps": true,
+            "maskCaret": true
+          }
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "quantity": "Fraction gaps",
+        "outcome": "2 blank rows above and below the rule",
+        "evidence": "same"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "GEO-12",
+      "title": "Caret next to a fraction",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "46-f-frac-key",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "FRACTION",
+        "1",
+        "RIGHT",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "GEO-12-1",
+          "capture": "final",
+          "expect": {
+            "caret": {
+              "width": 3,
+              "height": 30
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "quantity": "Caret next to a fraction",
+        "outcome": "3×30 (numerator top to denominator bottom)",
+        "evidence": "46-f-frac-key"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "GEO-13",
+      "title": "Caret on a root line containing a raised exponent",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "46-b-key / entry-power-exited.pbm",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "9",
+        "POWER",
+        "3",
+        "RIGHT",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "GEO-13-1",
+          "capture": "final",
+          "expect": {
+            "caret": {
+              "width": 3,
+              "height": 17
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "quantity": "Caret on a root line containing a raised exponent",
+        "outcome": "3×17 (y0-16)",
+        "evidence": "46-b-key / entry-power-exited.pbm"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "GEO-14",
+      "title": "Result line",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "46-h-result / result-one-third.pbm",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "1",
+        "DIVIDE",
+        "3",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "GEO-14-1",
+          "capture": "final",
+          "expect": {
+            "bbox": [
+              178,
+              46,
+              14,
+              1
+            ]
+          },
+          "native": "pass",
+          "measure": {
+            "region": [
+              170,
+              46,
+              22,
+              1
+            ]
+          }
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "quantity": "Result line",
+        "outcome": "answer right-aligned to x191, bottom ink y60",
+        "evidence": "46-h-result / result-one-third.pbm"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "GEO-15",
+      "title": "Decimal result (Norm 1)",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "s13",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "1",
+        "DIVIDE",
+        "3",
+        "SHIFT",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "GEO-15-1",
+          "capture": "final",
+          "expect": {
+            "result": {
+              "text": "0.3333333333"
+            }
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "quantity": "Decimal result (Norm 1)",
+        "outcome": "\"0.3333333333\" (10 significant digits)",
+        "evidence": "s13"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "GEO-16",
+      "title": "Active field emphasis",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "C01, C18, s02, s05, s22",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "9",
+        "POWER",
+        "3",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "GEO-16-1",
+          "capture": "final",
+          "expect": {
+            "hasGrey": true
+          },
+          "native": "pass",
+          "measure": {
+            "region": [
+              0,
+              0,
+              11,
+              30
+            ],
+            "maskCaret": true
+          }
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "quantity": "Active field emphasis",
+        "outcome": "pixels outside the active field's subtree at level 2",
+        "evidence": "C01, C18, s02, s05, s22"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "GEO-17",
+      "title": "Menu selection bar",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "06-b-key / menu-settings-root.pbm",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "SETTINGS",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "GEO-17-1",
+          "capture": "final",
+          "expect": {
+            "bbox": [
+              0,
+              0,
+              188,
+              15
+            ]
+          },
+          "native": "pass",
+          "measure": {
+            "region": [
+              0,
+              0,
+              189,
+              16
+            ]
+          }
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "quantity": "Menu selection bar",
+        "outcome": "y0-14 (15 rows), x0-187",
+        "evidence": "06-b-key / menu-settings-root.pbm"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "GEO-18",
+      "title": "Menu row pitch, visible rows",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "61-i-result-key / menu-format.pbm",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "1",
+        "DIVIDE",
+        "3",
+        "EXE",
+        "SHIFT",
+        "FORMAT",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "GEO-18-1",
+          "capture": "final",
+          "expect": {
+            "menu": {
+              "visibleRows": 4
+            }
+          },
+          "native": "pass"
+        },
+        {
+          "id": "GEO-18-2",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "status": "pending",
+          "reason": "M-03: supplied Settings BMP is emulator/Paint evidence, not physical. Display 3.009 matches its text, but physical font acceptance remains blocked.",
+          "owner": "ClassWiz reference maintainer",
+          "resolution": "Physical fx-880 capture or approved reference-kit probe"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "quantity": "Menu row pitch, visible rows",
+        "outcome": "16, 4; text ink 12 rows",
+        "evidence": "61-i-result-key / menu-format.pbm"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "GEO-19",
+      "title": "Menu scrollbar",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "same",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "1",
+        "DIVIDE",
+        "3",
+        "EXE",
+        "SHIFT",
+        "FORMAT",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "GEO-19-1",
+          "capture": "final",
+          "expect": {
+            "hasGrey": true
+          },
+          "native": "pass",
+          "measure": {
+            "region": [
+              188,
+              0,
+              4,
+              63
+            ]
+          }
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "quantity": "Menu scrollbar",
+        "outcome": "2 px at x190-191, **level 2**, blank x188-189",
+        "evidence": "same"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "GEO-20",
+      "title": "VARIABLE grid",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "15-b-key / menu-variables.pbm",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "VARIABLE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "GEO-20-1",
+          "capture": "final",
+          "expect": {
+            "bbox": [
+              0,
+              0,
+              91,
+              11
+            ]
+          },
+          "native": "pass",
+          "measure": {
+            "region": [
+              0,
+              0,
+              96,
+              14
+            ]
+          }
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "quantity": "VARIABLE grid",
+        "outcome": "selected cell y0-10 × x0-90; 13-px pitch; value text 9 rows; column 2 at x97",
+        "evidence": "15-b-key / menu-variables.pbm"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "GEO-21",
+      "title": "Long-line scroll arrows",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "s35",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        "9",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "GEO-21-1",
+          "capture": "final",
+          "expect": {
+            "bbox": [
+              2,
+              3,
+              8,
+              7
+            ]
+          },
+          "native": "pass",
+          "measure": {
+            "region": [
+              0,
+              0,
+              10,
+              14
+            ]
+          }
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "quantity": "Long-line scroll arrows",
+        "outcome": "◀ 8×7 at x2-9, y3-9; ▶ at x183-190, y3-9; drawn in the raster; digits clipped between",
+        "evidence": "s35"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "GEO-22",
+      "title": "Error dialog",
+      "scope": {
+        "reference_model": "fx-991CN CW Ver A",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "emu-cw",
+          "evidence": "s11, s25",
+          "specification": "CLASSWIZ_COMPATIBILITY_ENGINEERING_SPEC.md",
+          "section": "3.6"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "1",
+        "DIVIDE",
+        "0",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "GEO-22-1",
+          "capture": "final",
+          "expect": {
+            "bbox": [
+              0,
+              48,
+              188,
+              15
+            ]
+          },
+          "native": "pass",
+          "measure": {
+            "region": [
+              0,
+              48,
+              188,
+              15
+            ]
+          }
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "quantity": "Error dialog",
+        "outcome": "title top-left (y1-12); inverted bottom row y48-62 (\"Back\" 44x12 at (2,49)); warning 22x21 at (85,21), appears after the dialog",
+        "evidence": "s11, s25"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    },
+    {
+      "id": "GEO-23",
+      "title": "Home on the **target**",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "CONFIRMED"
+      },
+      "sources": [
+        {
+          "kind": "880-hw",
+          "evidence": "test/calculator_references/home-1.bin"
+        }
+      ],
+      "initial": {
+        "app": "Calculate",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "HOME",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "GEO-23-1",
+          "capture": "final",
+          "expect": {
+            "physicalHomeMatch": true
+          },
+          "native": "pass"
+        }
+      ],
+      "confidence": "CONFIRMED",
+      "notes": "Source spellings encode the observed structure in native canonical syntax; they are not ROM input-buffer observations. Reference outcomes and probes, not native renders, justify expectations.",
+      "reference": {
+        "quantity": "Home on the **target**",
+        "outcome": "scrollbar level 2 at x190-191; label cap height 11 rows",
+        "evidence": "`[880-HW]` test/calculator_references/home-1.bin"
+      },
+      "gap_ids": [],
+      "native": "pass"
+    }
+  ]
+}

@@ -1,0 +1,1009 @@
+{
+  "schema": 1,
+  "phase": "P15",
+  "cases": [
+    {
+      "id": "P15-CX-01",
+      "title": "Complex launch",
+      "app": "Complex",
+      "surface": "launch",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__complex_number_calculations.html.txt",
+          "section": "launch instructions"
+        }
+      ],
+      "initial": {
+        "app": "Complex",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-CX-01-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Entry"
+            },
+            "app": {
+              "id": 7
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-CX-02",
+      "title": "Complex input",
+      "app": "Complex",
+      "surface": "input",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__complex_number_calculations.html.txt",
+          "section": "example 1"
+        },
+        {
+          "kind": "EMU-CW",
+          "evidence": "p15-evidence.json",
+          "section": "cw.reviewed_facts; supplementary shared behavior only"
+        }
+      ],
+      "initial": {
+        "app": "Complex",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "2",
+        "ADD",
+        "3",
+        "SHIFT",
+        "9",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-CX-02-1",
+          "capture": "final",
+          "expect": {
+            "logical": {
+              "source": "2+3i"
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-CX-03",
+      "title": "Complex result",
+      "app": "Complex",
+      "surface": "result",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__complex_number_calculations.html.txt",
+          "section": "example 1; rectangular identity"
+        },
+        {
+          "kind": "EMU-CW",
+          "evidence": "p15-evidence.json",
+          "section": "cw.reviewed_facts; supplementary shared behavior only"
+        }
+      ],
+      "initial": {
+        "app": "Complex",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "2",
+        "ADD",
+        "3",
+        "SHIFT",
+        "9",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-CX-03-1",
+          "capture": "final",
+          "expect": {
+            "result": {
+              "text": "2+3i",
+              "hasResult": true
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-CX-04",
+      "title": "Complex FORMAT",
+      "app": "Complex",
+      "surface": "FORMAT",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__complex_number_calculations.html.txt",
+          "section": "FORMAT chapter global order filtered to complex capabilities"
+        },
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/before_using_the_calculator__getting_started.html.txt",
+          "section": "Indicators: i / angle reflect Complex Result setting"
+        },
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/changing_calculation_result_format__changing_the_display_format_calc_results.html.txt",
+          "section": "FORMAT order and result-dependent applicability"
+        },
+        {
+          "kind": "EMU-CW",
+          "evidence": "p15-evidence.json",
+          "section": "cw.reviewed_facts; supplementary shared behavior only"
+        }
+      ],
+      "initial": {
+        "app": "Complex",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "2",
+        "ADD",
+        "3",
+        "SHIFT",
+        "9",
+        "EXE",
+        "SHIFT",
+        "FORMAT",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-CX-04-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Format"
+            },
+            "menu": {
+              "labels": [
+                "Standard",
+                "Decimal",
+                "Rectangular Coord",
+                "Polar Coord"
+              ]
+            },
+            "icons": {
+              "allOff": true
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-CX-05",
+      "title": "Complex FORMAT AC",
+      "app": "Complex",
+      "surface": "FORMAT AC",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__complex_number_calculations.html.txt",
+          "section": "getting_started: close user-opened menus"
+        },
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/changing_calculation_result_format__changing_the_display_format_calc_results.html.txt",
+          "section": "FORMAT order and result-dependent applicability"
+        }
+      ],
+      "initial": {
+        "app": "Complex",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "2",
+        "ADD",
+        "3",
+        "SHIFT",
+        "9",
+        "EXE",
+        "SHIFT",
+        "FORMAT",
+        "AC",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-CX-05-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Result"
+            },
+            "result": {
+              "text": "2+3i"
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-CX-06",
+      "title": "Complex icons entry",
+      "app": "Complex",
+      "surface": "icons entry",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__complex_number_calculations.html.txt",
+          "section": "getting_started: i / angle indicate Complex Result setting"
+        },
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/before_using_the_calculator__getting_started.html.txt",
+          "section": "Indicators: i / angle reflect Complex Result setting"
+        },
+        {
+          "kind": "EMU-CW",
+          "evidence": "p15-evidence.json",
+          "section": "cw.reviewed_facts; supplementary shared behavior only"
+        }
+      ],
+      "initial": {
+        "app": "Complex",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-CX-06-1",
+          "capture": "final",
+          "expect": {
+            "icons": {
+              "i": true,
+              "angle": false
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-CX-07",
+      "title": "Complex icons rectangular",
+      "app": "Complex",
+      "surface": "icons rectangular",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG",
+        "rom_sha256": "4ab4791609cc8686fc6b4d1be34b3e6d19b3eb700abe8c9e3edd91ff2813471f",
+        "emulator": "CasioEmuX c887be7c956ddd970abb82e7a40a186c9c4e4289"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__complex_number_calculations.html.txt",
+          "section": "getting_started: Complex Result indicator"
+        },
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/before_using_the_calculator__getting_started.html.txt",
+          "section": "Indicators: i / angle reflect Complex Result setting"
+        },
+        {
+          "kind": "EMU-CW",
+          "evidence": "p15-evidence.json",
+          "section": "cw.reviewed_facts; supplementary shared behavior only"
+        }
+      ],
+      "initial": {
+        "app": "Complex",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "2",
+        "ADD",
+        "3",
+        "SHIFT",
+        "9",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-CX-07-1",
+          "capture": "final",
+          "expect": {
+            "icons": {
+              "i": true,
+              "angle": false
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-CX-08",
+      "title": "Complex icons local polar view",
+      "app": "Complex",
+      "surface": "icons local polar view",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__complex_number_calculations.html.txt",
+          "section": "FORMAT example 9 changes view; getting_started indicator tracks setting"
+        },
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/before_using_the_calculator__getting_started.html.txt",
+          "section": "Indicators: i / angle reflect Complex Result setting"
+        }
+      ],
+      "initial": {
+        "app": "Complex",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "2",
+        "ADD",
+        "3",
+        "SHIFT",
+        "9",
+        "EXE",
+        "SHIFT",
+        "FORMAT",
+        "DOWN",
+        "DOWN",
+        "DOWN",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-CX-08-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Result"
+            },
+            "icons": {
+              "i": true,
+              "angle": false
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-CX-09",
+      "title": "Complex error",
+      "app": "Complex",
+      "surface": "error",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__complex_number_calculations.html.txt",
+          "section": "technical_information errors; shared P10 modal contract"
+        }
+      ],
+      "initial": {
+        "app": "Complex",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "1",
+        "DIVIDE",
+        "0",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-CX-09-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "ErrorDialog"
+            },
+            "error": {
+              "title": "Math ERROR"
+            },
+            "icons": {
+              "allOff": true
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-CX-10",
+      "title": "Complex menu",
+      "app": "Complex",
+      "surface": "menu",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__complex_number_calculations.html.txt",
+          "section": "CATALOG and P9 menu contract"
+        }
+      ],
+      "initial": {
+        "app": "Complex",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "CATALOG",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-CX-10-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Catalog"
+            },
+            "icons": {
+              "allOff": true
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-CX-11",
+      "title": "Complex retention",
+      "app": "Complex",
+      "surface": "retention",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__complex_number_calculations.html.txt",
+          "section": "retention"
+        }
+      ],
+      "initial": {
+        "app": "Complex",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "2",
+        "ADD",
+        "3",
+        "SHIFT",
+        "9",
+        "EXE",
+        "HOME",
+        "OK",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-CX-11-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "Exact draft/result retention after Home needs target replay; shared-memory reducer is tested separately.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-CX-12",
+      "title": "Complex imaginary glyph",
+      "app": "Complex",
+      "surface": "imaginary glyph",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__complex_number_calculations.html.txt",
+          "section": "imaginary glyph"
+        }
+      ],
+      "initial": {
+        "app": "Complex",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "2",
+        "ADD",
+        "3",
+        "SHIFT",
+        "9",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-CX-12-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "No physical fx-880 imaginary-unit glyph capture. Keep converted native glyph; do not copy ROM pixels.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-CX-13",
+      "title": "Complex icons polar setting",
+      "app": "Complex",
+      "surface": "icons polar setting",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__complex_number_calculations.html.txt",
+          "section": "getting_started indicators"
+        },
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/before_using_the_calculator__getting_started.html.txt",
+          "section": "Indicators: i / angle reflect Complex Result setting"
+        }
+      ],
+      "initial": {
+        "app": "Complex",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1",
+          "complexResult": "Polar"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-CX-13-1",
+          "capture": "final",
+          "expect": {
+            "icons": {
+              "i": false,
+              "angle": true
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-CX-14",
+      "title": "Complex polar result",
+      "app": "Complex",
+      "surface": "polar result",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__complex_number_calculations.html.txt",
+          "section": "Complex Result r/theta; angle Degree"
+        }
+      ],
+      "initial": {
+        "app": "Complex",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1",
+          "complexResult": "Polar"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        "1",
+        "ADD",
+        "SHIFT",
+        "9",
+        "EXE",
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-CX-14-1",
+          "capture": "final",
+          "expect": {
+            "screen": {
+              "id": "Result"
+            },
+            "icons": {
+              "i": false,
+              "angle": true
+            }
+          },
+          "native": "pass",
+          "evidence": "880-MAN",
+          "confidence": "STRONG",
+          "owner": "P15"
+        }
+      ],
+      "confidence": "STRONG",
+      "native": "pass",
+      "gap_ids": [],
+      "owner": "P15",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-CX-15",
+      "title": "Complex stale job",
+      "app": "Complex",
+      "surface": "stale job",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "SOURCE-ONLY",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__complex_number_calculations.html.txt",
+          "section": "stale job"
+        }
+      ],
+      "initial": {
+        "app": "Complex",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-CX-15-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "Async generation/revision behavior is a native architecture safety contract, not externally visible target internals. Executed by P15 controller checks.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    },
+    {
+      "id": "P15-CX-16",
+      "title": "Complex render reference",
+      "app": "Complex",
+      "surface": "render reference",
+      "scope": {
+        "reference_model": "fx-880BTG PLUS",
+        "target_applicability": "STRONG"
+      },
+      "sources": [
+        {
+          "kind": "880-MAN",
+          "evidence": "../../../991CN-X-CW-Decompilation/research/downloads/manual-880/using_calculator_apps__complex_number_calculations.html.txt",
+          "section": "render reference"
+        }
+      ],
+      "initial": {
+        "app": "Complex",
+        "settings": {
+          "inputOutput": "MathMath",
+          "angle": "Degree",
+          "number": "Norm1"
+        },
+        "memory": "cleared",
+        "history": []
+      },
+      "keys": [
+        {
+          "capture": "final"
+        }
+      ],
+      "checks": [
+        {
+          "id": "P15-CX-16-1",
+          "capture": "final",
+          "expect": null,
+          "native": "pending",
+          "evidence": "PENDING",
+          "confidence": "UNKNOWN",
+          "owner": "P15/P20 physical",
+          "reason": "No approved physical app raster; existing render fixtures are regression evidence only.",
+          "resolution": "Capture this action on fx-880BTG PLUS with settings and icon row; review independently before replacing null."
+        }
+      ],
+      "confidence": "UNKNOWN",
+      "native": "pending",
+      "gap_ids": [],
+      "owner": "P15/P20 physical",
+      "notes": "Manual logical contract only; native field names encode state, not target RAM. Exact raster remains separate and pending."
+    }
+  ]
+}
